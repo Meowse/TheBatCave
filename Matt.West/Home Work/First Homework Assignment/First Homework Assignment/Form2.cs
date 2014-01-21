@@ -29,8 +29,8 @@ namespace First_Homework_Assignment
 
         private void button1_Click(object sender, EventArgs e) //
         { //
-            this.Close(); //
-            Form1.ActiveForm.Close(); //
+            this.Close(); //Allow form to close
+            Form1.ActiveForm.Close(); //Close the program
         } //
     }
 }
