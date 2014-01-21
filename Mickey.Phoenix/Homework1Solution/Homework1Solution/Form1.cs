@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Homework1Solution.Properties;
 
 namespace Homework1Solution
 {
@@ -15,6 +9,16 @@ namespace Homework1Solution
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void doSomething_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(Resources.ClickToPutUpMessageBox);
+        }
+
+        private void learnBetterLink_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(Resources.LearningByDoing);
         }
     }
 }

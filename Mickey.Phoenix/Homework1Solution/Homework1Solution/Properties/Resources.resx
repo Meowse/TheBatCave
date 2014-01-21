@@ -114,4 +114,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ClickToPutUpMessageBox" xml:space="preserve">
+    <value>I can put up a message box!</value>
+    <comment>Message telling the user that this button can put up a message box.
+</comment>
+  </data>
+  <data name="LearningByDoing" xml:space="preserve">
+    <value>People learn better by doing than by hearing or seeing.  We aren't "visual" learners or "auditory" learners.  We are MANUAL learners.</value>
+  </data>
 </root>
