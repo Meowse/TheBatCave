@@ -36,12 +36,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(663, 255);
             this.Name = "Form1";
-            this.Text = "This is my form";
+            this.Text = "Seattle Seahawks 2013 NFC Champs!!!";
             this.ResumeLayout(false);
+            
 
         }
 
         #endregion
     }
 }
+
 
