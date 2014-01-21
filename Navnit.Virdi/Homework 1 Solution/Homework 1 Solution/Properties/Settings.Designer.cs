@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WindowsFormsApplication1.Properties
+namespace Homework_1_Solution.Properties
 {
 
 
