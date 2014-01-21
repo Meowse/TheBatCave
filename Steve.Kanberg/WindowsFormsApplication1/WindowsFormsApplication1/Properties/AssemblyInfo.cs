@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SomethingInteresting")]
-[assembly: AssemblyDescription("Just some bad jokes...nothing to see here.  No really, there's nothing to see here.  Okay, okay...What is a computer virus?  A terminal illness!")]
+[assembly: AssemblyTitle("WindowsFormsApplication1")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Company: Monkey's Running in Circles Eating Ice Cream, Inc.")]
-[assembly: AssemblyProduct("Product: Something Interesting")]
-[assembly: AssemblyCopyright("Copyright? Copywrong! ☺☻☺☻☺☻☺☻☺☻  2014")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("WindowsFormsApplication1")]
+[assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("194d7c7b-a449-470c-9a6f-c7cb4bde24ca")]
+[assembly: Guid("e64970f6-232c-4689-9350-83988be1b79f")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.1")]
-[assembly: AssemblyFileVersion("1.0.0.1")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]

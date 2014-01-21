@@ -19,7 +19,18 @@ namespace SomethingInteresting
 
         private void AnswerButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("To get to the other TIDE.");
+            MessageBox.Show("A bañaña...\n\t...it's only funny if you know spanish.  :)");
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void stillaboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutBox1 box = new AboutBox1();
+            box.ShowDialog();
         }
     }
 }
