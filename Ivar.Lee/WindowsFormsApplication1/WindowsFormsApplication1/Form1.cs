@@ -16,5 +16,10 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
+
+        private void doSomething_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(@"IMPORTANT MESSAGE");
+        }
     }
 }
