@@ -36,18 +36,18 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(83, 75);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 13);
+            this.label1.Size = new System.Drawing.Size(76, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "I made a label";
+            this.label1.Text = "I made a label.";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(292, 273);
+            this.ClientSize = new System.Drawing.Size(764, 455);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "HOMEWORK";
+            this.Text = "This is a bit of homework.";
             this.ResumeLayout(false);
             this.PerformLayout();
 
