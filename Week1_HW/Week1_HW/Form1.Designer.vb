@@ -28,12 +28,14 @@ Partial Class Form1
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(203, 128)
+        Me.Button1.BackColor = System.Drawing.Color.Lime
+        Me.Button1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(203, 143)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(151, 71)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "What Does the Hawk Say...?"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Form1
         '
@@ -43,7 +45,7 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(559, 356)
         Me.Controls.Add(Me.Button1)
         Me.Name = "Form1"
-        Me.Text = "What Does the Hawk Say...?"
+        Me.Text = "Super Bowl 2014"
         Me.ResumeLayout(False)
 
     End Sub
