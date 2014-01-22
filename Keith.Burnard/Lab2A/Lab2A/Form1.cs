@@ -16,5 +16,26 @@ namespace Lab2a
         {
             InitializeComponent();
         }
+
+        private void btnDoTheThing_Click(object sender, EventArgs e)
+        {
+            lblHelloWorld.Text = "Hello World";
+
+            string One_STRING = "One";
+            string Two_STRING = "Two";
+            string Three_STRING = "Three";
+            lblOneTwoThree.Text = string.Format("{0} {1} {2}", One_STRING, Two_STRING, Three_STRING);
+
+            int FortyFive_INT = 45;
+            lbl45.Text = FortyFive_INT.ToString();
+
+            lblJustQuotes.Text = "\"\"\"";
+
+            lblJustBackslashes.Text = "\\\\\\\\";
+
+            lblOneBackslash.Text = "\"\\\"\"";
+
+            lblManyBackslash.Text = "\"\\\"\"\"\\\\\\\"\\\"\"";
+        }
     }
 }
