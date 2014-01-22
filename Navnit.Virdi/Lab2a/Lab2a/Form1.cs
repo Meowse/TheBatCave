@@ -19,6 +19,36 @@ namespace Lab2a
 
         private void button1_Click(object sender, EventArgs e)
         {
-        
+            LBLHelloworld.Text = "Hello world";
+            LBLonetwothree.Text = string.Format ("one two three");
+            int x = 5;
+            int y = 9;
+            LBL45.Text =(x * y).ToString();
+            LBLtwoquotes.Text = "\"\"\"";
+            LBLfourbackslashes.Text = "\\\\\\\\";
+            LBLonequotebackslash.Text = "\"\\\"\"";
+            LBLonequoteonebackslashthreequot.Text ="\"\\\"\"\"\\\\\\\"\\\"\""; 
+           
+
+
+
+
+            
+
+            
+           
+
+        }
+
+        private void LBL45_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LBLtwoquotes_Click(object sender, EventArgs e)
+        {
+
         }
     }
+
+}

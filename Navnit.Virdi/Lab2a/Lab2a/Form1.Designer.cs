@@ -96,6 +96,7 @@
             this.LBL45.Size = new System.Drawing.Size(128, 17);
             this.LBL45.TabIndex = 7;
             this.LBL45.Text = "output 3 goes here";
+            this.LBL45.Click += new System.EventHandler(this.LBL45_Click);
             // 
             // label5
             // 
@@ -116,6 +117,7 @@
             this.LBLtwoquotes.Size = new System.Drawing.Size(128, 17);
             this.LBLtwoquotes.TabIndex = 9;
             this.LBLtwoquotes.Text = "output 4 goes here";
+            this.LBLtwoquotes.Click += new System.EventHandler(this.LBLtwoquotes_Click);
             // 
             // label7
             // 
