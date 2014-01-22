@@ -39,6 +39,7 @@
             this.label1.Size = new System.Drawing.Size(272, 63);
             this.label1.TabIndex = 0;
             this.label1.Text = "SeaHawks";
+            this.label1.UseWaitCursor = true;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
@@ -49,6 +50,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "SeaHawks!!!";
+            this.UseWaitCursor = true;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
