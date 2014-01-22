@@ -19,7 +19,7 @@ namespace Homework1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("sds");
+            MessageBox.Show("Hello World!!! My age is " + txtAge.Text);
         }
     }
 }
