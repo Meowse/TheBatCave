@@ -16,5 +16,15 @@ namespace Week1HW_RoundTwo_ShaunaB
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Win, Win, Win, Win....");
+        }
+
+        private void button1_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }
