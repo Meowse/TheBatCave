@@ -15,6 +15,7 @@ namespace Lab2a
         public Form1()
         {
             InitializeComponent();
+            output1.Text = "Hello World";
         }
     }
 }
