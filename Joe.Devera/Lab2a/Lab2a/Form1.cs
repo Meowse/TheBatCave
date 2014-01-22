@@ -21,10 +21,10 @@ namespace Lab2a
 
             //Output2
             string orderNums = "{0} "+"{1} "+"{2} ";
-            string x = "one";
+            string x = "three";
             string y = "two";
-            string z = "three";
-            output2.Text = string.Format(orderNums,x,y,z);
+            string z = "one";
+            output2.Text = string.Format(orderNums,z,y,x);
 
             //Output3
             int num1 = 9;
