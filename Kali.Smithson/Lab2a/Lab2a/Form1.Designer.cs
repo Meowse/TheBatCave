@@ -221,6 +221,7 @@
         #endregion
 
         private System.Windows.Forms.Label output1;
+        System.Windows.Forms.Label output1 = stringtext"hello wordl"
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label output2;
         private System.Windows.Forms.Label label3;
