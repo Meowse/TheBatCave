@@ -49,5 +49,10 @@ namespace Lab2a
         {
             
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
