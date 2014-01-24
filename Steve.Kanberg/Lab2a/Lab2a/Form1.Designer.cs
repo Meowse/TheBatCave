@@ -54,6 +54,7 @@
             this.output1.Size = new System.Drawing.Size(96, 13);
             this.output1.TabIndex = 3;
             this.output1.Text = "output 1 goes here";
+            this.output1.Click += new System.EventHandler(this.output1_Click);
             // 
             // label1
             // 
@@ -72,6 +73,7 @@
             this.output2.Size = new System.Drawing.Size(96, 13);
             this.output2.TabIndex = 5;
             this.output2.Text = "output 2 goes here";
+            this.output2.Click += new System.EventHandler(this.output2_Click);
             // 
             // label3
             // 
@@ -90,6 +92,7 @@
             this.output3.Size = new System.Drawing.Size(96, 13);
             this.output3.TabIndex = 7;
             this.output3.Text = "output 3 goes here";
+            this.output3.Click += new System.EventHandler(this.output3_Click);
             // 
             // label5
             // 
@@ -108,6 +111,7 @@
             this.output4.Size = new System.Drawing.Size(96, 13);
             this.output4.TabIndex = 9;
             this.output4.Text = "output 4 goes here";
+            this.output4.Click += new System.EventHandler(this.output4_Click);
             // 
             // label7
             // 
@@ -126,6 +130,7 @@
             this.output5.Size = new System.Drawing.Size(96, 13);
             this.output5.TabIndex = 11;
             this.output5.Text = "output 5 goes here";
+            this.output5.Click += new System.EventHandler(this.output5_Click);
             // 
             // label9
             // 
@@ -144,6 +149,7 @@
             this.output6.Size = new System.Drawing.Size(96, 13);
             this.output6.TabIndex = 13;
             this.output6.Text = "output 6 goes here";
+            this.output6.Click += new System.EventHandler(this.output6_Click);
             // 
             // label11
             // 
@@ -162,6 +168,7 @@
             this.output7.Size = new System.Drawing.Size(96, 13);
             this.output7.TabIndex = 15;
             this.output7.Text = "output 7 goes here";
+            this.output7.Click += new System.EventHandler(this.output7_Click);
             // 
             // label13
             // 

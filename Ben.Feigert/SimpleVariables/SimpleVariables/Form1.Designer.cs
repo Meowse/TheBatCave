@@ -42,6 +42,13 @@
             this.output.TabIndex = 0;
             this.output.Text = "Output goes here...";
             // 
+            // nextButton
+            // 
+            this.nextButton.Location = new System.Drawing.Point(65, 63);
+            this.nextButton.Name = "nextButton";
+            this.nextButton.Size = new System.Drawing.Size(75, 23);
+            this.nextButton.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -50,7 +57,7 @@
             this.Controls.Add(this.nextButton);
             this.Controls.Add(this.output);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);

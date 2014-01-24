@@ -52,7 +52,7 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(247, 253);
+            this.ClientSize = new System.Drawing.Size(240, 253);
             this.Controls.Add(this.button1);
             this.Cursor = System.Windows.Forms.Cursors.Cross;
             this.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
