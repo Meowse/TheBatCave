@@ -12,7 +12,9 @@ namespace Lab2a
 {
     public partial class Form1 : Form
     {
-        string oneTwoThree = string.Format("one two three");
+        string oneValue = "one";
+        string twoValue = "two";
+        string threeValue = "three";
 
         int x = 30;
         int y = 15;
@@ -21,7 +23,7 @@ namespace Lab2a
         {
             InitializeComponent();
             output1.Text = "Hello world";
-            output2.Text = oneTwoThree;
+            output2.Text = string.Format("{0} {1} {2}", oneValue, twoValue, threeValue);
             output3.Text = Convert.ToString(x + y);
             output4.Text = @"""""""";
             output5.Text = @"\\\\";
