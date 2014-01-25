@@ -31,11 +31,20 @@ namespace Lab2a
             int x = 9;
             int y = 5;
             int product = (x * y);
-
             string strProduct = product.ToString();
             output3.Text = strProduct;
 
-          
+            //number 4
+            output4.Text = "''''''";
+
+            //number 5
+            output5.Text = @"\\\\";
+
+            //number 6
+            output6.Text = "\"\\\"\"";
+
+            //number 7
+            output7.Text = "\"\\\"\"\"\\\\\\\"\\\"\"";
 
 
         }
