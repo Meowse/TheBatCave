@@ -19,6 +19,18 @@ namespace Lab2a
 
         private void BTNcodeify_Click(object sender, EventArgs e)
         {
+            LBLHelloWorld.Text = "Hello World";
+            LBLonetwothree.Text = string.Format("one two three");
+            int number = 45;
+            LBLfortyfive.Text = number.ToString();
+//               For some reason unknown to me, this didn't work when I used int x instead of int number, and it kept saying that int
+//            couldn't be converted to tostring
+            LBLtwodblquote.Text = "\"\"";
+            LBLfourbackslash.Text = "\\\\\\\\";
+            LBLquoteslashtwoquote.Text = "\"\\\"\"";
+            LBLquoteslashtwoquotethreeslashthreequoteslashtwoquote.Text = "\"\\\"\"\"\\\\\\\"\\\"\"";
+
+
 
 
         }
