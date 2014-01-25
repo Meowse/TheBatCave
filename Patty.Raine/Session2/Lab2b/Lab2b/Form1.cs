@@ -36,10 +36,17 @@ namespace Lab2b
             eva.FirstName = "Eva-Lise";
 
             // Questions:
-            //  * What are eva.FirstName and eva.LastName?
+            //  * What are eva.FirstName and eva.LastName? 
+            //   eva.FirstName is "Eva-Lise" eva.LastName is  "Carlstrom"
+
             //  * What are ta.FirstName and ta.LastName?
+            //   ta.FirstName is "Eva-Lise" ta.LastName is  "Carlstrom"
+
             //  * What are mickey.FirstName and mickey.LastName?
+            //   mickey.FirstName is "Michael" mickey.LastName is  "Phoenix"
+
             //  * What are instructor.FirstName and instructor.LastName?
+            //   mickey.FirstName is "Michael" mickey.LastName is  "Phoenix"
 
             RedisplayNames();            
         }
@@ -51,6 +58,20 @@ namespace Lab2b
 
             // Questions:
             // Same questions as before.
+
+            // Questions:
+            //  * What are eva.FirstName and eva.LastName? 
+            //   eva.FirstName is "Eva-Lise" eva.LastName is  "Carlstrom"
+
+            //  * What are ta.FirstName and ta.LastName?
+            //   ta.FirstName is "Eva-Lise" ta.LastName is  "Carlstrom"
+
+            //  * What are mickey.FirstName and mickey.LastName?
+            //   mickey.FirstName is "Mickey" mickey.LastName is  "Phoenix"
+
+            //  * What are instructor.FirstName and instructor.LastName?
+            //   instructor.FirstName is "Mickey" instructor.LastName is  "Phoenix"
+
 
             RedisplayNames();
         }
@@ -64,6 +85,22 @@ namespace Lab2b
             personToAskForHelp.FirstName = "The Also Helpful " + personToAskForHelp.FirstName;
 
             // Same questions...
+            // Questions:
+            //  * What are eva.FirstName and eva.LastName? 
+            //   eva.FirstName is "Eva-Lise" eva.LastName is  "Carlstrom"
+            //   Got this wrong - I believed that when the TA's name changed, it wouldn't propagate backwards to eva.FirstName
+
+            //  * What are ta.FirstName and ta.LastName?
+            //   ta.FirstName is "The Very Helpful Eva-Lise" ta.LastName is  "Carlstrom"
+
+            //  * What are mickey.FirstName and mickey.LastName?
+            //   mickey.FirstName is "Mickey" mickey.LastName is  "Phoenix"
+            //   Got this wrong - I believed that when the Instructor's name changed, it wouldn't propagate backwards to mickey.FirstName
+
+            //  * What are instructor.FirstName and instructor.LastName?
+            //   instructor.FirstName is "The Also Helpful Mickey" instructor.LastName is  "Phoenix"
+
+
 
             RedisplayNames();
         }
@@ -74,6 +111,21 @@ namespace Lab2b
             instructor = ta;
 
             // Same questions...
+            // Questions:
+            //  * What are eva.FirstName and eva.LastName? 
+            //   eva.FirstName is "Eva-Lise" eva.LastName is  "Carlstrom"
+            //  this was wrong from the previous answer
+
+            //  * What are ta.FirstName and ta.LastName?
+            //   ta.FirstName is "The Very Helpful Eva-Lise" ta.LastName is  "Carlstrom"
+
+            //  * What are mickey.FirstName and mickey.LastName?
+            //   mickey.FirstName is "Mickey" mickey.LastName is  "Phoenix"            
+            //  this was wrong from the previous answer
+
+            //  * What are instructor.FirstName and instructor.LastName?
+            //   instructor.FirstName is "The Very Helpful Eva-Lise" instructor.LastName is  "Carlstron"
+
 
             RedisplayNames();
         }
@@ -85,6 +137,20 @@ namespace Lab2b
             mickey.LastName = "Ashes";
 
             // Same questions...
+            // Questions:
+            //  * What are eva.FirstName and eva.LastName? 
+            //   eva.FirstName is "Eva-Lise" eva.LastName is  "Carlstrom"
+            //  this was wrong from the answer 2 Questions ago
+
+            //  * What are ta.FirstName and ta.LastName?
+            //   ta.FirstName is "The Very Helpful Eva-Lise" ta.LastName is  "Carlstrom"
+
+            //  * What are mickey.FirstName and mickey.LastName?
+            //   mickey.FirstName is "Ex-Instructor" mickey.LastName is  "Ashes"
+
+            //  * What are instructor.FirstName and instructor.LastName?
+            //   instructor.FirstName is "The Very Helpful Eva-Lise" instructor.LastName is  "Carlstron"
+
 
             RedisplayNames();
         }
