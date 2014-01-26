@@ -29,11 +29,13 @@ namespace Brennan_Homework_1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Answer form1 = new Answer();
+            {
+                form1.Show();
+            }
 
-            Answer.Show();
-        
 
-    ;
+            ;
 
         }
     }
