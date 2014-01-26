@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace Brennan_Homework_1
 {
-    public partial class Form1 : Form
+    public partial class NotForm1 : Form
     {
-        public Form1()
+        public NotForm1()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
