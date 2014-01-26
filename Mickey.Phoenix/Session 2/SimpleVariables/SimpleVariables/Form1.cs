@@ -20,12 +20,12 @@ namespace SimpleVariables
             x = 4;
             output.Text = (x * y).ToString();
 
-//            y = null;
-//            x = "4";
-//            String x = "4";
-//            String z = 13;
+            y = null;
+            x = "4";
+            String x = "4";
+            String z = 13;
 
-//            output.Text = (x * y).ToString();
+            output.Text = (x * y).ToString();
 
 //            String firstName = "Mickey";
 //            String space = " ";
