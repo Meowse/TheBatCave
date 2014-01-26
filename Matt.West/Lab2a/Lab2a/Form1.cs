@@ -20,7 +20,9 @@ namespace Lab2a
         private void Form1_Load(object sender, EventArgs e)
         {
             String Output1 = "Hello World";
-            String Output2 = "one two three";
+            String S1 = "one";
+            String S2 = "two"; 
+            String S3 = "three";
             int Output3 = 45;
             String Output4 = "\"\"\"\"";
             String Output5 = "\\\\\\\\";
@@ -28,7 +30,7 @@ namespace Lab2a
             String Output7 = "\"\\\"\"\"\\\\\\\"\\\"\"";
 
             output1.Text = Output1;
-            output2.Text = Output2;
+            output2.Text = string.Format("{0} {1} {2}", S1,S2,S3);
             output3.Text = Output3.ToString();
             output4.Text = Output4;
             output5.Text = Output5;
