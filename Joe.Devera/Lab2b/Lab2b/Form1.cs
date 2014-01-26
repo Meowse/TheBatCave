@@ -37,9 +37,13 @@ namespace Lab2b
 
             // Questions:
             //  * What are eva.FirstName and eva.LastName?
+            //    Prediction: Eva-Lise Carlstrom
             //  * What are ta.FirstName and ta.LastName?
+            //    Prediction: Eva-Lise Carlstrom
             //  * What are mickey.FirstName and mickey.LastName?
+            //    Perdiction: Michael Phoenix
             //  * What are instructor.FirstName and instructor.LastName?
+            //    Perdiction: Michael Phoenix
 
             RedisplayNames();            
         }
@@ -50,7 +54,14 @@ namespace Lab2b
             mickey.FirstName = "Mickey";
 
             // Questions:
-            // Same questions as before.
+            //  * What are eva.FirstName and eva.LastName?
+            //    Prediction: Eva Carlstrom
+            //  * What are ta.FirstName and ta.LastName?
+            //    Prediction: Eva Carlstrom
+            //  * What are mickey.FirstName and mickey.LastName?
+            //    Perdiction: Mickey Phoenix
+            //  * What are instructor.FirstName and instructor.LastName?
+            //    Perdiction: Mickey Phoenix
 
             RedisplayNames();
         }
@@ -63,7 +74,19 @@ namespace Lab2b
             personToAskForHelp = instructor;
             personToAskForHelp.FirstName = "The Also Helpful " + personToAskForHelp.FirstName;
 
-            // Same questions...
+            // Questions:
+            //  * What are eva.FirstName and eva.LastName?
+            //    Prediction: The Very Helpful ta
+            //    Actual: The Very Helpful Eva Carlstrom
+            //  * What are ta.FirstName and ta.LastName?
+            //    Actual: The Very Helpful Eva Carlstrom
+            //  * What are mickey.FirstName and mickey.LastName?
+            //    Perdiction: The Very Helpful instructor
+            //    Actual: The Very Helpful Mickey Pheonix
+            //  * What are instructor.FirstName and instructor.LastName?
+            //    Perdiction: The Very Helpful instructor
+            //    Actual: The Very Helpful Mickey Pheonix
+
 
             RedisplayNames();
         }
@@ -73,7 +96,15 @@ namespace Lab2b
             // 4) Mickey gets the Martian Measles, and Eva takes over as teacher for the class.
             instructor = ta;
 
-            // Same questions...
+            // Questions:
+            //  * What are eva.FirstName and eva.LastName?
+            //    Prediction: Eva Carlstrom
+            //  * What are ta.FirstName and ta.LastName?
+            //    Prediction: Eva Carlstrom
+            //  * What are mickey.FirstName and mickey.LastName?
+            //    Perdiction: Mickey Phoenix
+            //  * What are instructor.FirstName and instructor.LastName?
+            //    Prediction: Eva Carlstrom
 
             RedisplayNames();
         }
@@ -84,7 +115,15 @@ namespace Lab2b
             mickey.FirstName = "Ex-Instructor";
             mickey.LastName = "Ashes";
 
-            // Same questions...
+            // Questions:
+            //  * What are eva.FirstName and eva.LastName?
+            //    Prediction: Eva Carlstrom
+            //  * What are ta.FirstName and ta.LastName?
+            //    Prediction: Eva Carlstrom
+            //  * What are mickey.FirstName and mickey.LastName?
+            //    Perdiction: Ex-Instructor Ashes
+            //  * What are instructor.FirstName and instructor.LastName?
+            //    Perdiction: Ex-Instructor Ashes
 
             RedisplayNames();
         }
