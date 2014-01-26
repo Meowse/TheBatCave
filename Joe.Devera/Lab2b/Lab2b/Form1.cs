@@ -82,10 +82,10 @@ namespace Lab2b
             //    Actual: The Very Helpful Eva Carlstrom
             //  * What are mickey.FirstName and mickey.LastName?
             //    Perdiction: The Very Helpful instructor
-            //    Actual: The Very Helpful Mickey Pheonix
+            //    Actual: The Also Helpful Micheal Pheonix
             //  * What are instructor.FirstName and instructor.LastName?
             //    Perdiction: The Very Helpful instructor
-            //    Actual: The Very Helpful Mickey Pheonix
+            //    Actual: The Also Helpful Micheal Pheonix
 
 
             RedisplayNames();
