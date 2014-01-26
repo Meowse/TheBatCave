@@ -36,10 +36,10 @@ namespace Lab2b
             eva.FirstName = "Eva-Lise";
 
             // Questions:
-            //  * What are eva.FirstName and eva.LastName?
-            //  * What are ta.FirstName and ta.LastName?
-            //  * What are mickey.FirstName and mickey.LastName?
-            //  * What are instructor.FirstName and instructor.LastName?
+            //  * What are eva.FirstName and eva.LastName?  Eva-Lise & Carlstrom
+            //  * What are ta.FirstName and ta.LastName?  Eva-Lise & Carlstrom
+            //  * What are mickey.FirstName and mickey.LastName? Michael & Phoenix
+            //  * What are instructor.FirstName and instructor.LastName? Michael & Phoenix
 
             RedisplayNames();            
         }
@@ -50,7 +50,10 @@ namespace Lab2b
             mickey.FirstName = "Mickey";
 
             // Questions:
-            // Same questions as before.
+            //  * What are eva.FirstName and eva.LastName?  Eva-Lise & Carlstrom
+            //  * What are ta.FirstName and ta.LastName?  Eva-Lise & Carlstrom
+            //  * What are mickey.FirstName and mickey.LastName? Mickey & Phoenix
+            //  * What are instructor.FirstName and instructor.LastName? Mickey & Phoenix
 
             RedisplayNames();
         }
@@ -63,7 +66,11 @@ namespace Lab2b
             personToAskForHelp = instructor;
             personToAskForHelp.FirstName = "The Also Helpful " + personToAskForHelp.FirstName;
 
-            // Same questions...
+            // Questions:
+            //  * What are eva.FirstName and eva.LastName?  The Very Helpful Eva-Lise & Carlstrom
+            //  * What are ta.FirstName and ta.LastName?  The Very Helpful Eva-Lise & Carlstrom
+            //  * What are mickey.FirstName and mickey.LastName? The Also Helpful Mickey & Phoenix
+            //  * What are instructor.FirstName and instructor.LastName? The Also Helpful Mickey & Phoenix
 
             RedisplayNames();
         }
@@ -73,7 +80,11 @@ namespace Lab2b
             // 4) Mickey gets the Martian Measles, and Eva takes over as teacher for the class.
             instructor = ta;
 
-            // Same questions...
+            // Questions:
+            //  * What are eva.FirstName and eva.LastName?  The Very Helpful Eva-Lise & Carlstrom
+            //  * What are ta.FirstName and ta.LastName?  The Very Helpful Eva-Lise & Carlstrom
+            //  * What are mickey.FirstName and mickey.LastName? The Also Helpful Mickey & Phoenix
+            //  * What are instructor.FirstName and instructor.LastName? The Very Helpful Eva-Lise & Carlstrom
 
             RedisplayNames();
         }
@@ -84,7 +95,12 @@ namespace Lab2b
             mickey.FirstName = "Ex-Instructor";
             mickey.LastName = "Ashes";
 
-            // Same questions...
+            // Questions:
+            //  * What are eva.FirstName and eva.LastName?  The Very Helpful Eva-Lise & Carlstrom
+            //  * What are ta.FirstName and ta.LastName?  The Very Helpful Eva-Lise & Carlstrom
+            //  * What are mickey.FirstName and mickey.LastName? Ex-Instructor & Ashes
+            //  * What are instructor.FirstName and instructor.LastName? The Very Helpful Eva-Lise & Carlstrom
+
 
             RedisplayNames();
         }
