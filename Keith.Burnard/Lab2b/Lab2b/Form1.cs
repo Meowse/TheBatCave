@@ -36,10 +36,23 @@ namespace Lab2b
             eva.FirstName = "Eva-Lise";
 
             // Questions:
-            //  * What are eva.FirstName and eva.LastName?
+            //  * What are eva.FirstName and eva.LastName? 
+            //    eva.FirstName = Eva-Lise (after update)
+            //    eva.Lastname = Carlstrom
+            
             //  * What are ta.FirstName and ta.LastName?
+            //    ta and eva are reference variables pointing to the same location in memory
+            //    ta.FirstName = Eva-Lise (after update)
+            //    ta.Lastname = Carlstrom
+
             //  * What are mickey.FirstName and mickey.LastName?
+            //    instructor and mickey are reference variables pointing to the same location in memory
+            //    mickey.FirstName = Michael 
+            //    mickey.LastName = Phoenix
+
             //  * What are instructor.FirstName and instructor.LastName?
+            //    instructor.FirstName = Michael 
+            //    instructor.LastName = Phoenix
 
             RedisplayNames();            
         }
@@ -51,6 +64,12 @@ namespace Lab2b
 
             // Questions:
             // Same questions as before.
+            // No changes to eva or ta in this method
+            //    mickey.FirstName = Mickey 
+            //    mickey.LastName = Phoenix
+            //    instructor.FirstName = Mickey 
+            //    instructor.LastName = Phoenix
+
 
             RedisplayNames();
         }
@@ -63,7 +82,17 @@ namespace Lab2b
             personToAskForHelp = instructor;
             personToAskForHelp.FirstName = "The Also Helpful " + personToAskForHelp.FirstName;
 
+            // Working on the premise that the buttons are pushed in order from top to bottom
             // Same questions...
+            //    eva.FirstName = The Very Helpful Eva-Lise 
+            //    eva.Lastname = Carlstrom
+            //    ta.FirstName = The Very Helpful Eva-Lise 
+            //    ta.Lastname = Carlstrom
+
+            //    mickey.FirstName = The Also Helpful Mickey 
+            //    mickey.LastName = Phoenix
+            //    instructor.FirstName = The Also Helpful Mickey 
+            //    instructor.LastName = Phoenix
 
             RedisplayNames();
         }
@@ -74,6 +103,17 @@ namespace Lab2b
             instructor = ta;
 
             // Same questions...
+            //    eva.FirstName = The Very Helpful Eva-Lise 
+            //    eva.Lastname = Carlstrom
+            //    ta.FirstName = The Very Helpful Eva-Lise 
+            //    ta.Lastname = Carlstrom
+
+            //    Oops!
+            //    mickey.FirstName = The Very Helpful Eva-Lise 
+            //    mickey.LastName = Carlstrom
+
+            //    instructor.FirstName = The Very Helpful Eva-Lise
+            //    instructor.LastName = Carlstrom
 
             RedisplayNames();
         }
@@ -85,6 +125,17 @@ namespace Lab2b
             mickey.LastName = "Ashes";
 
             // Same questions...
+            //    Oops!
+            //    eva.FirstName = Ex-Instructor
+            //    eva.Lastname = Ashes
+            //    ta.FirstName = Ex-Instructor
+            //    ta.Lastname = Ashes
+
+            //    Oops!
+            //    mickey.FirstName = Ex-Instructor
+            //    mickey.LastName = Ashes
+            //    instructor.FirstName = Ex-Instructor
+            //    instructor.LastName = Ashes
 
             RedisplayNames();
         }
