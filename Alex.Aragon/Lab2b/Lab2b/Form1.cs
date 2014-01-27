@@ -32,7 +32,7 @@ namespace Lab2b
 
         private void fixEvaNameButton_Click(object sender, EventArgs e)
         {
-            //Explanation for wrong answers: I thought the program would make a copy of the information stored in the object. But instead it looks like the objects are pointing to data.
+            //Explanation  for wrong answers: I thought the program would make a copy of the information stored in the object. But instead it looks like the objects are pointing to data.
             //So when data changes, it changes it for all objects pointing to the same data. Which is why eva.FirstName and ta.FirstName are the same after the first click, 
 
 
