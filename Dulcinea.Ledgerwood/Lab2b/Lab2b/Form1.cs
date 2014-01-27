@@ -37,9 +37,13 @@ namespace Lab2b
 
             // Questions:
             //  * What are eva.FirstName and eva.LastName?
+            // First = Eva-Lise  Last = Carlstrom
             //  * What are ta.FirstName and ta.LastName?
+            // First = Eva-Lise  Last = Carlstrom
             //  * What are mickey.FirstName and mickey.LastName?
+            // First = Michael  Last = Phoenix
             //  * What are instructor.FirstName and instructor.LastName?
+            // First = Michael  Last = Phoenix
 
             RedisplayNames();            
         }
@@ -50,7 +54,14 @@ namespace Lab2b
             mickey.FirstName = "Mickey";
 
             // Questions:
-            // Same questions as before.
+            //  * What are eva.FirstName and eva.LastName?
+            // First = Eva-Lise  Last = Carlstrom
+            //  * What are ta.FirstName and ta.LastName?
+            // First = Eva-Lise  Last = Carlstrom
+            //  * What are mickey.FirstName and mickey.LastName?
+            // First = Mickey  Last = Phoenix
+            //  * What are instructor.FirstName and instructor.LastName?
+            // First = Mickey  Last = Phoenix
 
             RedisplayNames();
         }
@@ -63,7 +74,14 @@ namespace Lab2b
             personToAskForHelp = instructor;
             personToAskForHelp.FirstName = "The Also Helpful " + personToAskForHelp.FirstName;
 
-            // Same questions...
+            //  * What are eva.FirstName and eva.LastName?
+            // First = The Very Helpful  Last = Carlstrom
+            //  * What are ta.FirstName and ta.LastName?
+            // First = The Very Helpful  Last = Carlstrom
+            //  * What are mickey.FirstName and mickey.LastName?
+            // First = The Also Helpful  Last = Phoenix
+            //  * What are instructor.FirstName and instructor.LastName?
+            // First = The Also Helpful  Last = Phoenix
 
             RedisplayNames();
         }
@@ -71,9 +89,17 @@ namespace Lab2b
         private void giveMickeyMartianMeaslesButton_Click(object sender, EventArgs e)
         {
             // 4) Mickey gets the Martian Measles, and Eva takes over as teacher for the class.
+            // I lol'd.  I hope you feel better soon.
             instructor = ta;
 
-            // Same questions...
+            //  * What are eva.FirstName and eva.LastName?
+            // First = The Very Helpful  Last = Carlstrom
+            //  * What are ta.FirstName and ta.LastName?
+            // First = The Very Helpful  Last = Carlstrom
+            //  * What are mickey.FirstName and mickey.LastName?
+            // First = The Also Helpful  Last = Phoenix
+            //  * What are instructor.FirstName and instructor.LastName?
+            // First = The Very Helpful  Last = Carlstrom.
 
             RedisplayNames();
         }
@@ -84,7 +110,14 @@ namespace Lab2b
             mickey.FirstName = "Ex-Instructor";
             mickey.LastName = "Ashes";
 
-            // Same questions...
+            //  * What are eva.FirstName and eva.LastName?
+            // First = The Very Helpful  Last = Carlstrom
+            //  * What are ta.FirstName and ta.LastName?
+            // First = The Very Helpful  Last = Carlstrom
+            //  * What are mickey.FirstName and mickey.LastName?
+            // First = Ex-Instructor  Last = Ashes
+            //  * What are instructor.FirstName and instructor.LastName?
+            // First = The Very Helpful  Last = Carlstrom.
 
             RedisplayNames();
         }
