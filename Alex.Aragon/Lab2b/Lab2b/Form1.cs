@@ -32,14 +32,22 @@ namespace Lab2b
 
         private void fixEvaNameButton_Click(object sender, EventArgs e)
         {
+            //Explanation for wrong answers: I thought the program would make a copy of the information stored in the object. But instead it looks like the objects are pointing to data.
+            //So when data changes, it changes it for all objects pointing to the same data. Which is why eva.FirstName and ta.FirstName are the same after the first click, 
+
+
             // 1) Fix Eva's name
             eva.FirstName = "Eva-Lise";
 
             // Questions:
             //  * What are eva.FirstName and eva.LastName?
+            //    eva.FirstName = Eva-Lise, eva.LastName = Carlstrom
             //  * What are ta.FirstName and ta.LastName?
+            //    ta.FirstName = Eva, ta.LastName = Carlstrom //Wrong: should be ta.FirstName = Eva-Lise
             //  * What are mickey.FirstName and mickey.LastName?
+            //    mickey.FirstName = Michael, mickey.LastName = Phoenix  
             //  * What are instructor.FirstName and instructor.LastName?
+            //    instructor.FirstName = Michael, instructor.LastName = Phoenix
 
             RedisplayNames();            
         }
@@ -50,7 +58,14 @@ namespace Lab2b
             mickey.FirstName = "Mickey";
 
             // Questions:
-            // Same questions as before.
+            //   * What are eva.FirstName and eva.LastName?
+            //    eva.FirstName = Eva-Lise, eva.LastName = Carlstrom
+            //  * What are ta.FirstName and ta.LastName?
+            //    ta.FirstName = Eva, ta.LastName = Carlstrom  //Wrong: should be ta.FirstName = Eva-Lise
+            //  * What are mickey.FirstName and mickey.LastName?
+            //    mickey.FirstName = Mickey, mickey.LastName = Phoenix
+            //  * What are instructor.FirstName and instructor.LastName?
+            //    instructor.FirstName = Michael, instructor.LastName = Phoenix  //Wrong: should be  instructor.FirstName = Mickey
 
             RedisplayNames();
         }
@@ -63,7 +78,15 @@ namespace Lab2b
             personToAskForHelp = instructor;
             personToAskForHelp.FirstName = "The Also Helpful " + personToAskForHelp.FirstName;
 
-            // Same questions...
+            // Questions:
+            //   * What are eva.FirstName and eva.LastName?
+            //    eva.FirstName = Eva-Lise, eva.LastName = Carlstrom //Wrong: should be eva.FirstName = The Very Helpful Eva-Lise
+            //  * What are ta.FirstName and ta.LastName?
+            //    ta.FirstName = Eva, ta.LastName = Carlstrom //Wrong: should be ta.FirstName = The Very Helpful Eva-Lise
+            //  * What are mickey.FirstName and mickey.LastName?
+            //    mickey.FirstName = Mickey, mickey.LastName = Phoenix //Wrong: should be mickey.FirstName = The Also Helpful Mickey
+            //  * What are instructor.FirstName and instructor.LastName?
+            //    instructor.FirstName = Michael, instructor.LastName = Phoenix //Wrong: should be instructor.FirstName = The Also Helpful Mickey
 
             RedisplayNames();
         }
@@ -73,7 +96,15 @@ namespace Lab2b
             // 4) Mickey gets the Martian Measles, and Eva takes over as teacher for the class.
             instructor = ta;
 
-            // Same questions...
+            // Questions:
+            //   * What are eva.FirstName and eva.LastName?
+            //    eva.FirstName = Eva-Lise, eva.LastName = Carlstrom //Wrong: should be eva.FirstName = The Very Helpful Eva-Lise
+            //  * What are ta.FirstName and ta.LastName?
+            //    ta.FirstName = Eva, ta.LastName = Carlstrom //Wrong ta.FirstName = The Very Helpful Eva-Lise
+            //  * What are mickey.FirstName and mickey.LastName?
+            //    mickey.FirstName = Mickey, mickey.LastName = Phoenix //Wrong: should be mickey.FirstName = The Also Helpful Mickey
+            //  * What are instructor.FirstName and instructor.LastName?
+            //    instructor.FirstName = Eva, instructor.LastName = Carlstrom //Wrong: should be mickey.FirstName =  The Very Helpful Eva-Lise instructor.LastName = Carlstrom 
 
             RedisplayNames();
         }
@@ -84,7 +115,15 @@ namespace Lab2b
             mickey.FirstName = "Ex-Instructor";
             mickey.LastName = "Ashes";
 
-            // Same questions...
+            // Questions:
+            //   * What are eva.FirstName and eva.LastName?
+            //    eva.FirstName = Eva-Lise, eva.LastName = Carlstrom
+            //  * What are ta.FirstName and ta.LastName?
+            //    ta.FirstName = Eva, ta.LastName = Carlstrom //Wrong ta.FirstName = The Very Helpful Eva-Lise
+            //  * What are mickey.FirstName and mickey.LastName?
+            //    mickey.FirstName = Ex-Instructor, mickey.LastName = Ashes
+            //  * What are instructor.FirstName and instructor.LastName?
+            //    instructor.FirstName = Eva, instructor.LastName = Carlstrom //Wrong instructor.FirstName = The Very Helpful Eva-Lise
 
             RedisplayNames();
         }
