@@ -84,36 +84,36 @@
             this.evaName.AutoSize = true;
             this.evaName.Location = new System.Drawing.Point(70, 13);
             this.evaName.Name = "evaName";
-            this.evaName.Size = new System.Drawing.Size(112, 13);
+            this.evaName.Size = new System.Drawing.Size(94, 13);
             this.evaName.TabIndex = 4;
-            this.evaName.Text = "Eva\'s name goes here";
+            this.evaName.Text = "Eva-Lise Carlstrom";
             // 
             // taName
             // 
             this.taName.AutoSize = true;
             this.taName.Location = new System.Drawing.Point(70, 37);
             this.taName.Name = "taName";
-            this.taName.Size = new System.Drawing.Size(129, 13);
+            this.taName.Size = new System.Drawing.Size(94, 13);
             this.taName.TabIndex = 5;
-            this.taName.Text = "The TA\'s name goes here";
+            this.taName.Text = "Eva-Lise Carlstrom";
             // 
             // mickeyName
             // 
             this.mickeyName.AutoSize = true;
             this.mickeyName.Location = new System.Drawing.Point(70, 61);
             this.mickeyName.Name = "mickeyName";
-            this.mickeyName.Size = new System.Drawing.Size(127, 13);
+            this.mickeyName.Size = new System.Drawing.Size(82, 13);
             this.mickeyName.TabIndex = 6;
-            this.mickeyName.Text = "Mickey\'s name goes here";
+            this.mickeyName.Text = "Mickey Phoenix";
             // 
             // instructorName
             // 
             this.instructorName.AutoSize = true;
             this.instructorName.Location = new System.Drawing.Point(70, 85);
             this.instructorName.Name = "instructorName";
-            this.instructorName.Size = new System.Drawing.Size(158, 13);
+            this.instructorName.Size = new System.Drawing.Size(82, 13);
             this.instructorName.TabIndex = 7;
-            this.instructorName.Text = "The instructor\'s name goes here";
+            this.instructorName.Text = "Mickey Phoenix";
             // 
             // fixEvaNameButton
             // 
@@ -169,7 +169,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(284, 288);
             this.Controls.Add(this.mickeyShameNameChangeButton);
             this.Controls.Add(this.giveMickeyMartianMeaslesButton);
             this.Controls.Add(this.askForHelpButton);
