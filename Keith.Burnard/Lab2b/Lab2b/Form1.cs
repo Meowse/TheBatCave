@@ -112,6 +112,10 @@ namespace Lab2b
             //    mickey.FirstName = The Very Helpful Eva-Lise 
             //    mickey.LastName = Carlstrom
 
+            //    Ah ha! Had to draw it out in a notebook
+            //    instructor now has the same address as ta, this replaces the previous address which pointed to mickey
+            //    however, mickey is unchanged            
+
             //    instructor.FirstName = The Very Helpful Eva-Lise
             //    instructor.LastName = Carlstrom
 
@@ -136,6 +140,18 @@ namespace Lab2b
             //    mickey.LastName = Ashes
             //    instructor.FirstName = Ex-Instructor
             //    instructor.LastName = Ashes
+
+            //    More Ah Ha moments
+            //    eva.FirstName = The Very Helpful Eva-Lise 
+            //    eva.Lastname = Carlstrom
+            //    ta.FirstName = The Very Helpful Eva-Lise 
+            //    ta.Lastname = Carlstrom
+
+            //    mickey.FirstName = Ex-Instructor
+            //    mickey.LastName = Ashes
+            //    instructor.FirstName = The Very Helpful Eva-Lise
+            //    instructor.LastName = Carlstrom
+
 
             RedisplayNames();
         }
