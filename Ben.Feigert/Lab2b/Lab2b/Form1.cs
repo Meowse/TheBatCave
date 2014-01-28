@@ -37,8 +37,12 @@ namespace Lab2b
 
             // Questions:
             //  * What are eva.FirstName and eva.LastName?
+                    //# eva.FirstName and eva.LastName are parameters of the object "eva". (is the object "overloaded"?),
+                    //# value of eva.FirstName is "Eva-Lise", etc.
             //  * What are ta.FirstName and ta.LastName?
+                    //# looks like they'd work the same way, only "ta" gets the values of whatever's in "eva"
             //  * What are mickey.FirstName and mickey.LastName?
+                    //# same as ta.FirstName: parameters of the object mickey, which gets the values passed in "instructor"
             //  * What are instructor.FirstName and instructor.LastName?
 
             RedisplayNames();            
@@ -51,6 +55,9 @@ namespace Lab2b
 
             // Questions:
             // Same questions as before.
+
+                  //# mickey.FirstName now has the value "Mickey" instead of "Michael", as a result of the button click
+                  //# all other values are unchanged
 
             RedisplayNames();
         }
@@ -65,6 +72,12 @@ namespace Lab2b
 
             // Same questions...
 
+                  //# value of eva.Firstname and eva.LastName are unchanged
+                  //# ta.FirstName is "Eva-Lise" because personToAskForHelp gets values of ta
+                  //# mickey.FirstName is "Mickey"; mickey.LastName is "Phoenix"
+                  //# instructor.FirstName is "Mickey" because personToAskForHelp gets values of instructor in that line
+
+
             RedisplayNames();
         }
 
@@ -74,6 +87,11 @@ namespace Lab2b
             instructor = ta;
 
             // Same questions...
+                  //# value of eva.FirstName is "Eva-Lise"; value of eva.LastName is "Carlstrom"
+                  //# value of ta.FirstName is "Eva-Lise"; ta.LastName is "Carlstrom"
+                  //# mickey.FirstName and mickey.LastName are unchanged
+                  //# instructor.FirstName is "Eva-Lise"; instructor.LastName is "Carlstrom" because instructor gets the values of ta
+
 
             RedisplayNames();
         }
@@ -85,6 +103,10 @@ namespace Lab2b
             mickey.LastName = "Ashes";
 
             // Same questions...
+                  //# values of eva.FirstName and eva.LastName are unchanged
+                  //# values of ta.FirstName and eva.LastName are unchanged
+                  //# mickey.FirstName is "Ex-Instructor"; mickey.LastName is "Ashes"
+                  //# instructor.FirstName and instructor.LastName are unchanged
 
             RedisplayNames();
         }
