@@ -54,7 +54,6 @@
             this.output1.Size = new System.Drawing.Size(96, 13);
             this.output1.TabIndex = 3;
             this.output1.Text = "output 1 goes here";
-            this.output1.Click += new System.EventHandler(this.output1_Click);
             // 
             // label1
             // 
