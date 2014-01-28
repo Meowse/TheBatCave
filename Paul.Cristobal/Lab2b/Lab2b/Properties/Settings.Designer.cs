@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SimpleVariables.Properties
+namespace Lab2b.Properties
 {
 
 
