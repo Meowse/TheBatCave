@@ -36,10 +36,10 @@ namespace Lab2b
             eva.FirstName = "Eva-Lise";
 
             // Questions:
-            //  * What are eva.FirstName and eva.LastName?
-            //  * What are ta.FirstName and ta.LastName?
-            //  * What are mickey.FirstName and mickey.LastName?
-            //  * What are instructor.FirstName and instructor.LastName?
+            //  * What are eva.FirstName and eva.LastName? They will be "Eva-Lise" and "Carlstrom"-Paul C.
+            //  * What are ta.FirstName and ta.LastName? These will be the same as above because "ta" now equals "eva"-Paul C.
+            //  * What are mickey.FirstName and mickey.LastName? They will be "Michael" and "Phoenix"-Paul C.
+            //  * What are instructor.FirstName and instructor.LastName? These will be the same as above because "mickey" now equals "instructor"-Paul C.
 
             RedisplayNames();            
         }
@@ -50,7 +50,7 @@ namespace Lab2b
             mickey.FirstName = "Mickey";
 
             // Questions:
-            // Same questions as before.
+            // Same questions as before. Now mickey.FirstName will be changed from "Michael" to "Mickey"-Paul C.
 
             RedisplayNames();
         }
@@ -64,6 +64,9 @@ namespace Lab2b
             personToAskForHelp.FirstName = "The Also Helpful " + personToAskForHelp.FirstName;
 
             // Same questions...
+            // Window will present the user to ask for help. Available selections will be "ta" or "instructor"-Paul C.
+            // If the user clicks on "ta" button then the window will display the following message: "The Very Helpful Eva-Lise Carlstrom"-Paul C.
+            // If the user click on "isntructor" button then the window will display the following message: "The Also Helpdul Mickey Phoenix"-Paul C.
 
             RedisplayNames();
         }
@@ -74,7 +77,8 @@ namespace Lab2b
             instructor = ta;
 
             // Same questions...
-
+            //Window will present user with a button "giveMickeyMartianMeasles"-Paul C.
+            //If the user clicks the button then instructor will be changed from "Mickey Phoenix" to "Eva-Lise Carlstrom" -Paul C.
             RedisplayNames();
         }
 
@@ -85,6 +89,8 @@ namespace Lab2b
             mickey.LastName = "Ashes";
 
             // Same questions...
+            //Window will present user with a button "mickeyShameNameChangeButton" -Paul C.
+            //If the user clicks the button then the instructor will be changed from "Mickey Phoenix" to "Ex-Instructor Ashes"-Paul C.
 
             RedisplayNames();
         }
@@ -95,6 +101,9 @@ namespace Lab2b
             taName.Text = ta.FirstName + " " + ta.LastName;
             mickeyName.Text = mickey.FirstName + " " + mickey.LastName;
             instructorName.Text = instructor.FirstName + " " + instructor.LastName;
+
+            //Conclusion: I was mostly correct in my individual predictions, but I failed to account for the actions in all of the other variables. I had a narrow focus 
+            // and should have kept a "big picture" mindset. Paul C.
         }
     }
 }
