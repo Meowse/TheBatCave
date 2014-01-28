@@ -37,9 +37,17 @@ namespace Lab2b
 
             // Questions:
             //  * What are eva.FirstName and eva.LastName?
+            //  eva.FirstName = "Eva-Lisa"
+            //  eva.LastName = "Carlstrom"
             //  * What are ta.FirstName and ta.LastName?
+            //  ta.FirstName = "Eva-Lisa"
+            //  ta.LastName = "Carlstrom"
             //  * What are mickey.FirstName and mickey.LastName?
+            //  mickey.FirstName = "Michael"
+            //  mickey.LastName = "Phoenix"
             //  * What are instructor.FirstName and instructor.LastName?
+            //  instructor.FirstName = "Michael"
+            //  instructor.LastName = "Phoenix"
 
             RedisplayNames();            
         }
@@ -52,6 +60,20 @@ namespace Lab2b
             // Questions:
             // Same questions as before.
 
+            // Questions:
+            //  * What are eva.FirstName and eva.LastName?
+            //  eva.FirstName = "Eva"
+            //  eva.LastName = "Carlstrom"
+            //  * What are ta.FirstName and ta.LastName?
+            //  ta.FirstName = "Eva"
+            //  ta.LastName = "Carlstrom"
+            //  * What are mickey.FirstName and mickey.LastName?
+            //  mickey.FirstName = "Mickey"
+            //  mickey.LastName = "Phoenix"
+            //  * What are instructor.FirstName and instructor.LastName?
+            //  instructor.FirstName = "Mickey"
+            //  instructor.LastName = "Phoenix"
+
             RedisplayNames();
         }
 
@@ -59,11 +81,26 @@ namespace Lab2b
         {
             // 3) Ask first the TA, and then the instructor, for help
             Person personToAskForHelp = ta;
-            personToAskForHelp.FirstName = "The Very Helpful " + personToAskForHelp.FirstName;
-            personToAskForHelp = instructor;
-            personToAskForHelp.FirstName = "The Also Helpful " + personToAskForHelp.FirstName;
+            personToAskForHelp.FirstName = "The Very Helpful " + personToAskForHelp.FirstName;  
+            personToAskForHelp = instructor;  
+            personToAskForHelp.FirstName = "The Also Helpful " + personToAskForHelp.FirstName;  
 
             // Same questions...
+
+            // Questions:
+            //  * What are eva.FirstName and eva.LastName?
+            //  eva.FirstName = "The Very Helpful Eva"
+            //  eva.LastName = "Carlstrom"
+            //  * What are ta.FirstName and ta.LastName?
+            //  ta.FirstName = "The Very Helpful Eva"
+            //  ta.LastName = "Carlstrom"
+            //  * What are mickey.FirstName and mickey.LastName?
+            //  mickey.FirstName = "The Also Helpful Michael"
+            //  mickey.LastName = "Phoenix"
+            //  * What are instructor.FirstName and instructor.LastName?
+            //  instructor.FirstName = "The Also Helpful Michael"
+            //  instructor.LastName = "Phoenix"
+
 
             RedisplayNames();
         }
@@ -75,6 +112,21 @@ namespace Lab2b
 
             // Same questions...
 
+            // Questions:
+            //  * What are eva.FirstName and eva.LastName?
+            //  eva.FirstName = "Eva"
+            //  eva.LastName = "Carlstrom"
+            //  * What are ta.FirstName and ta.LastName?
+            //  ta.FirstName = "Eva"
+            //  ta.LastName = "Carlstrom"
+            //  * What are mickey.FirstName and mickey.LastName?
+            //  mickey.FirstName = "Michael"
+            //  mickey.LastName = "Phoenix"
+            //  * What are instructor.FirstName and instructor.LastName?
+            //  instructor.FirstName = "Eva"
+            //  instructor.LastName = "Carlstrom"
+
+
             RedisplayNames();
         }
 
@@ -85,6 +137,21 @@ namespace Lab2b
             mickey.LastName = "Ashes";
 
             // Same questions...
+
+            // Questions:
+            //  * What are eva.FirstName and eva.LastName?
+            //  eva.FirstName = "Eva"
+            //  eva.LastName = "Carlstrom"
+            //  * What are ta.FirstName and ta.LastName?
+            //  ta.FirstName = "Eva"
+            //  ta.LastName = "Carlstrom"
+            //  * What are mickey.FirstName and mickey.LastName?
+            //  mickey.FirstName = "Ex-Instructor"
+            //  mickey.LastName = "Ashes"
+            //  * What are instructor.FirstName and instructor.LastName?
+            //  instructor.FirstName = "Ex-Instructor"
+            //  instructor.LastName = "Ashes"
+
 
             RedisplayNames();
         }
