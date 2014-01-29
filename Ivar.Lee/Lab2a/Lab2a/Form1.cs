@@ -16,10 +16,5 @@ namespace Lab2a
         {
             InitializeComponent();
         }
-
-        private void output1_Click(object sender, EventArgs e)
-        {
-            string=(@"Hello world")
-        }
     }
 }
