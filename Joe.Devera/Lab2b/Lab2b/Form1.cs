@@ -102,7 +102,7 @@ namespace Lab2b
             //  * What are ta.FirstName and ta.LastName?
             //    Prediction: Eva Carlstrom
             //  * What are mickey.FirstName and mickey.LastName?
-            //    Perdiction: Mickey Phoenix
+            //    Perdiction: Micheal Phoenix
             //  * What are instructor.FirstName and instructor.LastName?
             //    Prediction: Eva Carlstrom
 
