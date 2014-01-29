@@ -16,7 +16,8 @@
 
         public bool NegatesItsInputSingleLine(bool input)
         {
-            return !input;
+            // Use resharper on the above to reduce it to a single line.
+            return false;
         }
 
         public bool TrueIfBothInputsAreTrue(bool input1, bool input2)
