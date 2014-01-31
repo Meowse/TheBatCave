@@ -37,7 +37,14 @@ namespace ExploringCSharp
             {
                 return number*number;
             }
-            return 0;
+            if (number == 1)
+            {
+                return number;
+            }
+
+            var myLog = (int)Math.Log10(number) + 1;
+            var myMultiplier = (int)Math.Pow(10, myLog);
+            return number*myMultiplier;
         }
     }
 }
