@@ -37,9 +37,14 @@ namespace Lab2b
 
             // Questions:
             //  * What are eva.FirstName and eva.LastName?
+            // eva.FirstName should be Eva-Lise and eva.LastName should be Carlstrom
             //  * What are ta.FirstName and ta.LastName?
+            // ta.FirstName should be Eva and ta.LastName should be Carlstrom
+            // Got this wrong, I guess ta is a reference to eva 
             //  * What are mickey.FirstName and mickey.LastName?
+            // mickey.FirstName should be Michael and mickey.LastName Phoenix
             //  * What are instructor.FirstName and instructor.LastName?
+            // instructor.FirstName should be Michael and instructor.LastName should be Phoenix
 
             RedisplayNames();            
         }
@@ -51,6 +56,15 @@ namespace Lab2b
 
             // Questions:
             // Same questions as before.
+            //  * What are eva.FirstName and eva.LastName?
+            // eva.FirstName should be Eva-Lise and eva.LastName should be Carlstrom
+            //  * What are ta.FirstName and ta.LastName?
+            // ta.FirstName should be Eva-Lise and ta.LastName should be Carlstrom
+            //  * What are mickey.FirstName and mickey.LastName?
+            // mickey.FirstName should be Mickey and mickey.LastName Phoenix
+            //  * What are instructor.FirstName and instructor.LastName?
+            // instructor.FirstName should be Mickey and instructor.LastName should be Phoenix
+
 
             RedisplayNames();
         }
@@ -64,6 +78,14 @@ namespace Lab2b
             personToAskForHelp.FirstName = "The Also Helpful " + personToAskForHelp.FirstName;
 
             // Same questions...
+            //  * What are eva.FirstName and eva.LastName?
+            // eva.FirstName should be The Very Helpful Eva-Lise and eva.LastName should be Carlstrom
+            //  * What are ta.FirstName and ta.LastName?
+            // ta.FirstName should be The Very Helpful Eva-Lise and ta.LastName should be Carlstrom
+            //  * What are mickey.FirstName and mickey.LastName?
+            // mickey.FirstName should be The Also Helpful Michael and mickey.LastName Phoenix
+            //  * What are instructor.FirstName and instructor.LastName?
+            // instructor.FirstName should be The Also Helpful Michael and instructor.LastName should be Phoenix
 
             RedisplayNames();
         }
@@ -74,6 +96,14 @@ namespace Lab2b
             instructor = ta;
 
             // Same questions...
+            //  * What are eva.FirstName and eva.LastName?
+            // eva.FirstName should be The Very Helpful Eva-Lise and eva.LastName should be Carlstrom
+            //  * What are ta.FirstName and ta.LastName?
+            // ta.FirstName should be The Very Helpful Eva-Lise and ta.LastName should be Carlstrom
+            //  * What are mickey.FirstName and mickey.LastName?
+            // mickey.FirstName should be The Also Helpful Michael and mickey.LastName Phoenix
+            //  * What are instructor.FirstName and instructor.LastName?
+            // instructor.FirstName should be Very Helpful Eva-Lise and instructor.LastName should be Carlstrom
 
             RedisplayNames();
         }
@@ -85,6 +115,14 @@ namespace Lab2b
             mickey.LastName = "Ashes";
 
             // Same questions...
+            //  * What are eva.FirstName and eva.LastName?
+            // eva.FirstName should be The Very Helpful Eva-Lise and eva.LastName should be Carlstrom
+            //  * What are ta.FirstName and ta.LastName?
+            // ta.FirstName should be The Very Helpful Eva-Lise and ta.LastName should be Carlstrom
+            //  * What are mickey.FirstName and mickey.LastName?
+            // mickey.FirstName should be Ex-Instructor and mickey.LastName Ashes
+            //  * What are instructor.FirstName and instructor.LastName?
+            // instructor.FirstName should be Very Helpful Eva-Lise and instructor.LastName should be Carlstrom
 
             RedisplayNames();
         }
