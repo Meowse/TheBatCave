@@ -1,4 +1,5 @@
-﻿namespace ExploringCSharp
+﻿//using System.Math;
+namespace ExploringCSharp
 {
     public class DoingMath
     {
