@@ -18,14 +18,7 @@
             // Use resharper on the above to reduce it to a single line.
             // return false;
         {
-            if (input == true)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+            return !input;
         }
 
         public bool TrueIfBothInputsAreTrue(bool input1, bool input2)
@@ -57,22 +50,18 @@
         public bool TrueIfBothInputsAreTrueSingleLine(bool input1, bool input2)
             // Use resharper on the above to reduce it to a single line.
             //return false;
+ //       {
+ //           if (input1 == true)
+ //           {
+ //               return input2 == true;
+ //           }
+ //           else
+ //           {
+ //               return false;
+ //           }
+ //       }
         {
-            if (input1 == true)
-            {
-                if (input2 == true)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            else
-            {
-                    return false;
-            }
+            return input1 == true && input2 == true;
         }
 
 
@@ -103,26 +92,13 @@
             }
         }
 
+
         public bool TrueIfEitherInputIsTrueSingleLine(bool input1, bool input2)
             // Use resharper on the above to reduce it to a single line.
             //return false;
         {
             // Use resharper on this to reduce it to a single line.
-            if (input1 == true)
-            {
-                    return true;
-            }
-            else
-            {
-                if (input2 == true)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
+            return input1 == true || input2 == true;
         }
 
         public bool MustPayExtraSurchargeToRentACar(string gender, int age)
@@ -138,14 +114,7 @@
             }
             else
             {
-                if (gender == "M" && age < 25)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                return gender == "M" && age < 25;
             }
         }
     }
