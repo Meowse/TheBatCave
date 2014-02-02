@@ -18,6 +18,9 @@ namespace ExploringCSharp
         public string GreetsByCombiningStringsWithStringBuilder(string name)
         {
             StringBuilder builder = new StringBuilder(100);
+
+            builder.Insert(0, 4);
+
             // Try typing "builder." and seeing what auto-complete options ReSharper gives you.
             return builder.ToString();
         }
