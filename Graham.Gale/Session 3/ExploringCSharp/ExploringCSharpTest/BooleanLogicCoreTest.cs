@@ -55,5 +55,16 @@ namespace ExploringCSharpTest
             Assert.That(new BooleanLogic().TrueIfEitherInputIsTrueSingleLine(false, true), Is.True);
             Assert.That(new BooleanLogic().TrueIfEitherInputIsTrueSingleLine(false, false), Is.False);
         }
+        [Test]
+        public void MustPayExtraSurchargeToRentACarIsOnlyTrueIfMaleAndUnder25()
+         {
+            Assert.That(new BooleanLogic().MustPayExtraSurchargeToRentACar("M", 20), Is.True);
+            Assert.That(new BooleanLogic().MustPayExtraSurchargeToRentACar("M", 30), Is.False);
+            Assert.That(new BooleanLogic().MustPayExtraSurchargeToRentACar("M", 25), Is.False);
+            Assert.That(new BooleanLogic().MustPayExtraSurchargeToRentACar("F", 20), Is.False);
+            Assert.That(new BooleanLogic().MustPayExtraSurchargeToRentACar("F", 25), Is.False);
+        }
+
+    
     }
 }
