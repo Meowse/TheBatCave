@@ -12,14 +12,17 @@ namespace ExploringCSharp
         public string GreetsByCombiningStringsWithFormats(string name)
         {
             // try googling "string formatting in C#"
-            return null;
+            return GreetsByCombiningStringsWithPlus("Mickey");
         }
 
-        public string GreetsByCombiningStringsWithStringBuilder(string name)
+        public StringBuilder GreetsByCombiningStringsWithStringBuilder(string name)
         {
-            StringBuilder builder = new StringBuilder(100);
+            var builder = new StringBuilder(100);
             // Try typing "builder." and seeing what auto-complete options ReSharper gives you.
-            return builder.ToString();
+            return builder;
+            //builder.
+            //ReSharper asks if i want to remove unreachable code or comment unreachable code 
+
         }
     }
 }
