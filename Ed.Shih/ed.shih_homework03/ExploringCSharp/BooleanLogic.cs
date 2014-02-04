@@ -21,6 +21,11 @@
 
         public bool TrueIfBothInputsAreTrue(bool input1, bool input2)
         {
+            return SingleTrueIfBothInputsAreTrue1ATrueIfBothInputsAreTrue(input1, input2);
+        }
+
+        private static bool SingleTrueIfBothInputsAreTrue1ATrueIfBothInputsAreTrue(bool input1, bool input2)
+        {
             if (input1 == true)
             {
                 if (input2 == true)
@@ -48,12 +53,17 @@
         public bool TrueIfBothInputsAreTrueSingleLine(bool input1, bool input2)
         {
             // Use resharper on the above to reduce it to a single line.
-            return false;
+            return SingleTrueIfBothInputsAreTrue1ATrueIfBothInputsAreTrue(input1, input2);
         }
 
         public bool TrueIfEitherInputIsTrue(bool input1, bool input2)
         {
             // Use resharper on this to reduce it to a single line.
+            return TrueIfEitherInputIsTrueA(input1, input2);
+        }
+
+        private static bool TrueIfEitherInputIsTrueA(bool input1, bool input2)
+        {
             if (input1 == true)
             {
                 if (input2 == true)
@@ -81,7 +91,7 @@
         public bool TrueIfEitherInputIsTrueSingleLine(bool input1, bool input2)
         {
             // Use resharper on the above to reduce it to a single line.
-            return false;
+            return TrueIfEitherInputIsTrueA(input1, input2);
         }
 
         public bool MustPayExtraSurchargeToRentACar(string gender, int age)
