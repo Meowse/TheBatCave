@@ -6,7 +6,7 @@ namespace ExploringCSharp
     {
         public string GreetsByCombiningStringsWithPlus(string name)
         {
-            return "Hello, " + name;
+            return string.Format("Hello, {0}", "Mickey");
         }
 
         public string GreetsByCombiningStringsWithFormats(string name)
@@ -17,9 +17,9 @@ namespace ExploringCSharp
 
         public string GreetsByCombiningStringsWithStringBuilder(string name)
         {
-            StringBuilder builder = new StringBuilder(100);
+            var builder = new StringBuilder(100);
             // Try typing "builder." and seeing what auto-complete options ReSharper gives you.
-            return builder.ToString();
+            return builder.ToString(builder);
         }
     }
 }
