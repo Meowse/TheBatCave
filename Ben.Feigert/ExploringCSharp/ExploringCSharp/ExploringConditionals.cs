@@ -16,11 +16,9 @@
 
         public string ConvertsBoolToYesOrNoSingleLine(bool value)
         {
-            // Use ReSharper on the code above to make it a single line.
-            // You may want to google "C# the question mark colon operator".
-            // My first thought was to google "C# ?:", but it turns out that
-            // google doesn't handle pure punctuation that well.
-            return "";
+            // ### Used ReSharper on the code above to make it a single line.
+            
+            return value ? "Yes" : "No";
         }
 
         public string DoubleString(string stringToDouble)

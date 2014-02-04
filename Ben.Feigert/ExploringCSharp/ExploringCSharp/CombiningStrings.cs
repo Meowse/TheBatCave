@@ -13,7 +13,7 @@ namespace ExploringCSharp
         public string GreetsByCombiningStringsWithFormats(string name)
         {
             // try googling "string formatting in C#"
-            //want to return "Hello, Mickey" return "Hello,"
+            //want to return "Hello, Mickey"
 
             string value1 = "Hello";
             string value2 = "Mickey";
