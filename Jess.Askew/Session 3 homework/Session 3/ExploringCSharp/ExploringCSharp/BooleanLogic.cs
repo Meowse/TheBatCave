@@ -4,14 +4,8 @@
     {
         public bool NegatesItsInput(bool input)
         {
-            if (input == true)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+            if (!input) return true;
+            return false;
         }
 
         public bool NegatesItsInputSingleLine(bool input)
@@ -47,7 +41,7 @@
             // Implement this one from scratch so that all tests pass.  
             // Age is a whole number.  The intended values and meanings of the string "gender"
             // can be inferred from the tests.
-            return false;
+            return gender == "M" && age < 25;
         }
     }
 }
