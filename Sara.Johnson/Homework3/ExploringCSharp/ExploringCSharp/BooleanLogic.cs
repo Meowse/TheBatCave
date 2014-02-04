@@ -4,85 +4,74 @@
     {
         public bool NegatesItsInput(bool input)
         {
-            if (input == true)
+            if (input)
             {
                 return false;
             }
-            else
-            {
-                return true;
-            }
+            return true;
         }
 
         public bool NegatesItsInputSingleLine(bool input)
         {
             // Use resharper on the above to reduce it to a single line.
-            return false;
+            return !input;
         }
 
         public bool TrueIfBothInputsAreTrue(bool input1, bool input2)
         {
-            if (input1 == true)
+            switch (input1)
             {
-                if (input2 == true)
-                {
-                    return true;
-                }
-                else
-                {
+                case true:
+                    if (input2 == true)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                case false:
                     return false;
-                }
-            }
-            else
-            {
-                if (input1 == true)
-                {
+                default:
                     return false;
-                }
-                else
-                {
-                    return false;
-                }
             }
         }
 
         public bool TrueIfBothInputsAreTrueSingleLine(bool input1, bool input2)
         {
             // Use resharper on the above to reduce it to a single line.
+
+            return input1 == true & input2 == true;
+
+            /*
+             if (input1 == true & input2 == true)
+            {
+                return true;
+            }
             return false;
+             */
         }
 
         public bool TrueIfEitherInputIsTrue(bool input1, bool input2)
         {
             // Use resharper on this to reduce it to a single line.
-            if (input1 == true)
+
+            return input1 | input2 == true;
+
+            /*
+              if (input1 == true | input2 == true)
             {
-                if (input2 == true)
-                {
-                    return true;
-                }
-                else
-                {
-                    return true;
-                }
+                return true;
             }
-            else
-            {
-                if (input2 == true)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
+            return false;
+             */
         }
 
         public bool TrueIfEitherInputIsTrueSingleLine(bool input1, bool input2)
         {
             // Use resharper on the above to reduce it to a single line.
-            return false;
+
+            return input1 == true | input2 == true;
         }
 
         public bool MustPayExtraSurchargeToRentACar(string gender, int age)
@@ -90,7 +79,19 @@
             // Implement this one from scratch so that all tests pass.  
             // Age is a whole number.  The intended values and meanings of the string "gender"
             // can be inferred from the tests.
+            if (gender == "M" & age < 25)
+            {
+                return true;
+            }
+            else switch (gender)
+            {
+                case "O":
+                    return true;
+                case "P":
+                    return true;
+            }
             return false;
+
         }
     }
 }
