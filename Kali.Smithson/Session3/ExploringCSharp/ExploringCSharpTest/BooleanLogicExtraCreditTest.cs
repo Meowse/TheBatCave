@@ -23,7 +23,7 @@ namespace ExploringCSharpTest
         [Test]
         public void PersonsOfNontraditionalGenderMustPayExtraSurchargeToRentACar()
         {
-            Assert.That(new BooleanLogic().MustPayExtraSurchargeToRentACar("O", 19), Is.True);
+            Assert.That(new BooleanLogic().MustPayExtraSurchargeToRentACar("O", 19), Is.False);
             Assert.That(new BooleanLogic().MustPayExtraSurchargeToRentACar("O", 25), Is.True);
         }
 
