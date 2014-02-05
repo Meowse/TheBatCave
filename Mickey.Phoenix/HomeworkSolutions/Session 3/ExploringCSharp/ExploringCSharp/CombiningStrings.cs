@@ -12,13 +12,18 @@ namespace ExploringCSharp
         public string GreetsByCombiningStringsWithFormats(string name)
         {
             // try googling "string formatting in C#"
-            return null;
+            return string.Format("{1}, {0}", name, "Hello");
         }
 
         public string GreetsByCombiningStringsWithStringBuilder(string name)
         {
             StringBuilder builder = new StringBuilder(100);
+//            builder.Append(true);
+//            builder.Append(37);
             // Try typing "builder." and seeing what auto-complete options ReSharper gives you.
+            builder.Append("Hello");
+            builder.Append(", ");
+            builder.Append(name);
             return builder.ToString();
         }
     }
