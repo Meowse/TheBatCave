@@ -15,11 +15,11 @@ namespace ExploringCSharp
             return string.Format("Hello, " + name);
         }
 
-        public string GreetsByCombiningStringsWithStringBuilder(string name)
+        public string GreetsByCombiningStringsWithStringBuilderWorks(string name)
         {
             StringBuilder builder = new StringBuilder(100);
 
-            builder.Insert(0, 4);
+            builder.Append("Hello, Mickey");
 
             // Try typing "builder." and seeing what auto-complete options ReSharper gives you.
             return builder.ToString();
