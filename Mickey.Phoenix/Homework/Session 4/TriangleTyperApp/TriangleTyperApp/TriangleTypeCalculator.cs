@@ -4,7 +4,7 @@
     {
         public string GetTriangleType(string sideA, string sideB, string sideC)
         {
-            return "Isosceles";
+            return "Equilateral";
         }
     }
 }
