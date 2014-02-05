@@ -23,18 +23,15 @@
 
         public string DoubleString(string stringToDouble)
         {
-            return DoubleStringWithInputValidationPatternA(stringToDouble);
-        }
-
-        private static string DoubleStringWithInputValidationPatternA(string stringToDouble)
-        {
             if (stringToDouble == null)
             {
                 return null;
             }
-            return stringToDouble + stringToDouble;
+            else
+            {
+                return stringToDouble + stringToDouble;
+            }            
         }
-
         public string DoubleStringWithInputValidationPattern(string stringToDouble)
         {
             // Use Resharper on the code above to eliminate the "else" case.  This is a common pattern
@@ -42,6 +39,10 @@
             // and have something more complicated to do with normal input.  You just check for
             // the invalid input, and return if you find it.  The rest of the method can be as 
             // complicated as you want, and it doesn't need to be "nested" inside an "else" clause.
+            if (stringToDouble == null)
+            {
+                return null;
+            }
             return stringToDouble + stringToDouble;
         }
 
