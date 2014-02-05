@@ -9,7 +9,8 @@ namespace ExploringCSharpTest
         [Test]
         public void GreetsByCombiningStringsWithStringBuilderWorks()
         {
-            Assert.That(new CombiningStrings().GreetsByCombiningStringsWithFormats("Mickey"), Is.EqualTo("Hello, Mickey"));
+            // I believe this is what you had intended.  <insert smiley face here>
+            Assert.That(new CombiningStrings().GreetsByCombiningStringsWithStringBuilder("Mickey"), Is.EqualTo("Hello, Mickey"));
         }
     }
 }
