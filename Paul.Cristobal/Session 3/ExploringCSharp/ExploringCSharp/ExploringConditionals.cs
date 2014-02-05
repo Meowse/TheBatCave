@@ -8,10 +8,7 @@
             {
                 return "Yes";
             }
-            else
-            {
-                return "No";
-            }
+            return "No";
         }
 
         public string ConvertsBoolToYesOrNoSingleLine(bool value)
