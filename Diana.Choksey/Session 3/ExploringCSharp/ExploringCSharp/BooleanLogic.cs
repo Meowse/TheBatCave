@@ -1,4 +1,6 @@
-﻿namespace ExploringCSharp
+﻿using System;
+
+namespace ExploringCSharp
 {
     public class BooleanLogic
     {
@@ -87,11 +89,36 @@
 
         public bool MustPayExtraSurchargeToRentACar(string gender, int age)
         {
-            
-            // Implement this one from scratch so that all tests pass.  
+            if (Convert.ToBoolean(gender = "M"))
+            {
+                if (age < 25)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                if (gender != "M")
+                {
+                    return false;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
+
+        // Implement this one from scratch so that all tests pass.  
             // Age is a whole number.  The intended values and meanings of the string "gender"
             // can be inferred from the tests.
-            return false;
+            //else
+            //return true;
         }
     }
-}
+
