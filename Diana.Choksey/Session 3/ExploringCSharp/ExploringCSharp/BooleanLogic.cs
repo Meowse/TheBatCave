@@ -89,7 +89,7 @@ namespace ExploringCSharp
 
         public bool MustPayExtraSurchargeToRentACar(string gender, int age)
         {
-            if (Convert.ToBoolean(gender = "M"))
+            if (gender == "M")
             {
                 if (age < 25)
                 {
