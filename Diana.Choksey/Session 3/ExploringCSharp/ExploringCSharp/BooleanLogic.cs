@@ -91,25 +91,11 @@ namespace ExploringCSharp
         {
             if (gender == "M")
             {
-                if (age < 25)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                return age < 25;
             }
             else
             {
-                if (gender != "M")
-                {
-                    return false;
-                }
-                else
-                {
-                    return false;
-                }
+                return false;
             }
         }
 

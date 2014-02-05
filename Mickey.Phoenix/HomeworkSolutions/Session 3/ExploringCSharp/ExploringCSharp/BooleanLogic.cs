@@ -1,4 +1,6 @@
-﻿namespace ExploringCSharp
+﻿using System.Security.Cryptography.X509Certificates;
+
+namespace ExploringCSharp
 {
     public class BooleanLogic
     {
@@ -47,8 +49,17 @@
 
         public bool TrueIfBothInputsAreTrueSingleLine(bool input1, bool input2)
         {
+//            int x;
+//            int y = x * x;
+//
+//            bool val;
+//            bool result = val && val;
+//
+//            bool val2;
+//            bool result2 = val2 == val2;
+
             // Use resharper on the above to reduce it to a single line.
-            return false;
+            return input1 && input2;
         }
 
         public bool TrueIfEitherInputIsTrue(bool input1, bool input2)
