@@ -9,6 +9,7 @@ namespace ExploringCSharpTest
         [Test]
         public void NegatesItsInputReturnsTrueForFalseAndFalseForTrue()
         {
+            //BooleanLogic is in the BooleanLogic.cs above
             Assert.That(new BooleanLogic().NegatesItsInput(false), Is.True);
             Assert.That(new BooleanLogic().NegatesItsInput(true), Is.False);
         }
