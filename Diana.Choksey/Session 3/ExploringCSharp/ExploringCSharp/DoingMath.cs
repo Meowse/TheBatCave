@@ -1,9 +1,11 @@
-﻿namespace ExploringCSharp
+﻿using System;
+namespace ExploringCSharp
 {
     public class DoingMath
     {
         public int ReturnTheLargerNumber(int number1, int number2)
         {
+              
             // Type "Math.", and look at the various mathematical functions that are defined for you.
             // Notice that you'll have to say "using System.Math" at the top, or type "System.Math.",
             // in order to see it.
@@ -16,9 +18,10 @@
         public int GetBiggestMagnitude(int number1, int number2)
         {
             // Try googling "C# absolute value of a number"
-            return 0;
+            
+          
+           return 0;
         }
-
         public int MultiplyByTheNextLargerPowerOfTen(int number)
         {
             // Try googling "C# exponents and logarithms".  Or just "exponents and logarithms",
