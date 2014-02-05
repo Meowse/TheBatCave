@@ -6,13 +6,21 @@ namespace ExploringCSharp
     {
         public string GreetsByCombiningStringsWithPlus(string name)
         {
+            name = "Mickey";
             return "Hello, " + name;
         }
 
         public string GreetsByCombiningStringsWithFormats(string name)
         {
             // try googling "string formatting in C#"
-            return null;
+            string value1 = "Hello";
+            string value2 = "Mickey";
+
+            string result = string.Format("{0}, {1}",
+                value1,
+                value2);
+
+            return result;
         }
 
         public string GreetsByCombiningStringsWithStringBuilder(string name)
