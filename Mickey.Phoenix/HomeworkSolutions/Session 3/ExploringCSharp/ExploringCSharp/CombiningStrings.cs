@@ -17,13 +17,10 @@ namespace ExploringCSharp
 
         public string GreetsByCombiningStringsWithStringBuilder(string name)
         {
+//            StringBuilder builder = new StringBuilder("Hello, ", 100);
+//            builder.Append(name);
             StringBuilder builder = new StringBuilder(100);
-//            builder.Append(true);
-//            builder.Append(37);
-            // Try typing "builder." and seeing what auto-complete options ReSharper gives you.
-            builder.Append("Hello");
-            builder.Append(", ");
-            builder.Append(name);
+            builder.AppendFormat("Hello, {0}", name);
             return builder.ToString();
         }
     }
