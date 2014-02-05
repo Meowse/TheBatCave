@@ -2,6 +2,8 @@
 {
     public class BooleanLogic
     {
+        public string Gender = "X";
+        public int Age = 0;
         public bool NegatesItsInput(bool input)
         {
             if (input == true)
@@ -108,7 +110,7 @@
             //return false;
 
         {
-            if (gender == "W")
+            if (gender == "M")
             {
                 return false;
             }
