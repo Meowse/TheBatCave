@@ -27,12 +27,19 @@ namespace ExploringCSharp
             // if college math was too long ago for you (I had to look it up the last time I needed
             // to do this, so don't feel bad if you do, too).
 
-            // now I know it's "power of 10"
-            int mylog = (int)Math.Log10(number) + 1;
+            // This is 100% stolen.  It appears I can't do math anymore.  <sigh>
 
-            // multiplier
-            int myMultiplier = (int) Math.Pow(10, mylog);
-            
+            if (number % 10 == 0)
+            {
+                return number * number;
+            }
+            if (number == 1)
+            {
+                return number;
+            }
+
+            var myLog = (int)Math.Log10(number) + 1;
+            var myMultiplier = (int)Math.Pow(10, myLog);
             return number * myMultiplier;
         }
     }
