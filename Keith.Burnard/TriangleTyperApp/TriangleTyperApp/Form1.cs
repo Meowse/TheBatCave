@@ -18,9 +18,28 @@ namespace TriangleTyperApp
             string sideB = sideBField.Text;
             string sideC = sideCField.Text;
 
-            string triangleType = _calculator.GetTriangleType(sideA, sideB, sideC);
+            if (InputValid(sideA, sideB, sideC))
+            {
+                string triangleType = _calculator.GetTriangleType(sideA, sideB, sideC);
+                triangleTypeDisplay.Text = triangleType;
+            }
 
-            triangleTypeDisplay.Text = triangleType;
+            
+        }
+
+        private bool InputValid(string sideA, string sideB, string sideC)
+        {
+            bool isAllInputValid = true;
+            int sideAInt;
+            
+
+            if (! int.TryParse(sideA, out sideAInt))
+            {
+                isAllInputValid = false;
+            }
+
+            return isAllInputValid;
+            
         }
     }
 }
