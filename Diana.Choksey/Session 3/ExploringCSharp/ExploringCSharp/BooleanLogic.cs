@@ -89,13 +89,14 @@ namespace ExploringCSharp
 
         public bool MustPayExtraSurchargeToRentACar(string gender, int age)
         {
-            if (gender == "M")
+            switch (gender)
             {
-                return age < 25;
-            }
-            else
-            {
-                return false;
+                case "M":
+                    return age < 25;
+                case "F":
+                    return false;
+                default:
+                    return true;
             }
         }
 
