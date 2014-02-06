@@ -32,7 +32,6 @@ namespace TriangleTypeCalculatorTest
         public void TestScalene()
         {
             Assert.That(_calculator.GetTriangleType("3", "4", "5"), Is.EqualTo("Scalene"));
-
         }
     }
 

@@ -29,17 +29,30 @@ namespace TriangleTyperApp
 
         private bool InputValid(string sideA, string sideB, string sideC)
         {
-            bool isAllInputValid = true;
             int sideAInt;
+            int sideBInt;
+            int sideCInt;
             
-
-            if (! int.TryParse(sideA, out sideAInt))
+            if (!int.TryParse(sideA, out sideAInt))
             {
-                isAllInputValid = false;
+                triangleTypeDisplay.Text = "Input must be a positive integer";
+                return false;
+            }
+            if (!int.TryParse(sideB, out sideBInt))
+            {
+                triangleTypeDisplay.Text = "Input must be a positive integer";
+                return false;
+            }
+            if (!int.TryParse(sideB, out sideBInt))
+            {
+                triangleTypeDisplay.Text = "Input must be a positive integer";
+                return false;
             }
 
-            return isAllInputValid;
-            
+
+
+            return true;
+
         }
     }
 }
