@@ -1,32 +1,48 @@
 ﻿using System;
+using System.Windows.Forms;
 using System.Linq;
 
 namespace TriangleTyperApp
 {
     public class TriangleTypeCalculator
     {
-        public string GetTriangleType(string sideA, string sideB, string sideC)
+        private decimal _a;
+        private decimal _b;
+        private decimal _c;
+        public string CheckIfTriangleIsValid(string sideA, string sideB, string sideC)
         {
             try
             {
-                if (decimal.Parse(sideA) == decimal.Parse(sideB) && decimal.Parse(sideB) == decimal.Parse(sideC) && decimal.Parse(sideA) == decimal.Parse(sideC))
-                {
-                    return "Equilateral";
-                }
-                if (decimal.Parse(sideA) == decimal.Parse(sideB) || decimal.Parse(sideA) == decimal.Parse(sideB) || decimal.Parse(sideA) == decimal.Parse(sideC))
-                {
-                    return "Isosceles";
-                }
-                if (decimal.Parse(sideA) < 1 || decimal.Parse(sideB) < 1 || decimal.Parse(sideC) < 1)
-                {
-                    return "Input must be a positive number";
-                }
-                return "Scalene";
+                _a = decimal.Parse(sideA);
+                _b = decimal.Parse(sideB);
+                _c = decimal.Parse(sideC);
             }
-            catch
+            catch(FormatException)
             {
                 return "Inputs must be numeric";
             }
+            if (_a + _b > _c && _b + _c > _a && _a + _c > _b)
+            {
+                return GetTriangleType();
+            }
+            if (_a < 1 || _b < 1 || _c < 1)
+            {
+                return "Input must be a positive number";
+            }
+            return "Not a triangle";
+        }
+
+        public string GetTriangleType()
+        {
+            if (_a == _b && _b == _c && _a == _c)
+            {
+                return "Equilateral";
+            }
+            if (_a == _b || _b == _c || _a == _c)
+            {
+                return "Isosceles";
+            }
+            return "Scalene";
         }
     }
 }
