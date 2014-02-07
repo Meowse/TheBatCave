@@ -34,9 +34,9 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Yellow;
-            this.button1.Location = new System.Drawing.Point(85, 116);
+            this.button1.Location = new System.Drawing.Point(229, 180);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 23);
+            this.button1.Size = new System.Drawing.Size(87, 23);
             this.button1.TabIndex = 0;
             this.button1.Text = "PRESS HERE";
             this.button1.UseVisualStyleBackColor = false;
@@ -47,7 +47,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(547, 398);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "(after Herve Tullet)";
@@ -58,6 +58,7 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
+
     }
 }
 
