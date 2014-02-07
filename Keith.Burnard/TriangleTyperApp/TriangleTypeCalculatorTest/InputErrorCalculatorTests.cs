@@ -22,6 +22,14 @@ namespace TriangleTypeCalculatorTest
         }
 
         [Test]
+        public void TestNeedABetterMessage()
+        {
+            // Need a better error message for these
+            Assert.That(_inputValidation.TestInputValues("three", "three", "three"), Is.EqualTo("Each side must be a positive integer"));
+            Assert.That(_inputValidation.TestInputValues("2,147", "2,147", "2,147"), Is.EqualTo("Each side must be a positive integer"));
+        }
+
+        [Test]
         public void TestPositiveInteger()
         {
             Assert.That(_inputValidation.TestInputValues("3", "3", "3.0"), Is.EqualTo("Each side must be a positive integer"));
@@ -36,27 +44,19 @@ namespace TriangleTypeCalculatorTest
 
             Assert.That(_inputValidation.TestInputValues("-1", "-2", "-3"), Is.EqualTo("Each side must be a positive integer"));
             Assert.That(_inputValidation.TestInputValues("0", "0", "0"), Is.EqualTo("Each side must be a positive integer"));
-
-            // Need a better error message for this one
-            Assert.That(_inputValidation.TestInputValues("three", "three", "three"), Is.EqualTo("Each side must be a positive integer"));
-            
         }
 
         [Test]
         public void TestTheSidesMakeATriangle()
         {
-
             Assert.That(_inputValidation.TestInputValues("3", "2", "1"), Is.EqualTo("The sides do not make a triangle"));
             Assert.That(_inputValidation.TestInputValues("1", "17", "1"), Is.EqualTo("The sides do not make a triangle"));
-
         }
 
         [Test]
         public void TestOutOfRange()
         {
-
-            Assert.That(_inputValidation.TestInputValues("2,147,483,648", "2,147,483,648", "2,147,483,648"), Is.EqualTo("Input out of range (cannot be more than 2,147,483,647)"));
-            
+            Assert.That(_inputValidation.TestInputValues("2147483648", "2147483648", "2147483648"), Is.EqualTo("Input out of range (cannot be more than 2,147,483,647)"));
         }
 
         [Test]

@@ -33,11 +33,9 @@ namespace TriangleTypeCalculatorTest
         [Test]
         public void TestWorkingWithLargeNumbers()
         {
-            Assert.That(_calculator.GetTriangleType("2,147,483,647", "2,147,483,647", "2,147,483,647"), Is.EqualTo("Equilateral"));
-
-            Assert.That(_calculator.GetTriangleType("2,147,483,647", "2,147,483,647", "1"), Is.EqualTo("Isosceles"));
-            Assert.That(_calculator.GetTriangleType("1", "2,147,483,647", "2,147,483,647"), Is.EqualTo("Isosceles"));
-            Assert.That(_calculator.GetTriangleType("2,147,483,647", "1", "2,147,483,647"), Is.EqualTo("Isosceles"));
+            Assert.That(_calculator.GetTriangleType("2147483647", "2147483647", "2147483647"), Is.EqualTo("Equilateral"));
+            Assert.That(_calculator.GetTriangleType("2147483647", "2147483647", "1"), Is.EqualTo("Isosceles"));
+            Assert.That(_calculator.GetTriangleType("2147483645", "2147483646", "2147483647"), Is.EqualTo("Scalene"));
         }
     }
 
