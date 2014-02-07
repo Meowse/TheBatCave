@@ -25,15 +25,15 @@ namespace TriangleTypeCalculatorTest
         public void TestNeedABetterMessage()
         {
             // Need a better error message for these
-            Assert.That(_inputValidation.TestInputValues("three", "three", "three"), Is.EqualTo("Each side must be a positive integer"));
-            Assert.That(_inputValidation.TestInputValues("2,147", "2,147", "2,147"), Is.EqualTo("Each side must be a positive integer"));
+            Assert.That(_inputValidation.TestInputValues("three", "three", "three"), Is.EqualTo("Each side must be a positive integer written as an unformatted number"));
+            Assert.That(_inputValidation.TestInputValues("2,147", "2,147", "2,147"), Is.EqualTo("Each side must be a positive integer written as an unformatted number"));
+            Assert.That(_inputValidation.TestInputValues("3", "3", "3.0"), Is.EqualTo("Each side must be a positive integer written as an unformatted number"));
+
         }
 
         [Test]
         public void TestPositiveInteger()
-        {
-            Assert.That(_inputValidation.TestInputValues("3", "3", "3.0"), Is.EqualTo("Each side must be a positive integer"));
-
+        {            
             Assert.That(_inputValidation.TestInputValues("", "", ""), Is.EqualTo("Each side must be a positive integer"));
             Assert.That(_inputValidation.TestInputValues("", "", "3"), Is.EqualTo("Each side must be a positive integer"));
 
