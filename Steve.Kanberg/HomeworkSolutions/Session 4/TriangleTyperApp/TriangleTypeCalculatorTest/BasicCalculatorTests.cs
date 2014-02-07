@@ -11,7 +11,20 @@ namespace TriangleTypeCalculatorTest
         [Test]
         public void TestEquilateral()
         {
-            Assert.That(_calculator.GetTriangleType("3", "3", "3"), Is.EqualTo("Equilateral"));
+            Assert.That(_calculator.GetTriangleTypeEquilateral(3.ToString(), 3.ToString(), 3.ToString()), Is.EqualTo("Equilateral"));
         }
+
+        [Test]
+        public void TestEquilateralFloat()
+        {
+            Assert.That(_calculator.GetTriangleTypeEquilateralFloat(((float) 3.0).ToString(), ((float) 3.0).ToString(), ((float) 3.0).ToString()), Is.EqualTo("Equilateral"));
+        }
+
+        [Test]
+        public void TestEquilateralNotNumeric()
+        {
+            Assert.That(_calculator.GetTriangleTypeNotNumeric("a", "a", "3"), Is.EqualTo("Non-Numeric Values"));
+        }
+
     }
 }

@@ -17,7 +17,7 @@ namespace TriangleTyperApp
             string sideA = sideAField.Text;
             string sideB = sideBField.Text;
             string sideC = sideCField.Text;
-            string triangleType = _calculator.GetTriangleType(sideA, sideB, sideC);
+            string triangleType = _calculator.GetTriangleTypeEquilateralFloat(sideA, sideB, sideC);
             triangleTypeDisplay.Text = triangleType;
         }
     }
