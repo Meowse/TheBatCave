@@ -6,6 +6,7 @@ namespace TriangleTyperApp
     public partial class Form1 : Form
     {
         readonly TriangleTypeCalculator _calculator = new TriangleTypeCalculator();
+        private readonly InputValidation _inputValidation = new InputValidation();
 
         public Form1()
         {
@@ -18,41 +19,21 @@ namespace TriangleTyperApp
             string sideB = sideBField.Text;
             string sideC = sideCField.Text;
 
-            if (InputValid(sideA, sideB, sideC))
+            string message = _inputValidation.TestInputValues(sideA, sideB, sideC);
+
+            if (message == "Good")
             {
                 string triangleType = _calculator.GetTriangleType(sideA, sideB, sideC);
                 triangleTypeDisplay.Text = triangleType;
             }
+            else
+            {
+                triangleTypeDisplay.Text = message;
+            }
 
             
         }
 
-        private bool InputValid(string sideA, string sideB, string sideC)
-        {
-            int sideAInt;
-            int sideBInt;
-            int sideCInt;
-            
-            if (!int.TryParse(sideA, out sideAInt))
-            {
-                triangleTypeDisplay.Text = "Input must be a positive integer";
-                return false;
-            }
-            if (!int.TryParse(sideB, out sideBInt))
-            {
-                triangleTypeDisplay.Text = "Input must be a positive integer";
-                return false;
-            }
-            if (!int.TryParse(sideB, out sideBInt))
-            {
-                triangleTypeDisplay.Text = "Input must be a positive integer";
-                return false;
-            }
-
-
-
-            return true;
-
-        }
+        
     }
 }
