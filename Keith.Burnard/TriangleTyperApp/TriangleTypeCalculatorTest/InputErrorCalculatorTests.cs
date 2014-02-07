@@ -11,22 +11,35 @@ namespace TriangleTypeCalculatorTest
     class InputErrorCalculatorTests
     {
         private readonly InputValidation _inputValidation = new InputValidation();
-        
+
+        [Test]
+        public void TestValidInput()
+        {
+
+            Assert.That(_inputValidation.TestInputValues("3", "3", "3"), Is.EqualTo("Good"));
+            Assert.That(_inputValidation.TestInputValues("3", "4", "4"), Is.EqualTo("Good"));
+            Assert.That(_inputValidation.TestInputValues("3", "4", "5"), Is.EqualTo("Good"));
+        }
+
         [Test]
         public void TestPositiveInteger()
         {
+            Assert.That(_inputValidation.TestInputValues("3", "3", "3.0"), Is.EqualTo("Each side must be a positive integer"));
+
             Assert.That(_inputValidation.TestInputValues("", "", ""), Is.EqualTo("Each side must be a positive integer"));
             Assert.That(_inputValidation.TestInputValues("", "", "3"), Is.EqualTo("Each side must be a positive integer"));
 
             Assert.That(_inputValidation.TestInputValues("a", "a", "20"), Is.EqualTo("Each side must be a positive integer"));
-            Assert.That(_inputValidation.TestInputValues("three", "three", "three"), Is.EqualTo("Each side must be a positive integer"));
             Assert.That(_inputValidation.TestInputValues("&", "*", "VII"), Is.EqualTo("Each side must be a positive integer"));
             Assert.That(_inputValidation.TestInputValues("1f", "2f", "2f"), Is.EqualTo("Each side must be a positive integer"));
             Assert.That(_inputValidation.TestInputValues("3.5", "3.5", "3.5"), Is.EqualTo("Each side must be a positive integer"));
 
             Assert.That(_inputValidation.TestInputValues("-1", "-2", "-3"), Is.EqualTo("Each side must be a positive integer"));
             Assert.That(_inputValidation.TestInputValues("0", "0", "0"), Is.EqualTo("Each side must be a positive integer"));
-             
+
+            // Need a better error message for this one
+            Assert.That(_inputValidation.TestInputValues("three", "three", "three"), Is.EqualTo("Each side must be a positive integer"));
+            
         }
 
         [Test]

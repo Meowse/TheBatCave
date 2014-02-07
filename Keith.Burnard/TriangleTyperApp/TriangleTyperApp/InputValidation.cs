@@ -75,7 +75,11 @@ namespace TriangleTyperApp
 
         public bool TheSidesAreSmallEnough(string sideA, string sideB, string sideC)
         {
-            return true;
+            if (_sideAInt <= int.MaxValue && _sideBInt <= int.MaxValue && _sideCInt <= int.MaxValue)
+            {
+                return true;
+            }
+            return false;
         }
 
         public bool EasterEgg(string sideA, string sideB, string sideC)
