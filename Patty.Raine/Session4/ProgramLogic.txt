@@ -1,0 +1,42 @@
+
+
+Activties to Perform:
+
+Parse the Strings into Numeric variables  --http://msdn.microsoft.com/en-us/library/cafs243z(v=vs.110).aspx
+
+If successful - Determine if the triangle is valid
+                    If A and B and C all greater than 0
+                         If A + B > C and B + C > A and A + C > B
+                             Determine Triangle Type
+                         Else 
+                              'Invalid Triangle'
+                          End-if
+                    Else
+                        “All values must be postive”
+                     End-if
+
+Else
+    Call  Routine to Check for Easter Eggs
+End-if
+
+DetermineTriagleType
+   if A=B=C 
+          return Equilateral
+   else
+           if A=B or A=C or B=C
+                 return Isosceles
+            else
+                return Scalene
+            end-if
+   end-if
+
+Check for EasterEggs
+  if A='open' and B='podbay' and C='doors'
+          return 'Im sorry Dave, I'm afraid I can't do that'
+  else
+          return “Input must be numeric"
+  end-if  
+
+          
+                          
+                   
