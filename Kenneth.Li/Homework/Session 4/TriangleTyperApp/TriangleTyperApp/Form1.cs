@@ -17,7 +17,7 @@ namespace TriangleTyperApp
             var sideA = sideAField.Text;
             var sideB = sideBField.Text;
             var sideC = sideCField.Text;
-            var triangleType = _calculator.CheckIfTriangleIsValid(sideA, sideB, sideC);
+            var triangleType = _calculator.ConvertTriangleValuesToDecimal(sideA, sideB, sideC);
             triangleTypeDisplay.Text = triangleType;
         }
 
