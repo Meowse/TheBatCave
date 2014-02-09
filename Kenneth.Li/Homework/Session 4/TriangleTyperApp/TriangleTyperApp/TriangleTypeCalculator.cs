@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Diagnostics.Eventing.Reader;
-using System.Runtime.InteropServices;
-using System.Windows.Forms;
-using System.Linq;
+using System.Media;
 
 namespace TriangleTyperApp
 {
@@ -11,6 +8,7 @@ namespace TriangleTyperApp
         private decimal _a;
         private decimal _b;
         private decimal _c;
+        readonly SoundPlayer _huskySong = new SoundPlayer(TriangleTyperApp.Properties.Resources.Baha_Men___Who_Let_The_Dogs_Out);
 
         public string ConvertTriangleValuesToDecimal(string sideA, string sideB, string sideC)
         {
@@ -34,7 +32,9 @@ namespace TriangleTyperApp
             {
                 return "I'm sorry, Dave, I can't allow you to do that.";
             }
-            return "Inputs must be numeric";
+            if (easterA != "Go" || easterB != "UW" || easterC != "Huskies") return "Inputs must be numeric";
+            _huskySong.Play();
+            return "HUSKIES FOREVER";
         }
 
         public string CheckIfTriangleIsValid()

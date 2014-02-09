@@ -36,6 +36,9 @@ namespace TriangleTypeCalculatorTest
         public void EasterEgg()
         {
             Assert.That(_calculator.ConvertTriangleValuesToDecimal("open", "podbay", "door"), Is.EqualTo("I'm sorry, Dave, I can't allow you to do that."));
+            Assert.That(_calculator.ConvertTriangleValuesToDecimal("open", "podbay", "3"), Is.EqualTo("Inputs must be numeric"));
+            Assert.That(_calculator.ConvertTriangleValuesToDecimal("Go", "UW", "Huskies"), Is.EqualTo("HUSKIES FOREVER"));
+            Assert.That(_calculator.ConvertTriangleValuesToDecimal("Go", "podbay", "Huskies"), Is.EqualTo("Inputs must be numeric"));
         }
     }
 }
