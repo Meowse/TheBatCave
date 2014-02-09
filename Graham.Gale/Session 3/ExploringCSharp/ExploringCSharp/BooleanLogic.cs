@@ -110,14 +110,11 @@
             //return false;
 
         {
-            if (gender == "M")
+            if (gender == "F")
             {
                 return false;
             }
-            else
-            {
-                return gender == "M" && age < 25;
-            }
+            return gender == "M" && age < 25;
         }
     }
 }
