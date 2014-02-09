@@ -14,16 +14,11 @@ namespace TriangleTyperApp
 
         private void typeItButton_Click(object sender, EventArgs e)
         {
-            var sideA = sideAField.Text;
-            var sideB = sideBField.Text;
-            var sideC = sideCField.Text;
-            var triangleType = _calculator.ConvertTriangleValuesToDecimal(sideA, sideB, sideC);
+            string sideA = sideAField.Text;
+            string sideB = sideBField.Text;
+            string sideC = sideCField.Text;
+            string triangleType = _calculator.GetTriangleType(sideA, sideB, sideC);
             triangleTypeDisplay.Text = triangleType;
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
