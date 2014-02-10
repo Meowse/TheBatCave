@@ -13,5 +13,21 @@ namespace TriangleTypeCalculatorTest
         {
             Assert.That(_calculator.GetTriangleType("3", "3", "3"), Is.EqualTo("Equilateral"));
         }
+
+        [Test]
+        public void GetTriangleTypeValidTriangleTypes()
+        {
+            Assert.That(_calculator.GetTriangleType("4", "4", "4"), Is.EqualTo("Equilateral"));
+            Assert.That(_calculator.GetTriangleType("4", "5", "4"), Is.EqualTo("Isosceles"));
+            Assert.That(_calculator.GetTriangleType("2", "3", "4"), Is.EqualTo("Scalene"));
+        }
+
+        [Test]
+        public void GetTriangleTypeErrorTriangleTypes()
+        {
+            Assert.That(_calculator.GetTriangleType("1", "2", "3"), Is.EqualTo("Error"));
+            Assert.That(_calculator.GetTriangleType("A", "B", "C"), Is.EqualTo("Error"));
+        }
+
     }
 }
