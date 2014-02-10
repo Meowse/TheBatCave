@@ -15,9 +15,18 @@ namespace TriangleTyperApp
             // if a = b = c then return equilateral
             // otherwise return isosceles
 
-            if (sideA == sideB && sideB == sideC)
+            if ((sideA == sideB) && (sideB == sideC))
             {
                 return "Equilateral";
+            }
+
+            //return "Isosceles";
+
+            // if a != b && b != c && c != a return scalene
+            // otherwise return isosceles
+            if ((sideA != sideB) && (sideB != sideC) && (sideC != sideA))
+            {
+                return "Scalene";
             }
 
             return "Isosceles";
