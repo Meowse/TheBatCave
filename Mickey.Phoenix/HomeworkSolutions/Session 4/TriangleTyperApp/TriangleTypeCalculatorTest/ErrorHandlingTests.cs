@@ -17,7 +17,14 @@ namespace TriangleTypeCalculatorTest
         [Test]
         public void NegativeNumbersFail()
         {
-            Assert.That(_calculator.GetTriangleType("-3", "-4", "-5"), Is.EqualTo("A triangle cannot have sides of negative length"));
+            Assert.That(_calculator.GetTriangleType("-3", "-4", "-5"), Is.EqualTo("All sides of a triangle must have positive length"));
         }
+
+        [Test]
+        public void SidesCannotHaveZeroLength()
+        {
+            Assert.That(_calculator.GetTriangleType("0", "0", "0"), Is.EqualTo("All sides of a triangle must have positive length"));
+        }
+
     }
 }

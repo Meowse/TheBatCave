@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace TriangleTyperApp
 {
@@ -30,9 +31,9 @@ namespace TriangleTyperApp
 
         private string GetTriangleType(int a, int b, int c)
         {
-            if ((a < 0) || (b < 0) || (c < 0))
+            if ((a <= 0) || (b <= 0) || (c <= 0))
             {
-                return "A triangle cannot have sides of negative length";
+                return "All sides of a triangle must have positive length";
             }
 
             return "Equilateral";
