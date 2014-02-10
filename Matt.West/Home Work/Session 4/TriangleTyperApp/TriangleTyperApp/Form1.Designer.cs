@@ -100,7 +100,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(56, 121);
+            this.label4.Location = new System.Drawing.Point(18, 121);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 13);
             this.label4.TabIndex = 7;
@@ -109,7 +109,7 @@
             // triangleTypeDisplay
             // 
             this.triangleTypeDisplay.AutoSize = true;
-            this.triangleTypeDisplay.Location = new System.Drawing.Point(137, 121);
+            this.triangleTypeDisplay.Location = new System.Drawing.Point(97, 121);
             this.triangleTypeDisplay.Name = "triangleTypeDisplay";
             this.triangleTypeDisplay.Size = new System.Drawing.Size(160, 13);
             this.triangleTypeDisplay.TabIndex = 8;
@@ -119,7 +119,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(426, 185);
+            this.ClientSize = new System.Drawing.Size(478, 185);
             this.Controls.Add(this.triangleTypeDisplay);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.typeItButton);
