@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.SqlServer.Server;
 
 namespace TriangleTyperApp
 {
@@ -11,7 +12,15 @@ namespace TriangleTyperApp
         
         public string GetTriangleType(string sideA, string sideB, string sideC)
         {
-            return "Equilateral";
+            // if a = b = c then return equilateral
+            // otherwise return isosceles
+
+            if (sideA == sideB && sideB == sideC)
+            {
+                return "Equilateral";
+            }
+
+            return "Isosceles";
         }
     }
 }

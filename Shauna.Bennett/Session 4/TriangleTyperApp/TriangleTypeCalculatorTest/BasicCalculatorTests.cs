@@ -12,7 +12,7 @@ namespace TriangleTypeCalculatorTest
         public void TestEquilateral()
         {
             Assert.That(_calculator.GetTriangleType("3", "3", "3"), Is.EqualTo("Equilateral"));
-            Assert.That(_calculator.GetTriangleType("1", "1", "1"), Is.EqualTo("Equalateral"));
+            Assert.That(_calculator.GetTriangleType("1", "1", "1"), Is.EqualTo("Equilateral"));
         }
 
         [Test]
@@ -26,8 +26,8 @@ namespace TriangleTypeCalculatorTest
         [Test]
         public void TestScalene()
         {
-            Assert.That(_calculator.GetTriangleType("1", "3", "4"), Is.EqualTo("Scalene"));
-            Assert.That(_calculator.GetTriangleType("5", "10", "15"), Is.EqualTo("Scalene"));
+            Assert.That(_calculator.GetTriangleType("2", "3", "4"), Is.EqualTo("Scalene"));
+            Assert.That(_calculator.GetTriangleType("7", "10", "15"), Is.EqualTo("Scalene"));
             Assert.That(_calculator.GetTriangleType("8", "10", "12"), Is.EqualTo("Scalene"));
         }
 
