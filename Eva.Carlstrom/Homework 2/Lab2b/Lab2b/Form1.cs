@@ -37,9 +37,13 @@ namespace Lab2b
 
             // Questions:
             //  * What are eva.FirstName and eva.LastName?
+            // eva.FirstName is now "Eva-Lise" and eva.LastName is now "Carlstrom".
             //  * What are ta.FirstName and ta.LastName?
+            // ta.FirstName is now "Eva-Lise" and ta.LastName is now "Eva-Lise".
             //  * What are mickey.FirstName and mickey.LastName?
+            // Mickey.FirstName is "Michael" is mickey.LastName is "Phoenix".
             //  * What are instructor.FirstName and instructor.LastName?
+            // instructor.FirstName is "Michael" and instructor.LastName is "Phoenix".
 
             RedisplayNames();            
         }
@@ -51,6 +55,7 @@ namespace Lab2b
 
             // Questions:
             // Same questions as before.
+            // Eva's & TA's names remain unchanged, Mickey's & instructor's are now "Mickey" & "Phoenix".
 
             RedisplayNames();
         }
@@ -64,6 +69,7 @@ namespace Lab2b
             personToAskForHelp.FirstName = "The Also Helpful " + personToAskForHelp.FirstName;
 
             // Same questions...
+            // Eva's, Mickey's, TA's, & instructor's names remain unchanged--only personToAskForHelp has the helpful phrases prepended.
 
             RedisplayNames();
         }
@@ -74,6 +80,8 @@ namespace Lab2b
             instructor = ta;
 
             // Same questions...
+            // Mickey's name is unchanged, Eva's name is unchanged, ta's name is unchanged.  instructor's name is now "Eva-Lise Carlstrom".
+
 
             RedisplayNames();
         }
@@ -85,6 +93,7 @@ namespace Lab2b
             mickey.LastName = "Ashes";
 
             // Same questions...
+            // Mickey's name is "Ex-Instructor Ashes".  Eva's, ta's, & instructor's name is "Eva-Lise Carlstrom".
 
             RedisplayNames();
         }
