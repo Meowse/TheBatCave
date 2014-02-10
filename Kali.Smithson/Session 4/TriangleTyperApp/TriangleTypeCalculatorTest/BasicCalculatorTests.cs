@@ -1,5 +1,4 @@
-﻿using System.Security.Cryptography.X509Certificates;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using TriangleTyperApp;
 
 namespace TriangleTypeCalculatorTest
@@ -20,12 +19,14 @@ namespace TriangleTypeCalculatorTest
         public void TestIsoceles()
         {
             Assert.That(_calculator.GetTriangleType("8", "7", "8"), Is.EqualTo("Isoceles"));
-            Assert.That(_calculator.GetTriangleType("10", "10", "82"), Is.EqualTo("Isoceles"));
+            Assert.That(_calculator.GetTriangleType("10", "82", "82"), Is.EqualTo("Isoceles"));
         }
 
         [Test]
         public void TestScalene()
         {
             Assert.That(_calculator.GetTriangleType("8", "9", "10"), Is.EqualTo("Scalene"));
-            Assert.That(_calculator.GetTriangleType("800", "90", "201"), Is.EqualTo("Scalene"));
+            Assert.That(_calculator.GetTriangleType("800", "90", "801"), Is.EqualTo("Scalene"));
         }
+    }
+}
