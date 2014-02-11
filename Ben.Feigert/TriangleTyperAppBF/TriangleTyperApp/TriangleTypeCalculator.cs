@@ -38,7 +38,7 @@
                 return "Equilateral";
             }
 
-            if ((a == b) || (a == c) || (b == c))
+            if ((a == b) || (b == c) || (c == b))
             {
                 return "Isoceles";
 
