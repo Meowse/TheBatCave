@@ -16,11 +16,7 @@ namespace TriangleTyperApp
                 return "Isosceles";
             }
 
-        // if (sideA + sideB > sideC || sideB + sideC > sideA || sideA + sideC > sideB)
-       //  {
-       //      return "Scalene"
-      //   } 
-            return "Nope.";
+            return "Scalene";
         }
     }
 }
