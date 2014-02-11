@@ -36,7 +36,19 @@ namespace TriangleTyperApp
                 return "All sides of a triangle must have positive length";
             }
 
-            return "Equilateral";
+            if ((a == b) && (a == c))
+            {
+
+                return "Equilateral";
+            }
+
+            if ((a == b) || (b == c) || (c == d))
+            {
+                return "Isoceles";
+
+            }
+
+            return "scalene";
         }
     }
 }
