@@ -14,11 +14,13 @@ namespace TriangleTyperApp
 
         private void typeItButton_Click(object sender, EventArgs e)
         {
-            string sideA = sideAField.Text;
-            string sideB = sideBField.Text;
-            string sideC = sideCField.Text;
-            string triangleType = _calculator.GetTriangleType(sideA, sideB, sideC);
-            triangleTypeDisplay.Text = triangleType;
+
+                var sideA = sideAField.Text;
+                var sideB = sideBField.Text;
+                var sideC = sideCField.Text;
+                var triangleType = _calculator.GetTriangleType(sideA, sideB, sideC);
+                triangleTypeDisplay.Text = triangleType;
+
         }
     }
 }
