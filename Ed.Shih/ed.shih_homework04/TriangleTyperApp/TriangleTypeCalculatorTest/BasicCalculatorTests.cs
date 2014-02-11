@@ -9,6 +9,56 @@ namespace TriangleTypeCalculatorTest
         private readonly TriangleTypeCalculator _calculator = new TriangleTypeCalculator();
 
         [Test]
+        public void TestInteger1()
+        {
+            Assert.That(_calculator.GetTriangleType("go", "#", "blue"), Is.EqualTo("Make sure all sides are Integers"));
+        }
+        [Test]
+        public void TestInteger2()
+        {
+            Assert.That(_calculator.GetTriangleType("tuba", "10", "42"), Is.EqualTo("Make sure all sides are Integers"));
+        }
+        [Test]
+        public void TestInteger3()
+        {
+            Assert.That(_calculator.GetTriangleType("four", "IV", "4"), Is.EqualTo("Make sure all sides are Integers"));
+        }
+        [Test]
+        public void TestIntRange1()
+        {
+            Assert.That(_calculator.GetTriangleType("0", "0", "0"), Is.EqualTo("Sides must be greater than 0 and less than 2,000,000,000"));
+        }
+        [Test]
+        public void TestIntRange2()
+        {
+            Assert.That(_calculator.GetTriangleType("-4", "4", "20"), Is.EqualTo("Sides must be greater than 0 and less than 2,000,000,000"));
+        }
+        [Test]
+        public void TestIntRange3()
+        {
+            Assert.That(_calculator.GetTriangleType("2000000001", "2000000001", "2000000001"), Is.EqualTo("Sides must be greater than 0 and less than 2,000,000,000"));
+        }
+        [Test]
+        public void TestIntRange4()
+        {
+            Assert.That(_calculator.GetTriangleType("2000000001", "0", "2000000001"), Is.EqualTo("Sides must be greater than 0 and less than 2,000,000,000"));
+        }
+        [Test]
+        public void TestIsTriangle1()
+        {
+            Assert.That(_calculator.GetTriangleType("1", "10", "1"), Is.EqualTo("The sides do not form a triangle"));
+        }
+        [Test]
+        public void TestIsTriangle2()
+        {
+            Assert.That(_calculator.GetTriangleType("2000000000", "1", "1"), Is.EqualTo("The sides do not form a triangle"));
+        }
+        [Test]
+        public void TestIsTriangle3()
+        {
+            Assert.That(_calculator.GetTriangleType("1", "1", "2000000000"), Is.EqualTo("The sides do not form a triangle"));
+        }
+        [Test]
         public void TestEquilateral1()
         {
             Assert.That(_calculator.GetTriangleType("3", "3", "3"), Is.EqualTo("Equilateral"));
@@ -21,7 +71,7 @@ namespace TriangleTypeCalculatorTest
         [Test]
         public void TestEquilateral3()
         {
-            Assert.That(_calculator.GetTriangleType("2,147,483,647", "2,147,483,647", "2,147,483,647"), Is.EqualTo("Equilateral"));
+            Assert.That(_calculator.GetTriangleType("2000000000", "2000000000", "2000000000"), Is.EqualTo("Equilateral"));
         }
         [Test]
         public void TestIsoscoles1()
