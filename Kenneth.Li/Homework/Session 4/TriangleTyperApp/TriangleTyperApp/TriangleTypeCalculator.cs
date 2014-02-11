@@ -43,7 +43,7 @@ namespace TriangleTyperApp
             {
                 return GetTriangleType();
             }
-            if (_a < 1 || _b < 1 || _c < 1)
+            if (_a <= 0 || _b <= 0 || _c <= 0)
             {
                 return "Input must be a positive number";
             }
