@@ -23,20 +23,20 @@ namespace TriangleTyperApp
                 return "Make sure all sides are Integers";
             }
             // check to see if 0 < int < MaxInt
-            // changing design to limit range from 0 to 2000000000
+            // changing design to limit range from 0 to 1000000000 to avoid exceeding MaxInt32 in calculations
             if (A < 1)
             {
-                return "Sides must be greater than 0 and less than 2,000,000,001";
+                return "Sides must be greater than 0 and less than 1,000,000,001";
             }
-            if (A > 2000000000)
+            if (A > 1000000000)
             {
-                return "Sides must be greater than 0 and less than 2,000,000,001";
+                return "Sides must be greater than 0 and less than 1,000,000,001";
             }
             if (B < 1)
             {
-                return "Sides must be greater than 0 and less than 2,000,000,001";
+                return "Sides must be greater than 0 and less than 1,000,000,001";
             }
-            if (B > 2000000000)
+            if (B > 1000000000)
             {
                 return "Sides must be greater than 0 and less than 2,000,000,001";
             }
@@ -44,13 +44,25 @@ namespace TriangleTyperApp
             {
                 return "Sides must be greater than 0 and less than 2,000,000,001";
             }
-            if (C > 2000000000)
+            if (C > 1000000000)
             {
                 return "Sides must be greater than 0 and less than 2,000,000,001";
             }
-            // check to see if sideA + sideB <= sideC
-            // check to see if sideB + sideC <= sideA
-            // check to see if sideA + sideC <= sideB
+            // check to see if sideA + sideB > sideC
+            if (C > A + B - 1)
+            {
+                return "The sides do not form a triangle";
+            }
+            // check to see if sideB + sideC > sideA
+            if (A > B + C - 1)
+            {
+                return "The sides do not form a triangle";
+            }
+            // check to see if sideA + sideC > sideB 
+            if (B > A + C - 1)
+            {
+                return "The sides do not form a triangle";
+            }
             // check to see if A = B && B = C
             if (sideA == sideB && sideB == sideC)
             {
