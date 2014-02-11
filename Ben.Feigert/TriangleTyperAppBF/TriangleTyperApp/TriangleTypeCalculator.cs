@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Windows.Forms;
-
-namespace TriangleTyperApp
+﻿namespace TriangleTyperApp
 {
     public class TriangleTypeCalculator
     {
@@ -48,7 +44,7 @@ namespace TriangleTyperApp
 
             }
 
-            return "scalene";
+            return "Scalene";
         }
     }
 }
