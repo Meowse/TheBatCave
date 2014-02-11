@@ -42,7 +42,7 @@ namespace TriangleTyperApp
                 return "Equilateral";
             }
 
-            if ((a == b) || (b == c) || (c == d))
+            if ((a == b) || (a == c) || (b == c))
             {
                 return "Isoceles";
 
