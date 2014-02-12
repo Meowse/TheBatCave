@@ -11,13 +11,13 @@
             }
 
             int b;
-            if (!int.TryParse(sideA, out b))
+            if (!int.TryParse(sideB, out b))
             {
                 return "Inputs must be integers";
             }
 
             int c;
-            if (!int.TryParse(sideA, out c))
+            if (!int.TryParse(sideC, out c))
             {
                 return "Inputs must be integers";
             }
@@ -38,9 +38,9 @@
                 return "Equilateral";
             }
 
-            if ((a == b) || (b == c) || (c == b))
+            if ((a == b) || (b == c) || (c == a))
             {
-                return "Isoceles";
+                return "Isosceles";
 
             }
 
