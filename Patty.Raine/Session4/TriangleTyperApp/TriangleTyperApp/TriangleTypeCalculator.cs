@@ -4,18 +4,18 @@ namespace TriangleTyperApp
 {
     public class TriangleTypeCalculator
     {
-        decimal _nbrA;
-        decimal _nbrB;
-        decimal _nbrC;
+        int _nbrA;
+        int _nbrB;
+        int _nbrC;
 
         public string GetTriangleType(string sideA, string sideB, string sideC)
         {
-            // The Try, Catch and deicmal.Parse are shown in an example here: http://msdn.microsoft.com/en-us/library/cafs243z(v=vs.110).aspx
+            // The Try, Catch and decimal.Parse are shown in an example here: http://msdn.microsoft.com/en-us/library/cafs243z(v=vs.110).aspx
             try  
             {
-                _nbrA = decimal.Parse(sideA);
-                _nbrB = decimal.Parse(sideB);
-                _nbrC = decimal.Parse(sideC);
+                _nbrA = int.Parse(sideA);
+                _nbrB = int.Parse(sideB);
+                _nbrC = int.Parse(sideC);
             }
             catch (FormatException)
             {
@@ -47,10 +47,11 @@ namespace TriangleTyperApp
 
         public string TestTriangleDimensions()
         {
-            if (_nbrA+_nbrB >_nbrC &&_nbrB+_nbrC >_nbrA &&_nbrC+_nbrA >_nbrB)
-           {
+          //if (_nbrA + _nbrB > _nbrC && _nbrB + _nbrC > _nbrA && _nbrC + _nbrA > _nbrB)
+            if (Math.Abs(_nbrA-_nbrB) < _nbrC && Math.Abs(_nbrB - _nbrC) < _nbrA && Math.Abs(_nbrC-_nbrA) < _nbrB)
+                {
                return DetermineTriangleType();
-           }
+                }
             return "These dimensions are not correct; please reenter";
         }
 
