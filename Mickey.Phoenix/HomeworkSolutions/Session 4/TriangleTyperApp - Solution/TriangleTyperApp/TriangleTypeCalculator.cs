@@ -1,4 +1,8 @@
-﻿namespace TriangleTyperApp
+﻿using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
+
+namespace TriangleTyperApp
 {
     public class TriangleTypeCalculator
     {
@@ -11,13 +15,13 @@
             }
 
             int b;
-            if (!int.TryParse(sideB, out b))
+            if (!int.TryParse(sideA, out b))
             {
                 return "Inputs must be integers";
             }
 
             int c;
-            if (!int.TryParse(sideC, out c))
+            if (!int.TryParse(sideA, out c))
             {
                 return "Inputs must be integers";
             }
@@ -32,19 +36,7 @@
                 return "All sides of a triangle must have positive length";
             }
 
-            if ((a == b) && (a == c))
-            {
-
-                return "Equilateral";
-            }
-
-            if ((a == b) || (b == c) || (c == a))
-            {
-                return "Isosceles";
-
-            }
-
-            return "Scalene";
+            return "Equilateral";
         }
     }
 }

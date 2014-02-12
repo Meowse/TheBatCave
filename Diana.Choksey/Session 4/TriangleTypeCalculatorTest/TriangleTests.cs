@@ -4,7 +4,7 @@ using TriangleTyperApp;
 namespace TriangleTypeCalculatorTest
 {
     [TestFixture]
-    public class BasicCalculatorTests
+    public class TriangleTests
     {
         private readonly TriangleTypeCalculator _calculator = new TriangleTypeCalculator();
 
@@ -15,15 +15,17 @@ namespace TriangleTypeCalculatorTest
         }
 
         [Test]
-        public void TestIsoceles()
+        public void TestIsosceles()
         {
-            Assert.That(_calculator.GetTriangleType("5", "5", "3"), Is.EqualTo("Isosceles"));
+            Assert.That(_calculator.GetTriangleType("3", "3", "1"), Is.EqualTo("Isosceles"));
+            Assert.That(_calculator.GetTriangleType("3", "1", "3"), Is.EqualTo("Isosceles"));
+            Assert.That(_calculator.GetTriangleType("1", "3", "3"), Is.EqualTo("Isosceles"));
         }
 
         [Test]
         public void TestScalene()
         {
-            Assert.That(_calculator.GetTriangleType("3", "4", "5"), Is.EqualTo("Scalene"));
+            Assert.That(_calculator.GetTriangleType("3", "4", "5"), Is.EqualTo("Isosceles"));
         }
     }
 }
