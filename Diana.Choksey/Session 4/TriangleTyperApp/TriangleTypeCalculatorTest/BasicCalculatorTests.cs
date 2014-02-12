@@ -15,7 +15,7 @@ namespace TriangleTypeCalculatorTest
         }
 
         [Test]
-        public void TestForTriangl()
+        public void TestForTriangle()
         {
             Assert.That(_calculator.GetTriangleType("1", "2", "3"), Is.EqualTo("Sorry Dave these sides do not a triangle make"));
         }

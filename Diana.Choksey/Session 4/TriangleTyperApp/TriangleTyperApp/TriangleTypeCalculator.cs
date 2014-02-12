@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+
 namespace TriangleTyperApp
 {
     public class TriangleTypeCalculator
@@ -7,42 +9,51 @@ namespace TriangleTyperApp
         //private decimal _nbrA;
         //private decimal _nbrB;
         //private decimal _nbrC;
-    
+
         public string GetTriangleType(string sideA, string sideB, string sideC)
         {
-            int A;
-            if (!int.TryParse(sideA, out A))
+            int a;
+            if (!int.TryParse(sideA, out a))
             {
                 return "Make sure all sides are Integers";
             }
-            int B;
-            if (!int.TryParse(sideA, out B))
+            int b;
+            if (!int.TryParse(sideA, out b))
             {
                 return "Make sure all sides are Integers";
             }
-            int C;
-            if (!int.TryParse(sideA, out C))
+            
+            int c;
+            if (!int.TryParse(sideA, out c))
             {
                 return "Make sure all sides are Integers";
             }
 
-            //make sure all inputs make a triangle
-            if ((A + B < C) || (A + C < B) || (B + C < A))
+            return GetTriangleType(a, b, c);
+        }
 
+        public string GetTriangleType(int a, int b, int c)
+
+        //make sure all inputs make a triangle
+        {
+            if ((a + b < c) || (a + c < b) || (b + c < a))
+
+            {
                 return "Sorry Dave these sides do not a triangle make";
+            }
 
 
-            if ((sideA == sideB) && (sideB == sideC))
+            if ((a == b) && (b == c))
             {
                 return "Equilateral";      
             }
 
-            if ((sideA == sideB) || (sideA == sideC) || (sideB == sideC))
+            if ((a == b) || (a == c) || (b == c))
             {
                 return "Isoceles";
             }
 
-            if ((sideA != sideB) && (sideA != sideC) && (sideB != sideC))
+            if ((a != b) && (a != c) && (b != c))
             {
                 return "Scalene";
             }
