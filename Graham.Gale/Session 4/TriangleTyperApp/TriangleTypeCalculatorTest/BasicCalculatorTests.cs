@@ -25,8 +25,9 @@ namespace TriangleTypeCalculatorTest
         [Test]
         public void GetTriangleTypeErrorTriangleTypes()
         {
-            Assert.That(_calculator.GetTriangleType("1", "2", "3"), Is.EqualTo("Error"));
-            Assert.That(_calculator.GetTriangleType("A", "B", "C"), Is.EqualTo("Error"));
+            Assert.That(_calculator.GetTriangleType("1", "2", "3"), Is.EqualTo("Not a triangle"));
+            Assert.That(_calculator.GetTriangleType("A", "B", "C"), Is.EqualTo("Inputs must be integers"));
+            Assert.That(_calculator.GetTriangleType("-2", "-3", "-4"), Is.EqualTo("Input must be a positive number"));
         }
 
     }

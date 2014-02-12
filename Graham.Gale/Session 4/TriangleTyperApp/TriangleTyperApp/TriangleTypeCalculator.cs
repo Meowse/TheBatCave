@@ -21,7 +21,7 @@ namespace TriangleTyperApp
             catch (FormatException)
             {
            //     return CheckForEasterEggs(sideA, sideB, sideC);
-                           return "Error";
+                return "Inputs must be integers";
 
             }
             return ValidateTriangle(); 
@@ -29,26 +29,20 @@ namespace TriangleTyperApp
 
         public string ValidateTriangle()
         {
-            //Placing items in an array for processing 
-
-            // keeping this as the first check in case someone passes invalid parameters that could also be a triangle type. 
-            //Example: -2,-2,-2 could return Equilateral instead of Error without this check.  
-            //We also have a catch all at the end that returns Error if no other condition was met.
+     
             if (NbrA <= 0 || NbrB <= 0 || NbrC <= 0)
             {
-                return "Error";
+                return "Input must be a positive number";
             }
             if (NbrA + NbrB <= NbrC || NbrB + NbrC <= NbrA || NbrA + NbrC < NbrB)
             {
-                return "Error";
+                return "Not a triangle";
             }
             if (NbrA == NbrB && NbrB == NbrC)
-                //There is only one distinct value in the set, therefore all sides are of equal length
             {
                 return "Equilateral";
             }
             if (NbrA == NbrB || NbrB == NbrC || NbrA == NbrC)
-                //There are only two distinct values in the set, therefore two sides are equal and one is not
             {
                 return "Isosceles";
             }
