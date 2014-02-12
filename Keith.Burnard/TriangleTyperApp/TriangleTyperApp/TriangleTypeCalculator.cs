@@ -8,6 +8,7 @@
             int sideBInt = int.Parse(sideB);
             int sideCInt = int.Parse(sideC);
 
+            // if ((a <= math.abs(c-b)) || (b <= math.abs(c-a)) || (c <= math.abs(a-b))
             if (sideAInt == sideBInt && sideAInt == sideCInt)
             {
                 return "Equilateral";

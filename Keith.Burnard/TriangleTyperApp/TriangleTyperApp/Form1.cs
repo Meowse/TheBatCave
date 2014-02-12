@@ -5,8 +5,7 @@ namespace TriangleTyperApp
 {
     public partial class Form1 : Form
     {
-        readonly TriangleTypeCalculator _calculator = new TriangleTypeCalculator();
-        private readonly InputValidation _inputValidation = new InputValidation();
+        private readonly ValidatingCalculator _validatingCalculator = new ValidatingCalculator();
 
         public Form1()
         {
@@ -18,22 +17,13 @@ namespace TriangleTyperApp
             string sideA = sideAField.Text;
             string sideB = sideBField.Text;
             string sideC = sideCField.Text;
+            
+            var message = _validatingCalculator.GetValidatedTriangleType(sideA, sideB, sideC);
 
-            string message = _inputValidation.TestInputValues(sideA, sideB, sideC);
-
-            if (message == "Good")
-            {
-                string triangleType = _calculator.GetTriangleType(sideA, sideB, sideC);
-                triangleTypeDisplay.Text = triangleType;
-            }
-            else
-            {
-                triangleTypeDisplay.Text = message;
-            }
+            triangleTypeDisplay.Text = message;
 
             
         }
 
-        
     }
 }

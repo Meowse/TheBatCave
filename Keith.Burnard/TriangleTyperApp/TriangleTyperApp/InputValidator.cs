@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TriangleTyperApp
 {
-    public class InputValidation
+    public class InputValidator
     {
         int _sideAInt;
         int _sideBInt;
