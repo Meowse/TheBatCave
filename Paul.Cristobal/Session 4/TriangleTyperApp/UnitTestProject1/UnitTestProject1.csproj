@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FBFCFAB1-EC94-4A6A-BDA3-E7ED86BD542B}</ProjectGuid>
+    <ProjectGuid>33aa6724-22fd-4150-9fab-b4545d672a3b</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TriangleTypeCalculatorTest</RootNamespace>
-    <AssemblyName>TriangleTypeCalculatorTest</AssemblyName>
+    <RootNamespace>UnitTestProject1</RootNamespace>
+    <AssemblyName>UnitTestProject1</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -35,7 +35,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -51,18 +50,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="BasicCalculatorTests.cs" />
-    <Compile Include="EvilNonTriangleTests.cs" />
-    <Compile Include="EvilTriangleTests.cs" />
-    <Compile Include="NonTriangleTests.cs" />
+    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TriangleTests.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\TriangleTyperApp\TriangleTyperApp.csproj">
-      <Project>{796CA4D2-4B61-486D-B7CF-92AC08AD29CF}</Project>
-      <Name>TriangleTyperApp</Name>
-    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

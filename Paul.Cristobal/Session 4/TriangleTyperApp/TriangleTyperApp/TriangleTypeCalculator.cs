@@ -2,22 +2,39 @@
 {
     public class TriangleTypeCalculator
     {
-        private decimal _A;
-        private decimal _B;
-        private decimal _C;
 
-        public void GetTriangleType(string sideA, string sideB, string sideC)
+        public string GetTriangleType(string sideA, string sideB, string sideC)
         {
-            if ((sideA == sideB) && (sideB == sideC))
+            int a;
+            if (!int.TryParse(sideA, out a))
             {
-                return "Equilateral";
+                return "Inputs must be integers";
             }
-
-            if ((sideA != sideB) && (sideB != sideC) && (sideC != sideA))
+            int b;
+            if (!int.TryParse(sideB, out b))
             {
-                return "Scalene";
+                return "Inputs must be integers";
+            }
+            int c;
+            if (!int.TryParse(sideC, out c))
+            {
+                return "Inputs must be integers";
+            }
+            
+                if ((a == b) && (b == c))
+                {
+                    return "Equilateral";
+                }
+
+                if ((a != b) && (b != c) && (c != a))
+                {
+                    return "Scalene";
+                }
+
+                if ((a + b <= c) || (b + c <= a) || (c + a <= b))
+                {
+                    return "Not a Triangle";
+                }
             }
         }
     }
-}
-
