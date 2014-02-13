@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace TriangleTyperApp
@@ -7,18 +8,21 @@ namespace TriangleTyperApp
     {
         readonly TriangleTypeCalculator _calculator = new TriangleTypeCalculator();
 
+
         public Form1()
         {
             InitializeComponent();
         }
 
+ 
         private void typeItButton_Click(object sender, EventArgs e)
         {
-            string sideA = sideAField.Text;
-            string sideB = sideBField.Text;
-            string sideC = sideCField.Text;
-            string triangleType = _calculator.GetTriangleType(sideA, sideB, sideC);
-            triangleTypeDisplay.Text = triangleType;
+            var sideA = sideAField.Text;
+            var sideB = sideBField.Text;
+            var sideC = sideCField.Text;
+
+            triangleTypeDisplay.Text = _calculator.GetTriangleType(sideA, sideB, sideC);
         }
+
     }
 }

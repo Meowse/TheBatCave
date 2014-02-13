@@ -5,6 +5,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TriangleTyperApp", "Triangl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TriangleTypeCalculatorTest", "TriangleTypeCalculatorTest\TriangleTypeCalculatorTest.csproj", "{FBFCFAB1-EC94-4A6A-BDA3-E7ED86BD542B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{63D09A0D-B688-4EE0-9D02-4D4929F3A9AD}"
+	ProjectSection(SolutionItems) = preProject
+		Grading Rubric\EvilNonTriangleTests.cs = Grading Rubric\EvilNonTriangleTests.cs
+		Grading Rubric\EvilTriangleTests.cs = Grading Rubric\EvilTriangleTests.cs
+		Grading Rubric\NonTriangleTests.cs = Grading Rubric\NonTriangleTests.cs
+		Grading Rubric\TriangleTests.cs = Grading Rubric\TriangleTests.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
