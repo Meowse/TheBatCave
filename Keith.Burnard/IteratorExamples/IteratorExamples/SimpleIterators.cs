@@ -59,14 +59,49 @@ namespace IteratorExamples
             return result;
         }
 
-        public int[] CountFromToWithForLoop(int min, int max)
+        public int[] CountFromToWithForLoop(int countFrom, int countTo)
         {
-            return new[] { 3, 4, 5, 6, 7 };
+            int length = countTo - countFrom + 1;
+            int[] result = new int[length];
+            for (int i = 0; i < length; i++)
+            {
+                result[i] = countFrom + i;
+            }
+            return result;
+            //return new[] { 3, 4, 5, 6, 7 };
         }
 
-        public int[] CountFromToByWithForLoop(int p0, int p1, int p2)
+        public int[] CountFromToByWithForLoop(int countFrom, int countTo, int countBy)
         {
-            throw new NotImplementedException();
+            int countValue = countFrom;
+
+            int length = GetLengthForFromToWithForLoop(countFrom, countTo, countBy);
+            
+            int[] result = new int[length];
+            for (int i = 0; i < length; i++)
+            {
+                result[i] = countValue;
+                countValue += countBy; 
+            }
+            return result;
+        }
+
+        private static int GetLengthForFromToWithForLoop(int countFrom, int countTo, int countBy)
+        {
+            int length;
+            if (countFrom == 0)
+            {
+                length = (countTo/countBy) + 1;
+            }
+            else if (countTo%countBy == 0)
+            {
+                length = (countTo/countBy) - 1;
+            }
+            else
+            {
+                length = (countTo/countBy);
+            }
+            return length;
         }
 
         public int[] CountFromToByWithWhileLoop(int p0, int p1, int p2)
