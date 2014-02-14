@@ -75,7 +75,7 @@ namespace IteratorExamples
         {
             int countValue = countFrom;
 
-            int length = GetLengthForFromToWithForLoop(countFrom, countTo, countBy);
+            int length = GetLengthForArray(countFrom, countTo, countBy);
             
             int[] result = new int[length];
             for (int i = 0; i < length; i++)
@@ -86,7 +86,7 @@ namespace IteratorExamples
             return result;
         }
 
-        private static int GetLengthForFromToWithForLoop(int countFrom, int countTo, int countBy)
+        private static int GetLengthForArray(int countFrom, int countTo, int countBy)
         {
             int length;
             if (countFrom == 0)
@@ -104,14 +104,36 @@ namespace IteratorExamples
             return length;
         }
 
-        public int[] CountFromToByWithWhileLoop(int p0, int p1, int p2)
+        public int[] CountFromToByWithWhileLoop(int countFrom, int countTo, int countBy)
         {
-            throw new NotImplementedException();
+            int countValue = countFrom;
+
+            int length = GetLengthForArray(countFrom, countTo, countBy);
+
+            int[] result = new int[length];
+            int i = 0;
+            while (i < length)
+            {
+                result[i] = countValue;
+                countValue += countBy;
+                i++;
+            }
+            return result;
         }
 
-        public int[] BackFromBy(int i, int i1)
+        public int[] BackFromBy(int countFrom, int countBy)
         {
-            throw new NotImplementedException();
+            int countValue = countFrom;
+
+            int length = (countFrom / countBy) + 1;
+
+            int[] result = new int[length];
+            for (int i = 0; i < length; i++)
+            {
+                result[i] = countValue;
+                countValue -= countBy;
+            }
+            return result;
         }
     }
 }
