@@ -29,10 +29,18 @@ namespace TriangleTyperApp
                 return "Input out of range";
             }
 
-            if ((A <= 0 || B <= 0 || C <= 0))
+            catch (OverflowException)
             {
-                return "Inputs must have a postive value";
+                return "Input out of range";
             }
+
+            //if the result of adding any two sides is less than or equal to the third side, return "not a triangle".
+
+            if ((A <= Math.Abs(B - C)) || (B <= Math.Abs(C - A)) || (C <= Math.Abs(B-A)))
+            {
+                return "Not a triangle";
+            }
+
 
 
             if ((A == B && B == C && A==C))
@@ -52,6 +60,9 @@ namespace TriangleTyperApp
 
                 return "Not a valid entry";
          }
+
+        
+
 
 
 
