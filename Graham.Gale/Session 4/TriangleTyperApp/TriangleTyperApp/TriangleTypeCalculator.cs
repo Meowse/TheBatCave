@@ -34,7 +34,7 @@ namespace TriangleTyperApp
             {
                 return "Input must be a positive number";
             }
-            if (NbrC <=Math.Abs(NbrA - NbrB)  ||  NbrA <= Math.Abs(NbrB - NbrC)  || NbrB  <= Math.Abs(NbrA - NbrC))
+            if (NbrC <= Math.Abs(NbrA - NbrB)  ||  NbrA <= Math.Abs(NbrB - NbrC)  || NbrB  <= Math.Abs(NbrA - NbrC))
             {
                 return "Not a triangle";
             }
