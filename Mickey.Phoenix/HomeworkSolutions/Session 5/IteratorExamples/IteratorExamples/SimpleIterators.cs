@@ -64,13 +64,27 @@ namespace IteratorExamples
             return new[] { 3, 4, 5, 6, 7 };
         }
 
-        public int[] CountFromToByWithForLoop(int p0, int p1, int p2)
+        public int[] CountFromToByWithForLoop(int fred, int barney, int wilma)
         {
             throw new NotImplementedException();
         }
 
-        public int[] CountFromToByWithWhileLoop(int p0, int p1, int p2)
+        public int[] CountFromToByWithWhileLoop(int min, int max, int by)
         {
+            // count from whatever value is in "from", to whatever value is in "to",
+            // by steps of size "stepSize"
+
+            // count from whatever value is in "min", to whatever value is in "max",
+            // by steps of size whatever-value-is-in-"by"
+
+            // So: if someone calls this method with "CountFromToByWithWhileLoop(3, 17, 2)"
+            // then "min" (or "from", or "countFrom", whatever we call it) will have the value
+            // 3, and "max" (or "to", or "countTo", or whatever we call it) will have the value
+            // 17, and "by" (or "step", or "stepSize", or whatever we call it) will have the value
+            // 2.  And we'll return [3, 5, 7, 9, 11, 13, 15, 17] as the answer, no matter what
+            // we named the variables.
+
+
             throw new NotImplementedException();
         }
 
