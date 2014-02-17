@@ -114,6 +114,7 @@
             this.triangleTypeDisplay.Size = new System.Drawing.Size(160, 13);
             this.triangleTypeDisplay.TabIndex = 8;
             this.triangleTypeDisplay.Text = "                                                   ";
+            this.triangleTypeDisplay.Click += new System.EventHandler(this.triangleTypeDisplay_Click);
             // 
             // Form1
             // 
