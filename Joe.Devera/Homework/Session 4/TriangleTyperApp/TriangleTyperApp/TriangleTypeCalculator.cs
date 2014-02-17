@@ -13,32 +13,58 @@ namespace TriangleTyperApp
         public string GetTriangleType(string sideA, string sideB, string sideC)
         {
 
-                //decimal numSideA = Convert.ToDecimal(sideA);
-                //decimal numSideB = Convert.ToDecimal(sideB);
-                //decimal numSideC = Convert.ToDecimal(sideC);
-
-
-            if (Convert.ToInt16(sideA) <= 0 || Convert.ToInt16(sideB) <=0  || Convert.ToInt16(sideC) <=0)
+            if (sideA == "")
             {
                 return "Please Enter a Positive Number";
             }
 
-           if (Convert.ToInt16(sideA) == Convert.ToInt16(sideB) && Convert.ToInt16(sideA) == Convert.ToInt16(sideC))
+            if (sideB == "")
+            {
+                return "Please Enter a Positive Number";
+            }
+
+            if (sideC == "")
+            {
+                return "Please Enter a Positive Number";
+            }
+
+
+            if (Convert.ToInt32(sideA) <= 0 || Convert.ToInt32(sideB) <=0  || Convert.ToInt32(sideC) <=0)
+            {
+                return "Please Enter a Positive Number";
+            }
+
+            if (Convert.ToInt32(sideA) <= (Math.Abs(Convert.ToInt32(sideB)) - Math.Abs(Convert.ToInt32(sideC))))
+            {
+                return "Not a triangle";
+            }
+
+            if (Convert.ToInt32(sideB) <= (Math.Abs(Convert.ToInt32(sideC)) - Math.Abs(Convert.ToInt32(sideA))))
+            {
+                return "Not a triangle";
+            }
+
+            if (Convert.ToInt32(sideA) <= (Math.Abs(Convert.ToInt32(sideC)) - Math.Abs(Convert.ToInt32(sideB))))
+            {
+                return "Not a triangle";
+            }
+
+           if (Convert.ToInt32(sideA) == Convert.ToInt32(sideB) && Convert.ToInt32(sideA) == Convert.ToInt32(sideC))
             {
                 return "Equilateral";
             }
 
-            if (Convert.ToInt16(sideA) == Convert.ToInt16(sideB) || Convert.ToInt16(sideA) == Convert.ToInt16(sideC))
+            if (Convert.ToInt32(sideA) == Convert.ToInt32(sideB) || Convert.ToInt32(sideA) == Convert.ToInt32(sideC) || (Convert.ToInt32(sideB) == (Convert.ToInt32(sideC))))
             {
                 return "Isosceles";
             }
 
-            if (Convert.ToInt16(sideA) != Convert.ToInt16(sideB) || Convert.ToInt16(sideA) != Convert.ToInt16(sideC) || Convert.ToInt16(sideB) != Convert.ToInt16(sideC))
-            {
-                return "Scalene";
-            }
+            //if (Convert.ToInt32(sideA) == Convert.ToInt32(sideB) || Convert.ToInt32(sideA) == Convert.ToInt32(sideC) || Convert.ToInt32(sideB) == Convert.ToInt32(sideC))
+            //{
+            //    return "Scalene";
+            //}
 
-            return "some error";
+            return "Scalene";
         }
 
     }
