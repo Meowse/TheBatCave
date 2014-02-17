@@ -75,14 +75,29 @@ namespace IteratorExamples
             throw new NotImplementedException();
         }
 
-        public int[] CountFromToByWithWhileLoop(int p0, int p1, int p2)
+        public int[] CountFromToByWithWhileLoop(int min, int max, int count)
         {
-            throw new NotImplementedException();
+            int length = max - min;
+            int[] result = new int[length];
+            int i = 0;
+            while (i < length)
+            {
+                result[i] = min + i;
+                i = i + count;
+            }
+            return result;
         }
 
-        public int[] BackFromBy(int i, int i1)
+        public int[] BackFromBy(int num, int count)
         {
-            throw new NotImplementedException();
+            int length = num/count + 1;
+            int[] result = new int[length];
+            for (int i = 0; i < length; i++)
+            {
+                result[i] = num;
+                num = num - count;
+            }
+            return result;
         }
     }
 }
