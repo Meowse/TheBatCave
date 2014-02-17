@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Runtime.Serialization;
 
 namespace IteratorExamples
@@ -61,22 +62,70 @@ namespace IteratorExamples
 
         public int[] CountFromToWithForLoop(int min, int max)
         {
-            return new[] { 3, 4, 5, 6, 7 };
+            // return new[] { 3, 4, 5, 6, 7 };           
+            int [] result = new int[max-min+1];
+            int counter = min;
+            for (int i = 0; counter <= max; i++)
+            {
+                result[i] = counter;
+                counter = counter + 1;
+            }
+            return result;
+
+
         }
 
         public int[] CountFromToByWithForLoop(int p0, int p1, int p2)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            // return new[] { 3, 4, 5, 6, 7 };     
+            int arraySize = ((p1 - p0)/p2) + 1;
+            int[] result = new int[arraySize];
+            int counter = p0;
+            int max = p1;
+            int with = p2;
+            //for (int i = 0; i < max; i = i + 1)
+            //for (int i = 0; i < max; i += 1)
+            for (int i = 0; counter <= max; i++)
+            {
+                result[i] = counter;
+                counter = counter + with;
+            }
+            return result;
+
         }
 
         public int[] CountFromToByWithWhileLoop(int p0, int p1, int p2)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+             int arraySize = ((p1 - p0)/p2) + 1;
+            int[] result = new int[arraySize];
+            int counter = p0;
+            int max = p1;
+            int with = p2;
+            int i = 0;
+            while (counter <= max)
+            {
+                result[i] = counter;
+                i = i + 1;
+                counter = counter + with;
+            }
+            return result;
         }
 
         public int[] BackFromBy(int i, int i1)
         {
-            throw new NotImplementedException();
+          //  throw new NotImplementedException();
+            int arraySize = (i/i1) + 1;
+            int[] result = new int[arraySize];
+            int counter = i;
+            int by = i1;
+            for (int index = 0; index < arraySize; index++)
+            {
+                result[index] = counter;
+                counter = counter - by;
+            }
+            return result;
         }
     }
 }
