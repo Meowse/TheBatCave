@@ -37,8 +37,6 @@ namespace IteratorExamples
         public int[] CountToWithForLoop(int max)
         {
             int [] result = new int[max];
-            //for (int i = 0; i < max; i = i + 1)
-            //for (int i = 0; i < max; i += 1)
             for (int i = 0; i < max; i++)
             {
                 result[i] = i + 1;
@@ -68,18 +66,15 @@ namespace IteratorExamples
                 result[i] = (min += 1) - 1;
             }
             return result;
-            
-            //return new[] { 3, 4, 5, 6, 7 };
+           
         }
 
-        public int[] CountFromToByWithForLoop(int p0, int p1, int p2)
+        public int[] CountFromToByWithForLoop(int min, int max, int countby)
         {
-            int[] result = new int[p1];
-            //for (int i = 0; i < max; i = i + 1)
-            //for (int i = 0; i < max; i += 1)
-            for (int i = p0; i < p1; i+=p2)
+            int[] result = new int[max];
+            for (int i = min; i < max; i+=countby)
             {
-                result[i] = i + p2;
+                result[i] = i + countby;
             }
             return result;
         }
