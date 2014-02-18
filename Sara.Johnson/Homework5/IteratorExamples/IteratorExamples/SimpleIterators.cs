@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Remoting.Messaging;
 using System.Runtime.Serialization;
 
 namespace IteratorExamples
@@ -61,22 +62,60 @@ namespace IteratorExamples
 
         public int[] CountFromToWithForLoop(int min, int max)
         {
-            return new[] { 3, 4, 5, 6, 7 };
+
+            int length = max - min + 1;
+            int[] result = new int[length];
+            for (int i = 0; i < length; i++)
+            {
+                result[i] = i + min;
+            }
+            return result;
+
+
         }
 
-        public int[] CountFromToByWithForLoop(int p0, int p1, int p2)
+        public int[] CountFromToByWithForLoop(int min, int max, int countBy)
         {
-            throw new NotImplementedException();
+            int length = ((max - min) / countBy) + 1;
+            int[] result = new int[length];
+            for (int i = 0; i < length; i++)
+            {
+                result[i] = (min += countBy) - countBy;
+            }
+            return result;
+
         }
 
-        public int[] CountFromToByWithWhileLoop(int p0, int p1, int p2)
+        public int[] CountFromToByWithWhileLoop(int min, int max, int countBy)
         {
-            throw new NotImplementedException();
-        }
+            int length = ((max - min) / countBy) + 1;
 
-        public int[] BackFromBy(int i, int i1)
+            int[] result = new int[length];
+            int i = 0;
+            while (i < length)
+            {
+                result[i] = min;
+                min += countBy;
+                i++;
+
+            }
+            return result;
+
+        }
+        
+
+        public int[] BackFromBy(int start, int countBy)
         {
-            throw new NotImplementedException();
+            int length = (start / countBy) + 1;
+
+            int[] result = new int[length];
+            for (int i = 0; i < length; i++)
+            {
+                result[i] = start;
+                start -= countBy;
+            }
+            return result;
+
         }
     }
 }
