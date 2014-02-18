@@ -71,7 +71,7 @@ namespace TriangleTyperApp
             // check to see if A = B || B = C || A = C
             if (sideA == sideB || sideB == sideC || sideA == sideC)
             {
-                return "Isoscoles";
+                return "Isosceles";
             }
             return "Scalene";
         }
