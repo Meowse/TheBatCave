@@ -75,13 +75,12 @@ namespace IteratorExamples
         public int[] CountFromToByWithForLoop(int low, int high, int step)
         {
             //  changed variable names; fred = low, barney = high, wilma = step
-            int length = (high - low + 1/step);
+            int length = ((high - low) / step) + 1;
             int[] result = new int[length];
-            int numb = low;
             for (int i = 0; i < length; i++)
             {
-                result [i] = numb;
-                numb += step;
+                result [i] = low;
+                low += step;
             }
             return result;
         }
