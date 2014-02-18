@@ -111,9 +111,17 @@ namespace IteratorExamples
 
         }
 
-        public int[] BackFromBy(int i, int i1)
+        public int[] BackFromBy(int from, int by)
         {
-            throw new NotImplementedException();
+            int length = (from/by) + 1;
+            int[] result = new int[length];
+            int count = 0;
+            for (int i = 0; i < length; i++)
+            {
+                result[i] = from - count;
+                count += by;
+            }
+            return result;
         }
     }
 }
