@@ -69,21 +69,70 @@ namespace IteratorExamples
             }
             return result;
         }
-
-
+        
         public int[] CountFromToByWithForLoop(int p0, int p1, int p2)
         {
-            throw new NotImplementedException();
+            int countValue = p0;
+
+            int length = GetLengthForArray(p0, p1, p2);
+
+            int[] result = new int[length];
+            for (int i = 0; i < length; i++)
+            {
+                result[i] = countValue;
+                countValue += p2;
+            }
+            return result;
+        }
+
+        private static int GetLengthForArray(int p0, int p1, int p2)
+        {
+            int length;
+            if (p0 == 0)
+            {
+                length = (p1 / p2) + 1;
+            }
+            else if (p1 % p2 == 0)
+            {
+                length = (p1 / p2) - 1;
+            }
+            else
+            {
+                length = (p1 / p2);
+            }
+            return length;
         }
 
         public int[] CountFromToByWithWhileLoop(int p0, int p1, int p2)
         {
-            throw new NotImplementedException();
+            int countValue = p0;
+
+            int length = GetLengthForArray(p0, p1, p2);
+
+            int[] result = new int[length];
+            int i = 0;
+            while (i < length)
+            {
+                result[i] = countValue;
+                countValue += p2;
+                i++;
+            }
+            return result;
         }
 
-        public int[] BackFromBy(int i, int i1)
+        public int[] BackFromBy(int p, int p1)
         {
-            throw new NotImplementedException();
+            int countValue = p;
+
+            int length = (p / p1) + 1;
+
+            int[] result = new int[length];
+            for (int i = 0; i < length; i++)
+            {
+                result[i] = countValue;
+                countValue -= p1;
+            }
+            return result;
         }
     }
 }
