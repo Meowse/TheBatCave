@@ -72,9 +72,18 @@ namespace IteratorExamples
             return result;
         }
 
-        public int[] CountFromToByWithForLoop(int fred, int barney, int wilma)
+        public int[] CountFromToByWithForLoop(int low, int high, int step)
         {
-            throw new NotImplementedException();
+            //  changed variable names; fred = low, barney = high, wilma = step
+            int length = (high - low + 1/step);
+            int[] result = new int[length];
+            int numb = low;
+            for (int i = 0; i < length; i++)
+            {
+                result [i] = numb;
+                numb += step;
+            }
+            return result;
         }
 
         public int[] CountFromToByWithWhileLoop(int min, int max, int by)
