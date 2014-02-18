@@ -99,9 +99,16 @@ namespace IteratorExamples
             // 17, and "by" (or "step", or "stepSize", or whatever we call it) will have the value
             // 2.  And we'll return [3, 5, 7, 9, 11, 13, 15, 17] as the answer, no matter what
             // we named the variables.
+            int length = ((max - min)/by) + 1;
+            int[] result = new int[length];
+            int i = 0;
+            while (i < length)
+            {
+                result[i] = min + (i*by);
+                i = i + 1;
+            }
+            return result;
 
-
-            throw new NotImplementedException();
         }
 
         public int[] BackFromBy(int i, int i1)
