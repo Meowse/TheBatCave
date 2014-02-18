@@ -10,7 +10,7 @@ namespace IteratorExamples
         {
             return new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
         }
-
+        
         // TODO: Re-implement this using only string arrays.
         public string[] EveryOtherElement(string[] input)
         {
@@ -59,23 +59,86 @@ namespace IteratorExamples
             return result;
         }
 
-        public int[] CountFromToWithForLoop(int min, int max)
+        public int[] CountFromToWithForLoop(int p0, int p1)
         {
-            return new[] { 3, 4, 5, 6, 7 };
+            int ArraySize = 0;
+            int ArrayPosition = 0;
+            for (int i = p0; i <= p1; i = i + 1)
+            {
+                ArraySize = ArraySize + 1;
+            }
+            int[] result = new int[ArraySize];
+            for (int i = p0; i <= p1; i = i + 1)
+            {
+                result[ArrayPosition] = i;
+                ArrayPosition++;
+            }
+            return result;
         }
 
         public int[] CountFromToByWithForLoop(int p0, int p1, int p2)
         {
-            throw new NotImplementedException();
+            //Count from p0 to p1 by increments of p2
+
+
+            int ArraySize = 0;
+            int ArrayPosition = 0;
+            for (int i = p0; i <= p1; i = i+p2)
+            {
+                ArraySize = ArraySize + 1;
+            }
+            int[] result = new int[ArraySize];
+            for (int i = p0; i <= p1; i = i+p2)
+            {
+                result[ArrayPosition] = i;
+                ArrayPosition ++;
+            }
+            return result;
         }
 
         public int[] CountFromToByWithWhileLoop(int p0, int p1, int p2)
         {
-            throw new NotImplementedException();
+            int ArraySize = 0;
+            int ArrayPosition = 0;
+            int i = p0;
+            while (i <= p1)
+            {
+                ArraySize = ArraySize + 1;
+                i = i + p2;
+            }
+            int[] result = new int[ArraySize];
+            i = p0;
+            while (i <= p1)
+            {
+                result[ArrayPosition] = i;
+                i = i + p2;
+                ArrayPosition++;
+            }
+            return result;
         }
 
-        public int[] BackFromBy(int i, int i1)
+
+
+
+        public int[] BackFromBy(int p0, int p1)
         {
+
+
+
+            int ArraySize = 0;
+            int ArrayPosition = 0;
+            for (int i = p0; i > 0; i = i - p1)
+            {
+                ArraySize = ArraySize + 1;
+            }
+            int[] result = new int[ArraySize];
+            for (int i = p0; i > 0; i = i - p1)
+            {
+                result[ArrayPosition] = i;
+                ArrayPosition++;
+            }
+            return result;
+            
             throw new NotImplementedException();
         }
     }
