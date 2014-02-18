@@ -70,9 +70,25 @@ namespace IteratorExamples
             return result;
         }
 
-        public int[] CountFromToByWithForLoop(int p0, int p1, int p2)
+        public int[] CountFromToByWithForLoop(int min, int max, int count)
         {
-            throw new NotImplementedException();
+            int newmin = min;
+            int length;
+            if ((max/min) < count)
+            {
+                length = max/min;
+            }
+            else
+            {
+                length = max/min + count;
+            }
+            int[] result = new int[length];
+            for (int i = 0; i < length; i++)
+            {
+                result[i] = newmin;
+                newmin = newmin + count;
+            }
+            return result;
         }
 
         public int[] CountFromToByWithWhileLoop(int min, int max, int count)
