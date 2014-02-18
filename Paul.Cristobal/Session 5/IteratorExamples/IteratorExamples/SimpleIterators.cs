@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
+using System.Net.Mail;
 using System.Runtime.Serialization;
 
 namespace IteratorExamples
@@ -14,12 +16,29 @@ namespace IteratorExamples
         // TODO: Re-implement this using only string arrays.
         public string[] EveryOtherElement(string[] input)
         {
-            List<string> result = new List<string>();
-            for (int i = 0; i < input.Length; i += 2)
+            int length = 0;
+            int oddLengths = ((input.Length)/2) + 1;
+            int evenLengths = ((input.Length)/2);
+            if ((input.Length%2) == 0)
             {
-                result.Add(input[i]);
+                length = evenLengths;
             }
-            return result.ToArray();
+            if ((input.Length%2) == 1)
+            {
+                length = oddLengths;
+            }
+            string[] result = new string[length];
+            for (int i = 0, j = 0; i < length; i++, j+=2 )
+            {
+                result[i] = input[j];
+            }
+            return result;
+            //List<string> result = new List<string>();
+            //for (int i = 0; i < input.Length; i += 2)
+            //{
+            //    result.Add(input[i]);
+            //}
+            //return result.ToArray();
         }
 
         public int[] CountToWithWhileLoop(int max)
@@ -61,12 +80,26 @@ namespace IteratorExamples
 
         public int[] CountFromToWithForLoop(int min, int max)
         {
-            return new[] { 3, 4, 5, 6, 7 };
+            //return new[] { 3, 4, 5, 6, 7 };
+
+            int length = max - min + 1;
+            int[] result = new int[length];
+            for (int i = 0; i < length; i++)
+            {
+                result[i] = (min += 1) - 1;
+            }
+            return result;
         }
 
-        public int[] CountFromToByWithForLoop(int p0, int p1, int p2)
+        public int[] CountFromToByWithForLoop(int min, int max, int increment)
         {
-            throw new NotImplementedException();
+            int length = ((max - min)/increment) + 1;
+            int[] result = new int[length];
+            for (int i = 0; i < length; i++)
+            {
+                result[i] = (min += increment) - increment;
+            }
+            return result;
         }
 
         public int[] CountFromToByWithWhileLoop(int p0, int p1, int p2)
@@ -74,7 +107,7 @@ namespace IteratorExamples
             throw new NotImplementedException();
         }
 
-        public int[] BackFromBy(int i, int i1)
+        public int[] BackFromBy(int max, int min)
         {
             throw new NotImplementedException();
         }
