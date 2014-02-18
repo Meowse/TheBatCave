@@ -93,13 +93,23 @@ namespace IteratorExamples
 
         public int[] CountFromToByWithWhileLoop(int min, int max, int count)
         {
-            int length = max - min;
+            int newmin = min;
+            int length;
+            if ((max / min) < count)
+            {
+                length = max / min;
+            }
+            else
+            {
+                length = max / min + count;
+            }
             int[] result = new int[length];
             int i = 0;
             while (i < length)
             {
-                result[i] = min + i;
-                i = i + count;
+                result[i] = newmin;
+                i++;
+                newmin = newmin + count;
             }
             return result;
         }
