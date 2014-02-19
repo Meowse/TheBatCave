@@ -16,16 +16,14 @@ namespace IteratorExamples
         public string[] EveryOtherElement(string[] input)
         {
             int length = 0;
-            int oddLengths = ((input.Length)/2) +1;
-            int evenLengths = ((input.Length)/2);
 
             if ((input.Length %2) == 0)
             {
-                length = evenLengths;
+                length = ((input.Length)/2);
             }
             if ((input.Length % 2) == 1)
             {
-                length = oddLengths;
+                length = ((input.Length)/2) +1;
             }
 
             string[] result = new string[length];
