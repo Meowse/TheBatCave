@@ -102,9 +102,18 @@ namespace IteratorExamples
             return result;
         }
 
-        public int[] CountFromToByWithWhileLoop(int p0, int p1, int p2)
+        public int[] CountFromToByWithWhileLoop(int min, int max, int increment)
         {
-            throw new NotImplementedException();
+            int length = ((max - min) / increment) +1;
+            int[] result = new int[length];
+            int i = 0;
+            while (i < length)
+            {
+                result[i] = (min += increment) - increment;
+                i = i + 1;
+            }
+
+            return result;
         }
 
         public int[] BackFromBy(int max, int min)
