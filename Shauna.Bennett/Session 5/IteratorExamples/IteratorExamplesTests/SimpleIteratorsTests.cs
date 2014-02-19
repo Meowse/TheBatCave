@@ -12,14 +12,14 @@ namespace IteratorExamplesTests
     public class SimpleIteratorsTests
     {
         private static readonly SimpleIterators SimpleIterators = new SimpleIterators();
-
+        //PASSES
         [Test]
         public void CanCountToTen()
         {
             int[] expected = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
             Assert.That(SimpleIterators.CountToTen(), Is.EqualTo(expected));
         }
-
+        //PASSES
         [Test]
         public void CanCountToNWithWhileLoop()
         {
@@ -29,7 +29,7 @@ namespace IteratorExamplesTests
             int[] expected2 = {1, 2, 3, 4};
             Assert.That(SimpleIterators.CountToWithWhileLoop(4), Is.EqualTo(expected2));
         }
-
+        //PASSES
         [Test]
         public void CanCountToNWithForLoop()
         {
