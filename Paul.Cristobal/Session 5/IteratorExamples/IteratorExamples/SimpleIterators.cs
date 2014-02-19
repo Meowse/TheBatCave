@@ -118,7 +118,14 @@ namespace IteratorExamples
 
         public int[] BackFromBy(int max, int min)
         {
-            throw new NotImplementedException();
+            int length = (max/min) +1;
+            int[]result= new int[length];
+            for (int i = 0; i < length; i++)
+            {
+                result[i] = (max -= min) + min;
+
+            }
+            return result;
         }
     }
 }
