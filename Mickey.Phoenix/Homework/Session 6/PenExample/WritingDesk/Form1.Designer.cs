@@ -137,6 +137,7 @@
             this.waitFiveMinutesButton.TabIndex = 9;
             this.waitFiveMinutesButton.Text = "5 Minutes of Writer\'s Block";
             this.waitFiveMinutesButton.UseVisualStyleBackColor = true;
+            this.waitFiveMinutesButton.Click += new System.EventHandler(this.waitFiveMinutesButton_Click);
             // 
             // waitOneHourButton
             // 
@@ -146,6 +147,7 @@
             this.waitOneHourButton.TabIndex = 10;
             this.waitOneHourButton.Text = "1 Hour of Writer\'s Block";
             this.waitOneHourButton.UseVisualStyleBackColor = true;
+            this.waitOneHourButton.Click += new System.EventHandler(this.waitOneHourButton_Click);
             // 
             // capPenButton
             // 
@@ -155,6 +157,7 @@
             this.capPenButton.TabIndex = 11;
             this.capPenButton.Text = "Cap Your Pen";
             this.capPenButton.UseVisualStyleBackColor = true;
+            this.capPenButton.Click += new System.EventHandler(this.capPenButton_Click);
             // 
             // uncapPenButton
             // 
@@ -164,6 +167,7 @@
             this.uncapPenButton.TabIndex = 12;
             this.uncapPenButton.Text = "Un-Cap Your Pen";
             this.uncapPenButton.UseVisualStyleBackColor = true;
+            this.uncapPenButton.Click += new System.EventHandler(this.uncapPenButton_Click);
             // 
             // Form1
             // 
