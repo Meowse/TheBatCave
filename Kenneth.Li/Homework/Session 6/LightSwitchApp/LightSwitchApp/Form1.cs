@@ -23,7 +23,7 @@ namespace LightSwitchApp
             }
             else
             {
-                lightBrightnessDisplay.Text = @"Overhead light ON: " + _lightSwitch.PhysicalLightBrightness;
+                lightBrightnessDisplay.Text = @"Overhead light ON: " + _lightSwitch.IntensityLedValue;
             }
         }
 

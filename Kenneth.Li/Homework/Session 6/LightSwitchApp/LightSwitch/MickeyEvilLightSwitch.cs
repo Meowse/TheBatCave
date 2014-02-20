@@ -29,7 +29,10 @@ namespace LightSwitch
 
         public const int DimmestDimmerValue = 0;
         public const int BrightestDimmerValue = 5;
+        public const int LowestIntensityValue = 0;
+        public const int HighestIntensityValue = 5;
         public int DimmerValue { get; private set; }
+        public int IntensityLedValue { get; private set; }
 
         public int PhysicalLightBrightness
         {
@@ -41,9 +44,9 @@ namespace LightSwitch
                 }
                 if (IsFullBright)
                 {
-                    return BrightestDimmerValue;
+                    return HighestIntensityValue;
                 }
-                return DimmerValue;
+                return HighestIntensityValue;
             }
         }
 
@@ -72,29 +75,64 @@ namespace LightSwitch
 //            {
 //                DimmerValue++;
 //            }
-            DimmerValue++;
-            if (DimmerValue > BrightestDimmerValue)
+            if (IsSwitchOn == false)
             {
-                DimmerValue = BrightestDimmerValue;
+                DimmerValue++;
+                if (DimmerValue > BrightestDimmerValue)
+                {
+                    DimmerValue = BrightestDimmerValue;
+                }
             }
-            IsSwitchOn = true;
+            if (IsSwitchOn)
+            {
+                IntensityLedValue++;
+                if (IntensityLedValue > HighestIntensityValue)
+                {
+                    IntensityLedValue = HighestIntensityValue;
+                }
+            }
         }
 
         public void ClickDimmerDownButton()
         {
-            if (IsFullBright)
+            if (IsSwitchOn == false)
             {
-                DimmerValue = BrightestDimmerValue - 1;
-                IsFullBright = false;
-            }
-            else
-            {
-                DimmerValue--;
-                if (DimmerValue < DimmestDimmerValue)
+                if (IsFullBright)
                 {
-                    DimmerValue = DimmestDimmerValue;
+                    DimmerValue = BrightestDimmerValue - 1;
+                    IsFullBright = false;
+                }
+                else
+                {
+                    DimmerValue--;
+                    if (DimmerValue < DimmestDimmerValue)
+                    {
+                        DimmerValue = DimmestDimmerValue;
+                    }
                 }
             }
+            if (IsSwitchOn)
+            {
+                IntensityLedValue--;
+                if (IntensityLedValue < LowestIntensityValue)
+                {
+                    IntensityLedValue = LowestIntensityValue;
+                }
+
+            }
+//            if (IsFullBright)
+//            {
+//                DimmerValue = BrightestDimmerValue - 1;
+//                IsFullBright = false;
+//            }
+//            else
+//            {
+//                DimmerValue--;
+//                if (DimmerValue < DimmestDimmerValue)
+//                {
+//                    DimmerValue = DimmestDimmerValue;
+//                }
+//            }
         }
     }
 }
