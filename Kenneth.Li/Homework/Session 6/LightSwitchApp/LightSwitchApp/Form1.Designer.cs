@@ -48,7 +48,6 @@
             this.dimmer5.Name = "dimmer5";
             this.dimmer5.Size = new System.Drawing.Size(14, 13);
             this.dimmer5.TabIndex = 0;
-            this.dimmer5.TabStop = true;
             this.dimmer5.UseVisualStyleBackColor = true;
             // 
             // dimmer4
@@ -58,7 +57,6 @@
             this.dimmer4.Name = "dimmer4";
             this.dimmer4.Size = new System.Drawing.Size(14, 13);
             this.dimmer4.TabIndex = 1;
-            this.dimmer4.TabStop = true;
             this.dimmer4.UseVisualStyleBackColor = true;
             // 
             // dimmer3
@@ -68,7 +66,6 @@
             this.dimmer3.Name = "dimmer3";
             this.dimmer3.Size = new System.Drawing.Size(14, 13);
             this.dimmer3.TabIndex = 2;
-            this.dimmer3.TabStop = true;
             this.dimmer3.UseVisualStyleBackColor = true;
             // 
             // dimmer2
@@ -78,7 +75,6 @@
             this.dimmer2.Name = "dimmer2";
             this.dimmer2.Size = new System.Drawing.Size(14, 13);
             this.dimmer2.TabIndex = 3;
-            this.dimmer2.TabStop = true;
             this.dimmer2.UseVisualStyleBackColor = true;
             // 
             // dimmer1
@@ -88,7 +84,6 @@
             this.dimmer1.Name = "dimmer1";
             this.dimmer1.Size = new System.Drawing.Size(14, 13);
             this.dimmer1.TabIndex = 4;
-            this.dimmer1.TabStop = true;
             this.dimmer1.UseVisualStyleBackColor = true;
             // 
             // dimmer0
@@ -98,7 +93,6 @@
             this.dimmer0.Name = "dimmer0";
             this.dimmer0.Size = new System.Drawing.Size(14, 13);
             this.dimmer0.TabIndex = 5;
-            this.dimmer0.TabStop = true;
             this.dimmer0.UseVisualStyleBackColor = true;
             // 
             // bigButton

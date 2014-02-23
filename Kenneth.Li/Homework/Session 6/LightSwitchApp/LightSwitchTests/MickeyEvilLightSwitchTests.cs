@@ -19,9 +19,9 @@ namespace LightSwitchTests
         {
             var lightSwitch = new MickeyEvilLightSwitch();
             lightSwitch.ClickBigButton();
-            Assert.That(lightSwitch.PhysicalLightBrightness, Is.EqualTo(0));
+            Assert.That(lightSwitch.DimmerValue, Is.EqualTo(0));
             lightSwitch.ClickBigButton();
-            Assert.That(lightSwitch.PhysicalLightBrightness, Is.EqualTo(0));
+            Assert.That(lightSwitch.DimmerValue, Is.EqualTo(0));
         }
 
         [Test]
@@ -47,38 +47,57 @@ namespace LightSwitchTests
             Assert.That(lightSwitch.PhysicalLightBrightness, Is.EqualTo(0));
             Assert.That(lightSwitch.DimmerValue, Is.EqualTo(MickeyEvilLightSwitch.DimmestDimmerValue));
             lightSwitch.ClickBigButton();
-            Assert.That(lightSwitch.PhysicalLightBrightness, Is.EqualTo(0));
+            Assert.That(lightSwitch.PhysicalLightBrightness, Is.EqualTo(MickeyEvilLightSwitch.BrightestDimmerValue));
             Assert.That(lightSwitch.DimmerValue, Is.EqualTo(MickeyEvilLightSwitch.DimmestDimmerValue));
         }
 
         [Test]
-        public void DimmerUpTurnsLightOn()
+        public void IntensityAndDimmerValuesNotBeingOverridden()
         {
             var lightSwitch = new MickeyEvilLightSwitch();
-            lightSwitch.ClickDimmerUpButton();
+            lightSwitch.ClickBigButton();
+            lightSwitch.ClickUpButton();
             Assert.That(lightSwitch.PhysicalLightBrightness, Is.EqualTo(1));
+            lightSwitch.ClickBigButton();
+            lightSwitch.ClickUpButton();
+            lightSwitch.ClickUpButton();
+            lightSwitch.ClickBigButton();
+            Assert.That(lightSwitch.PhysicalLightBrightness, Is.EqualTo(1));
+            Assert.That(lightSwitch.DimmerValue, Is.EqualTo(2));
+        }
+
+        [Test]
+        public void DimmerUpDoesNotTurnsLightOnAndDimmerValuesIncreases()
+        {
+            var lightSwitch = new MickeyEvilLightSwitch();
+            lightSwitch.ClickUpButton();
+            Assert.That(lightSwitch.PhysicalLightBrightness, Is.EqualTo(0));
             Assert.That(lightSwitch.DimmerValue, Is.EqualTo(1));
+            lightSwitch.ClickUpButton();
+            Assert.That(lightSwitch.PhysicalLightBrightness, Is.EqualTo(0));
+            Assert.That(lightSwitch.DimmerValue, Is.EqualTo(2));
         }
 
         [Test]
         public void DimmerUpExcessiveTimesOnlyBrightensLightToMax()
         {
             var lightSwitch = new MickeyEvilLightSwitch();
-            lightSwitch.ClickDimmerUpButton();
-            lightSwitch.ClickDimmerUpButton();
-            lightSwitch.ClickDimmerUpButton();
-            lightSwitch.ClickDimmerUpButton();
-            lightSwitch.ClickDimmerUpButton();
-            lightSwitch.ClickDimmerUpButton();
+            lightSwitch.DoubleClickBigButton();
+            lightSwitch.ClickUpButton();
+            lightSwitch.ClickUpButton();
+            lightSwitch.ClickUpButton();
+            lightSwitch.ClickUpButton();
+            lightSwitch.ClickUpButton();
+            lightSwitch.ClickUpButton();
             Assert.That(lightSwitch.PhysicalLightBrightness, Is.EqualTo(MickeyEvilLightSwitch.BrightestDimmerValue));
-            Assert.That(lightSwitch.DimmerValue, Is.EqualTo(MickeyEvilLightSwitch.BrightestDimmerValue));
+            //Assert.That(lightSwitch.DimmerValue, Is.EqualTo(MickeyEvilLightSwitch.BrightestDimmerValue));
         }
 
         [Test]
         public void DimmerDownOnlyDimsLightToMin()
         {
             var lightSwitch = new MickeyEvilLightSwitch();
-            lightSwitch.ClickDimmerDownButton();
+            lightSwitch.ClickDownButton();
             Assert.That(lightSwitch.PhysicalLightBrightness, Is.EqualTo(0));
             Assert.That(lightSwitch.DimmerValue, Is.EqualTo(0));
         }
@@ -87,8 +106,8 @@ namespace LightSwitchTests
         public void DimmerUpThenDownTurnsLightOff()
         {
             var lightSwitch = new MickeyEvilLightSwitch();
-            lightSwitch.ClickDimmerUpButton();
-            lightSwitch.ClickDimmerDownButton();
+            lightSwitch.ClickUpButton();
+            lightSwitch.ClickDownButton();
             Assert.That(lightSwitch.PhysicalLightBrightness, Is.EqualTo(0));
             Assert.That(lightSwitch.DimmerValue, Is.EqualTo(0));
         }
@@ -98,9 +117,9 @@ namespace LightSwitchTests
         {
             var lightSwitch = new MickeyEvilLightSwitch();
             lightSwitch.DoubleClickBigButton();
-            lightSwitch.ClickDimmerDownButton();
+            lightSwitch.ClickDownButton();
             Assert.That(lightSwitch.PhysicalLightBrightness, Is.EqualTo(MickeyEvilLightSwitch.BrightestDimmerValue - 1));
-            Assert.That(lightSwitch.DimmerValue, Is.EqualTo(MickeyEvilLightSwitch.BrightestDimmerValue - 1));
+            //Assert.That(lightSwitch.DimmerValue, Is.EqualTo(MickeyEvilLightSwitch.BrightestDimmerValue - 1));
         }
 
         // TODO: Add or change tests as necessary to replicate the ACTUAL behavior of

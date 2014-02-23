@@ -23,7 +23,7 @@ namespace LightSwitchApp
             }
             else
             {
-                lightBrightnessDisplay.Text = @"Overhead light ON: " + _lightSwitch.IntensityLedValue;
+                lightBrightnessDisplay.Text = @"Overhead light ON: " + _lightSwitch.PhysicalLightBrightness;
             }
         }
 
@@ -57,13 +57,13 @@ namespace LightSwitchApp
 
         private void dimmerUpButton_Click(object sender, EventArgs e)
         {
-            _lightSwitch.ClickDimmerUpButton();
+            _lightSwitch.ClickUpButton();
             UpdateUi();
         }
 
         private void dimmerDownButton_Click(object sender, EventArgs e)
         {
-            _lightSwitch.ClickDimmerDownButton();
+            _lightSwitch.ClickDownButton();
             UpdateUi();
         }
     }

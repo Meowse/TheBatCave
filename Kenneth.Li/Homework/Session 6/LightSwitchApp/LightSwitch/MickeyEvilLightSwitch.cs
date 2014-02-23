@@ -8,20 +8,20 @@ namespace LightSwitch
 {
     public class MickeyEvilLightSwitch
     {
-        private decimal _price;
-
-        public decimal Price
-        {
-            get { return _price; }
-            set
-            {
-                if (value <= 0)
-                {
-                    throw new ArgumentException("Price must be positive");
-                }
-                _price = value;
-            }
-        }
+//        private decimal _price;
+//
+//        public decimal Price
+//        {
+//            get { return _price; }
+//            set
+//            {
+//                if (value <= 0)
+//                {
+//                    throw new ArgumentException("Price must be positive");
+//                }
+//                _price = value;
+//            }
+//        }
 
         private bool IsSwitchOn { get; set; }
 
@@ -44,9 +44,9 @@ namespace LightSwitch
                 }
                 if (IsFullBright)
                 {
-                    return HighestIntensityValue;
+                    return IntensityLedValue = HighestIntensityValue;
                 }
-                return HighestIntensityValue;
+                return IntensityLedValue;
             }
         }
 
@@ -69,70 +69,80 @@ namespace LightSwitch
             IsFullBright = true;
         }
 
-        public void ClickDimmerUpButton()
+        public void ClickUpButton()
         {
-//            if (DimmerValue < BrightestDimmerValue)
-//            {
-//                DimmerValue++;
-//            }
             if (IsSwitchOn == false)
             {
-                DimmerValue++;
-                if (DimmerValue > BrightestDimmerValue)
-                {
-                    DimmerValue = BrightestDimmerValue;
-                }
+                SwitchOffForUpButton();
             }
             if (IsSwitchOn)
             {
-                IntensityLedValue++;
-                if (IntensityLedValue > HighestIntensityValue)
+                SwitchOnForUpButton();
+            }
+        }
+
+        public void ClickDownButton()
+        {
+            if (IsSwitchOn == false)
+            {
+                SwitchOffForDownButton();
+            }
+            if (IsSwitchOn)
+            {
+                SwitchOnForDownButton();
+            }
+        }
+
+        public void SwitchOffForUpButton()
+        {
+            DimmerValue++;
+            if (DimmerValue > BrightestDimmerValue)
+            {
+                DimmerValue = BrightestDimmerValue;
+            }
+        }
+
+        public void SwitchOnForUpButton()
+        {
+            IntensityLedValue++;
+            if (IntensityLedValue > HighestIntensityValue)
+            {
+                IntensityLedValue = HighestIntensityValue;
+            }
+        }
+
+        public void SwitchOffForDownButton()
+        {
+            if (IsFullBright)
+            {
+                DimmerValue = BrightestDimmerValue - 1;
+                IsFullBright = false;
+            }
+            else
+            {
+                DimmerValue--;
+                if (DimmerValue < DimmestDimmerValue)
                 {
-                    IntensityLedValue = HighestIntensityValue;
+                    DimmerValue = DimmestDimmerValue;
                 }
             }
         }
 
-        public void ClickDimmerDownButton()
+        public void SwitchOnForDownButton()
         {
-            if (IsSwitchOn == false)
+            if (IsFullBright)
             {
-                if (IsFullBright)
-                {
-                    DimmerValue = BrightestDimmerValue - 1;
-                    IsFullBright = false;
-                }
-                else
-                {
-                    DimmerValue--;
-                    if (DimmerValue < DimmestDimmerValue)
-                    {
-                        DimmerValue = DimmestDimmerValue;
-                    }
-                }
+                IntensityLedValue = HighestIntensityValue - 1;
+                IsFullBright = false;
             }
-            if (IsSwitchOn)
+            else
             {
                 IntensityLedValue--;
                 if (IntensityLedValue < LowestIntensityValue)
                 {
                     IntensityLedValue = LowestIntensityValue;
                 }
-
             }
-//            if (IsFullBright)
-//            {
-//                DimmerValue = BrightestDimmerValue - 1;
-//                IsFullBright = false;
-//            }
-//            else
-//            {
-//                DimmerValue--;
-//                if (DimmerValue < DimmestDimmerValue)
-//                {
-//                    DimmerValue = DimmestDimmerValue;
-//                }
-//            }
         }
     }
 }
