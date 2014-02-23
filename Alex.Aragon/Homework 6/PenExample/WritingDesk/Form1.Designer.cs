@@ -57,9 +57,9 @@
             this.currentPage.Location = new System.Drawing.Point(12, 135);
             this.currentPage.Multiline = true;
             this.currentPage.Name = "currentPage";
+            this.currentPage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.currentPage.Size = new System.Drawing.Size(314, 171);
             this.currentPage.TabIndex = 1;
-            this.currentPage.Text = "        \r\n                ";
             // 
             // getNewPageButton
             // 
