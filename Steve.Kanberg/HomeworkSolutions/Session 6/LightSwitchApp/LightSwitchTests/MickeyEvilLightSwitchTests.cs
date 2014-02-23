@@ -103,6 +103,15 @@ namespace LightSwitchTests
             Assert.That(lightSwitch.DimmerValue, Is.EqualTo(MickeyEvilLightSwitch.BrightestDimmerValue - 1));
         }
 
+        [Test]
+        public void DoubleClickSetsDimmerValueToMaxFromDimmerValueLessThanMax()
+        {
+            var lightSwitch = new MickeyEvilLightSwitch();
+            lightSwitch.DoubleClickBigButton();
+            Assert.That(lightSwitch.PhysicalLightBrightness, Is.EqualTo(5));
+            Assert.That(lightSwitch.DimmerValue, Is.EqualTo(5));
+        }
+
         // TODO: Add or change tests as necessary to replicate the ACTUAL behavior of
         // the real light switches, to wit:
         // The LEDs only display the current DimmerValue if the light is off.

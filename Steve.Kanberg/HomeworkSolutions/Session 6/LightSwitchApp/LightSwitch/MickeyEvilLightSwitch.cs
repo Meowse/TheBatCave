@@ -96,5 +96,19 @@ namespace LightSwitch
                 }
             }
         }
+
+        public void DoubleClickBigButtonForMaxDimmerValue()
+        {
+            if (IsSwitchOn)
+            {
+                DimmerValue = BrightestDimmerValue;
+                IsFullBright = true;
+            }
+            else
+            {
+                DimmerValue = DimmestDimmerValue;
+                IsFullBright = false;
+            }
+        }
     }
 }
