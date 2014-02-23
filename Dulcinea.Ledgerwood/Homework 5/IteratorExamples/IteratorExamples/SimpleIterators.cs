@@ -14,12 +14,24 @@ namespace IteratorExamples
         // TODO: Re-implement this using only string arrays.
         public string[] EveryOtherElement(string[] input)
         {
-            List<string> result = new List<string>();
-            for (int i = 0; i < input.Length; i += 2)
+            int length;
+            if ((input.Length % 2) == 0)
             {
-                result.Add(input[i]);
+                length = (input.Length / 2);
             }
-            return result.ToArray();
+            else
+            {
+                length = ((input.Length + 1) / 2);
+            }
+
+            string[] result = new string[length];
+            int count = 0;
+            for (int i = 0; i < result.Length; i++)
+            {
+                result[i] = input[count];
+                count += 2;
+            }
+            return result;
         }
 
         public int[] CountToWithWhileLoop(int max)
@@ -61,22 +73,54 @@ namespace IteratorExamples
 
         public int[] CountFromToWithForLoop(int min, int max)
         {
-            return new[] { 3, 4, 5, 6, 7 };
+            int length = (max - min) + 1;
+            int[] result = new int[length];
+            for (int i = 0; i < length; i++)
+            {
+                result[i] = min + i;
+            }
+            return result;
         }
 
         public int[] CountFromToByWithForLoop(int p0, int p1, int p2)
         {
-            throw new NotImplementedException();
+            int length = ((p1 - p0) / p2) +1; 
+            int[] result = new int[length];
+            
+            for (int i = 0; i < length; i++)
+            {
+                result[i] = (p0 += p2) - p2;
+            }
+            return result;
         }
 
         public int[] CountFromToByWithWhileLoop(int p0, int p1, int p2)
         {
-            throw new NotImplementedException();
+            int length = ((p1 - p0) / p2) + 1;
+            int[] result = new int[length];
+            int count = 0;
+
+            do
+            {
+                result[count] = (p0 += p2) - p2;
+                count += 1;
+
+            } while (count < length);
+
+            return result;
         }
 
-        public int[] BackFromBy(int i, int i1)
+        public int[] BackFromBy(int from, int by)
         {
-            throw new NotImplementedException();
+            int length = (from / by) + 1;
+            int[] result = new int[length];
+
+            for (int i = 0; i < length; i++)
+            {
+                result[i] = (from -= by) + by;
+
+            }
+            return result;
         }
     }
 }
