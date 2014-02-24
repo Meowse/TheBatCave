@@ -60,7 +60,7 @@ namespace WritingDesk
             else
             {
                 _pen.Write("something");
-                currentPage.Text += @"\nWrote something with our pen.";
+                currentPage.Text += "Wrote something with our pen.\r\n";
             }
             
             // For extra credit, feel free to have the "Write" method 
@@ -104,14 +104,22 @@ namespace WritingDesk
         {
             // Implement the MinutesPass method so that your pen
             // "ages" by 5 minutes.
-            _pen.MinutesPass(5);
+            if (!_pen.Capped)
+            {
+                _pen.MinutesPass(5);
+            }
+            
         }
 
         private void waitOneHourButton_Click(object sender, EventArgs e)
         {
             // Implement the MinutesPass method so that your pen
             // "ages" by 60 minutes.
-            _pen.MinutesPass(60);
+            if (!_pen.Capped)
+            {
+                _pen.MinutesPass(60);
+            }
+            
         }
     }
 }

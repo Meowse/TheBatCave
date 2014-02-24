@@ -46,26 +46,28 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 118);
+            this.label1.Location = new System.Drawing.Point(12, 145);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.Size = new System.Drawing.Size(50, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Paper:";
             // 
             // currentPage
             // 
-            this.currentPage.Location = new System.Drawing.Point(12, 135);
+            this.currentPage.Location = new System.Drawing.Point(16, 166);
+            this.currentPage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.currentPage.Multiline = true;
             this.currentPage.Name = "currentPage";
-            this.currentPage.Size = new System.Drawing.Size(314, 171);
+            this.currentPage.Size = new System.Drawing.Size(417, 210);
             this.currentPage.TabIndex = 1;
-            this.currentPage.Text = "        \r\n                ";
             // 
             // getNewPageButton
             // 
-            this.getNewPageButton.Location = new System.Drawing.Point(332, 283);
+            this.getNewPageButton.Location = new System.Drawing.Point(443, 348);
+            this.getNewPageButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.getNewPageButton.Name = "getNewPageButton";
-            this.getNewPageButton.Size = new System.Drawing.Size(75, 23);
+            this.getNewPageButton.Size = new System.Drawing.Size(100, 28);
             this.getNewPageButton.TabIndex = 2;
             this.getNewPageButton.Text = "New Page";
             this.getNewPageButton.UseVisualStyleBackColor = true;
@@ -73,9 +75,10 @@
             // 
             // buyFeltTipPenButton
             // 
-            this.buyFeltTipPenButton.Location = new System.Drawing.Point(371, 38);
+            this.buyFeltTipPenButton.Location = new System.Drawing.Point(495, 47);
+            this.buyFeltTipPenButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buyFeltTipPenButton.Name = "buyFeltTipPenButton";
-            this.buyFeltTipPenButton.Size = new System.Drawing.Size(181, 23);
+            this.buyFeltTipPenButton.Size = new System.Drawing.Size(241, 28);
             this.buyFeltTipPenButton.TabIndex = 3;
             this.buyFeltTipPenButton.Text = "Buy Felt Tip Pen";
             this.buyFeltTipPenButton.UseVisualStyleBackColor = true;
@@ -83,9 +86,10 @@
             // 
             // buyCheapBallPointPenButton
             // 
-            this.buyCheapBallPointPenButton.Location = new System.Drawing.Point(371, 67);
+            this.buyCheapBallPointPenButton.Location = new System.Drawing.Point(495, 82);
+            this.buyCheapBallPointPenButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buyCheapBallPointPenButton.Name = "buyCheapBallPointPenButton";
-            this.buyCheapBallPointPenButton.Size = new System.Drawing.Size(181, 23);
+            this.buyCheapBallPointPenButton.Size = new System.Drawing.Size(241, 28);
             this.buyCheapBallPointPenButton.TabIndex = 4;
             this.buyCheapBallPointPenButton.Text = "Buy Cheap Ball-Point Pen";
             this.buyCheapBallPointPenButton.UseVisualStyleBackColor = true;
@@ -93,9 +97,10 @@
             // 
             // buyExpensiveBallPointPenButton
             // 
-            this.buyExpensiveBallPointPenButton.Location = new System.Drawing.Point(371, 96);
+            this.buyExpensiveBallPointPenButton.Location = new System.Drawing.Point(495, 118);
+            this.buyExpensiveBallPointPenButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buyExpensiveBallPointPenButton.Name = "buyExpensiveBallPointPenButton";
-            this.buyExpensiveBallPointPenButton.Size = new System.Drawing.Size(181, 23);
+            this.buyExpensiveBallPointPenButton.Size = new System.Drawing.Size(241, 28);
             this.buyExpensiveBallPointPenButton.TabIndex = 5;
             this.buyExpensiveBallPointPenButton.Text = "Buy Expensive Ball-Point Pen";
             this.buyExpensiveBallPointPenButton.UseVisualStyleBackColor = true;
@@ -104,26 +109,29 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 28);
+            this.label2.Location = new System.Drawing.Point(21, 34);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 13);
+            this.label2.Size = new System.Drawing.Size(37, 17);
             this.label2.TabIndex = 6;
             this.label2.Text = "Pen:";
             // 
             // currentPenLabel
             // 
             this.currentPenLabel.AutoSize = true;
-            this.currentPenLabel.Location = new System.Drawing.Point(51, 28);
+            this.currentPenLabel.Location = new System.Drawing.Point(68, 34);
+            this.currentPenLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.currentPenLabel.Name = "currentPenLabel";
-            this.currentPenLabel.Size = new System.Drawing.Size(133, 13);
+            this.currentPenLabel.Size = new System.Drawing.Size(174, 17);
             this.currentPenLabel.TabIndex = 7;
             this.currentPenLabel.Text = "You do not own a pen.      ";
             // 
             // writeSomethingButton
             // 
-            this.writeSomethingButton.Location = new System.Drawing.Point(12, 92);
+            this.writeSomethingButton.Location = new System.Drawing.Point(16, 113);
+            this.writeSomethingButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.writeSomethingButton.Name = "writeSomethingButton";
-            this.writeSomethingButton.Size = new System.Drawing.Size(133, 23);
+            this.writeSomethingButton.Size = new System.Drawing.Size(177, 28);
             this.writeSomethingButton.TabIndex = 8;
             this.writeSomethingButton.Text = "Write Something!";
             this.writeSomethingButton.UseVisualStyleBackColor = true;
@@ -131,9 +139,10 @@
             // 
             // waitFiveMinutesButton
             // 
-            this.waitFiveMinutesButton.Location = new System.Drawing.Point(371, 169);
+            this.waitFiveMinutesButton.Location = new System.Drawing.Point(495, 208);
+            this.waitFiveMinutesButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.waitFiveMinutesButton.Name = "waitFiveMinutesButton";
-            this.waitFiveMinutesButton.Size = new System.Drawing.Size(181, 23);
+            this.waitFiveMinutesButton.Size = new System.Drawing.Size(241, 28);
             this.waitFiveMinutesButton.TabIndex = 9;
             this.waitFiveMinutesButton.Text = "5 Minutes of Writer\'s Block";
             this.waitFiveMinutesButton.UseVisualStyleBackColor = true;
@@ -141,9 +150,10 @@
             // 
             // waitOneHourButton
             // 
-            this.waitOneHourButton.Location = new System.Drawing.Point(371, 198);
+            this.waitOneHourButton.Location = new System.Drawing.Point(495, 244);
+            this.waitOneHourButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.waitOneHourButton.Name = "waitOneHourButton";
-            this.waitOneHourButton.Size = new System.Drawing.Size(181, 23);
+            this.waitOneHourButton.Size = new System.Drawing.Size(241, 28);
             this.waitOneHourButton.TabIndex = 10;
             this.waitOneHourButton.Text = "1 Hour of Writer\'s Block";
             this.waitOneHourButton.UseVisualStyleBackColor = true;
@@ -151,9 +161,10 @@
             // 
             // capPenButton
             // 
-            this.capPenButton.Location = new System.Drawing.Point(12, 54);
+            this.capPenButton.Location = new System.Drawing.Point(16, 66);
+            this.capPenButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.capPenButton.Name = "capPenButton";
-            this.capPenButton.Size = new System.Drawing.Size(133, 23);
+            this.capPenButton.Size = new System.Drawing.Size(177, 28);
             this.capPenButton.TabIndex = 11;
             this.capPenButton.Text = "Cap Your Pen";
             this.capPenButton.UseVisualStyleBackColor = true;
@@ -161,9 +172,10 @@
             // 
             // uncapPenButton
             // 
-            this.uncapPenButton.Location = new System.Drawing.Point(160, 54);
+            this.uncapPenButton.Location = new System.Drawing.Point(213, 66);
+            this.uncapPenButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.uncapPenButton.Name = "uncapPenButton";
-            this.uncapPenButton.Size = new System.Drawing.Size(133, 23);
+            this.uncapPenButton.Size = new System.Drawing.Size(177, 28);
             this.uncapPenButton.TabIndex = 12;
             this.uncapPenButton.Text = "Un-Cap Your Pen";
             this.uncapPenButton.UseVisualStyleBackColor = true;
@@ -171,9 +183,9 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(575, 318);
+            this.ClientSize = new System.Drawing.Size(767, 391);
             this.Controls.Add(this.uncapPenButton);
             this.Controls.Add(this.capPenButton);
             this.Controls.Add(this.waitOneHourButton);
@@ -187,6 +199,7 @@
             this.Controls.Add(this.getNewPageButton);
             this.Controls.Add(this.currentPage);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
