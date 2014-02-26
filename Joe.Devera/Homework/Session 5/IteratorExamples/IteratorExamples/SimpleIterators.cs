@@ -74,9 +74,15 @@ namespace IteratorExamples
             throw new NotImplementedException();
         }
 
-        public int[] BackFromBy(int i, int i1)
+        public int[] BackFromBy(int num, int i1)
         {
-            throw new NotImplementedException();
+            int length = (i1 / num) + 1; 
+            int[] result = new int[length];
+            for (int i = 100; i <= length; i--)
+            {
+                result[i] = (i1 -7);
+            }
+            return result;
         }
     }
 }
