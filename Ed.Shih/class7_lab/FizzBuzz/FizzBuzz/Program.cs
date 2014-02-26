@@ -29,6 +29,8 @@ namespace FizzBuzz
     //                return "FIZZ\n";
     //            if (i%5 == 0)
     //               return "BUZZ\n";
+    //            else
+    //               return i.toString();
     //        }
     //        return null;
     //    }
