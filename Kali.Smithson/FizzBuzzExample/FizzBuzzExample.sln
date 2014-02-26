@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzzExample", "Session8 - Lab\FizzBuzzExample.csproj", "{4AF084C3-2E1D-45EF-8715-74C03747AC3D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzzExample", "FizzBuzzExample\FizzBuzzExample.csproj", "{4AF084C3-2E1D-45EF-8715-74C03747AC3D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzzExampleTests", "FizzBuzzTests\FizzBuzzExampleTests.csproj", "{49D73BA5-0BB0-4F1F-A461-B095E31AC4D8}"
 EndProject
