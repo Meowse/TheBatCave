@@ -11,14 +11,14 @@ namespace Counting
     {
         public string[] Count(int min, int max)
         {
-            int length = max;
+            int length = (max-min)+1;
 
             string[] result = new string[length];
             for (int i = 0; i < length; i++)
             {
                 if (i%3 != 0 && i%5 != 0)
                 {
-                    result[i] = Convert.ToString(i);
+                    result[i] = Convert.ToString(min+=1);
                 }
                 if (i%3 == 0)
                 {
