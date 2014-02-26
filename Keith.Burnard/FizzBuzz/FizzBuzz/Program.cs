@@ -13,7 +13,7 @@ namespace FizzBuzz
         {
             FizzBuzzCounter _fizzBuzzCounter = new FizzBuzzCounter();
 
-            string[] lastValue = _fizzBuzzCounter.Counter(16);
+            string[] lastValue = _fizzBuzzCounter.Counter(2);
 
             Console.WriteLine("\nHit any key to continue");
             Console.ReadLine();
