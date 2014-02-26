@@ -31,21 +31,19 @@ namespace TriangleTypeCalculatorTest
         [Test]
         public void TestIsoceles()
         {
-            Assert.That(_calculator.GetTriangleType("3", "3", "1"), Is.EqualTo("Isoceles"));
-            Assert.That(_calculator.GetTriangleType("2147483647", "2147483647", "1"), Is.EqualTo("Isoceles"));
-            Assert.That(_calculator.GetTriangleType("1","2147483647", "2147483647"), Is.EqualTo("Isoceles"));
-            Assert.That(_calculator.GetTriangleType("2147483647","1", "2147483647"), Is.EqualTo("Isoceles"));
+            Assert.That(_calculator.GetTriangleType("3", "3", "1"), Is.EqualTo("Isosceles"));
+            Assert.That(_calculator.GetTriangleType("2147483647", "2147483647", "1"), Is.EqualTo("Isosceles"));
+            Assert.That(_calculator.GetTriangleType("1", "2147483647", "2147483647"), Is.EqualTo("Isosceles"));
+            Assert.That(_calculator.GetTriangleType("2147483647", "1", "2147483647"), Is.EqualTo("Isosceles"));
         }
 
         [Test]
         public void TestScalene()
         {
             Assert.That(_calculator.GetTriangleType("5", "4", "8"), Is.EqualTo("Scalene"));
-            Assert.That(_calculator.GetTriangleType("2147483647", "2147483647", "1"), Is.EqualTo("Isoceles"));
-            Assert.That(_calculator.GetTriangleType("1", "2147483647", "2147483647"), Is.EqualTo("Isoceles"));
-            Assert.That(_calculator.GetTriangleType("2147483647", "1", "2147483647"), Is.EqualTo("Isoceles"));
+
         }
 
-        
+
     }
 }

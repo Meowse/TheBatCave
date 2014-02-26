@@ -84,9 +84,16 @@ namespace IteratorExamples
             throw new NotImplementedException();
         }
 
-        public int[] BackFromBy(int i, int i1)
+        public int[] BackFromBy(int max, int increment)
         {
-            throw new NotImplementedException();
+            int length = (max/increment) + 1;
+            for (int i=0; i<length; i++ );
+            {
+                result [i] =  // dunno
+                    //and here's where I'm stuck: I don't know how to 
+                    //return the result of the decremented 'max'. Obviously
+                    //I need to decrease max by 7 each time, but can't get it to work.
+            }
         }
     }
 }
