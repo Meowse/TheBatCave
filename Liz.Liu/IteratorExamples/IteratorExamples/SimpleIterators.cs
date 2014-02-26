@@ -80,7 +80,7 @@ namespace IteratorExamples
             int length = GetLengthForArray(countFrom, countTo, countBy);
 
             int[] result = new int[length];
-            for (int i = 0; i < length; i++)
+            for (int i = 0; i < length; ++i)
             {
                 result[i] = countValue;
                 countValue += countBy;
@@ -119,7 +119,7 @@ namespace IteratorExamples
             {
                 result[i] = countValue;
                 countValue += countBy;
-                i++;
+                ++i;
             }
             return result;
         }
@@ -131,7 +131,7 @@ namespace IteratorExamples
             int length = (countFrom/countBy) + 1;
 
             int[] result = new int[length];
-            for (int i = 0; i < length; i++)
+            for (int i = 0; i < length; ++i)
             {
                 result[i] = countValue;
                 countValue -= countBy;
