@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CodeSamples.Properties
+namespace SimpleVariables.Properties
 {
 
 

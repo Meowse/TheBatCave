@@ -6,10 +6,7 @@ namespace TriangleTyperApp
 {
     public class TriangleTypeCalculator
     {
-        //private decimal _nbrA;
-        //private decimal _nbrB;
-        //private decimal _nbrC;
-
+        
         public string GetTriangleType(string sideA, string sideB, string sideC)
         {
             int a;
@@ -18,13 +15,13 @@ namespace TriangleTyperApp
                 return "Make sure all sides are Integers";
             }
             int b;
-            if (!int.TryParse(sideA, out b))
+            if (!int.TryParse(sideB, out b))
             {
                 return "Make sure all sides are Integers";
             }
             
             int c;
-            if (!int.TryParse(sideA, out c))
+            if (!int.TryParse(sideC, out c))
             {
                 return "Make sure all sides are Integers";
             }
@@ -33,11 +30,8 @@ namespace TriangleTyperApp
         }
 
         public string GetTriangleType(int a, int b, int c)
-
-        //make sure all inputs make a triangle
         {
-            if ((a + b < c) || (a + c < b) || (b + c < a))
-
+            if ((a + b <= c) || (a + c <= b) || (b + c <= a))
             {
                 return "Sorry Dave these sides do not a triangle make";
             }
@@ -50,7 +44,7 @@ namespace TriangleTyperApp
 
             if ((a == b) || (a == c) || (b == c))
             {
-                return "Isoceles";
+                return "Isosceles";
             }
 
             if ((a != b) && (a != c) && (b != c))
