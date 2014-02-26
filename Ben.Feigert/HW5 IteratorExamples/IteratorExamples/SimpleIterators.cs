@@ -96,7 +96,9 @@ namespace IteratorExamples
                 // dunno
                 //and here's where I'm stuck: I don't know how to 
                 //return the result of the decremented 'max'. Obviously
-                //I need to decrease max by 7 each time, but can't get it to work.
+                //I need to decrease max by increment each time, but can't get it to work.
+                //would like to step through debugger to see where it goes wrong, but 
+                //don't know how.
             }
             return result;
         }
