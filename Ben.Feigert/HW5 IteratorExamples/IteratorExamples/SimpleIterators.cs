@@ -88,10 +88,11 @@ namespace IteratorExamples
         {
             int length = (max/increment) + 1;
             int [] result = new int[length];
-            for (int i=0; i<length; i++ )
+            for (int i=0; i<length; i++)
             {
-                result[i] = (max - increment);
-                max = (max - increment);
+                result[i] = max - (increment * i);
+//                result[i] = max;
+//                max = (max - increment);
                 
                 // dunno
                 //and here's where I'm stuck: I don't know how to 
