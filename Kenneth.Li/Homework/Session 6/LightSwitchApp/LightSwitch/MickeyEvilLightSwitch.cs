@@ -26,7 +26,7 @@ namespace LightSwitch
         private bool IsSwitchOn { get; set; }
 
         private bool IsFullBright { get; set; }
-
+        
         public const int DimmestDimmerValue = 0;
         public const int BrightestDimmerValue = 5;
         public const int LowestIntensityValue = 0;
