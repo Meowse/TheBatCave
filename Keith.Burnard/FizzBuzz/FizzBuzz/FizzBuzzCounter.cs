@@ -10,11 +10,15 @@ namespace FizzBuzz
     {
         public string[] Counter(int countTo)
         {
-            string[] result = new string[countTo];
+            string[] result = new string[countTo + 1];
 
-            for (int i = 0; i < countTo; i++)
+            for (int i = 0; i <= countTo; i++)
             {
-                if (i % 3 == 0 && i % 5 == 0)
+                if (i == 0)
+                {
+                    result[i] = "";
+                }
+                else if (i % 3 == 0 && i % 5 == 0)
                 {
                     Console.WriteLine("FizzBuzz");
                     result[i] = "FizzBuzz";
