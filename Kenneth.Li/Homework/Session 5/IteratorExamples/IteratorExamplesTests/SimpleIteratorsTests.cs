@@ -49,6 +49,8 @@ namespace IteratorExamplesTests
 
             int[] expected2 = { 2, 3, 4 };
             Assert.That(SimpleIterators.CountFromToWithWhileLoop(2, 4), Is.EqualTo(expected2));
+            int[] expected3 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
+            Assert.That(SimpleIterators.CountFromToWithWhileLoop(1, 15), Is.EqualTo(expected3));
         }
 
         [Test]
