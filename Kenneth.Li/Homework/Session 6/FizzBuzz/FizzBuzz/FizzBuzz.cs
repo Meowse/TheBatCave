@@ -4,9 +4,9 @@ namespace FizzBuzz
 {
     class FizzBuzz
     {
-        public string[] Count(int min, int max)
+        public string[] Count(int max)
         {
-            min = 1;
+            int min = 1;
             int length = (max / min) + 1;
 
             string[] result = new string[length];

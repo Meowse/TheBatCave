@@ -6,7 +6,6 @@ namespace FizzBuzz
     public partial class Form1 : Form
     {
         private readonly FizzBuzz _fizzbuzz = new FizzBuzz();
-        private const int MinValue = 1;
         private int _maxValue;
 
         public Form1()
@@ -30,23 +29,17 @@ namespace FizzBuzz
         {
             displayNumberTextbox.Clear();
             CheckIfMaxValue(_maxValue);
-            if (MinValue > _maxValue)
+            if (_maxValue < 1)
             {
-                displayNumberTextbox.Text = "Minimun value has to be less then maximum value";
+                displayNumberTextbox.Text = "Maximum value has to be greater then 1";
             }
 
-            string[] numbers = _fizzbuzz.Count(MinValue, _maxValue);
-            for (int i = 1; i < _fizzbuzz.Count(MinValue, _maxValue).Length; i++)
+            string[] numbers = _fizzbuzz.Count(_maxValue);
+            for (int i = 1; i < _fizzbuzz.Count(_maxValue).Length; i++)
             {
                 displayNumberTextbox.Text += numbers[i] + Environment.NewLine;
             }
         }
-
-        private void minValueTextbox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
