@@ -9,6 +9,7 @@ namespace WritingDesk
     public partial class Form1 : Form
     {
         private Pen _pen;
+        Timer _penTimer = new Timer();
 
         public Form1()
         {
@@ -45,21 +46,53 @@ namespace WritingDesk
         {
             // Extra credit: add a text field to the form that allows the
             // user to enter text for the pen to "write", and use it here.
-            string written = _pen.Write("This was written by the pen!");
 
+            if (_pen == null)
+            {
+                MessageBox.Show("You need a pen to write with");
+                return;
+            }
+            if (_pen.Capped)
+            {
+                MessageBox.Show("You need to uncap the pen to  write something!");
+                return;
+            }
             // TODO: Fix the bug in this line of code.  Of course, you'll
             // have to find it, first.  :-)
+            string written = _pen.Write("This was written by the pen!");
             currentPage.Text += Environment.NewLine + written;
         }
 
         private void capPenButton_Click(object sender, EventArgs e)
         {
+            if (_pen == null)
+            {
+                MessageBox.Show("You need a pen first");
+                return;
+            }
+            if (_pen.Capped)
+            {
+                MessageBox.Show("You need to uncap your pen");
+                return;
+            }
             _pen.Capped = true;
+            _penTimer.Start();
         }
 
         private void uncapPenButton_Click(object sender, EventArgs e)
         {
+            if (_pen == null)
+            {
+                MessageBox.Show("You need a pen first");
+                return;
+            }
+            if (_pen.Capped == false)
+            {
+                MessageBox.Show("You need to cap your pen");
+                return;
+            }
             _pen.Capped = false;
+            _penTimer.Start();
         }
 
         private void waitFiveMinutesButton_Click(object sender, EventArgs e)
@@ -79,6 +112,7 @@ namespace WritingDesk
         private void throwAwayPenButton_Click(object sender, EventArgs e)
         {
             _pen = null;
+            StopPenTimer();
             UpdateUi();
         }
 
@@ -92,7 +126,24 @@ namespace WritingDesk
         private void UpdateUi()
         {
             // TODO: Fix the bug on this line.
-            currentPenLabel.Text = _pen.Description;
+
+            if (_pen == null)
+            {
+                currentPenLabel.Text = "You do not own a pen.";
+            }
+            else
+            {
+                currentPenLabel.Text = _pen.Description;
+                _pen.Capped = true;
+                _penTimer.Enabled = true;
+                _penTimer.Start();
+            }
+        }
+
+        private void StopPenTimer()
+        {
+            _penTimer.Enabled = false;
+            _penTimer.Stop();
         }
     }
 }

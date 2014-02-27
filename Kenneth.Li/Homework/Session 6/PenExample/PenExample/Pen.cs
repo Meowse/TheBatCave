@@ -23,7 +23,10 @@
         public void MinutesPass(int minutes)
         {
             // TODO: Age your pen here.
-            throw new System.NotImplementedException();
+            if (!Capped)
+            {
+                DryingTimeInMinutes = DryingTimeInMinutes - minutes;
+            }
         }
 
         // TODO: Implement this to report any errors with MessageBox.Show().
@@ -32,7 +35,7 @@
         public string Write(string something)
         {
             // TODO: Optionally age your pen here based on time and ink consumption.
-            return null;
+            return something;
         }
     }
 }
