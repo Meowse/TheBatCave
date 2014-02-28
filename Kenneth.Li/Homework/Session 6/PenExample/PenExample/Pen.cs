@@ -15,18 +15,21 @@
 
         public bool Capped { get; set; }
 
+        public int TimeLeft { get; set; }
+
         // TODO: Implement the description so that the different kinds of
         // pens describe themselves accurately.
         public string Description { get; protected set; }
 
         // TODO: Remember that pens only dry out while uncapped.
-        public void MinutesPass(int minutes)
+        public int MinutesPass(int minutes)
         {
             // TODO: Age your pen here.
             if (!Capped)
             {
-                DryingTimeInMinutes = DryingTimeInMinutes - minutes;
+                TimeLeft = TimeLeft - minutes;   //DryingTimeInMinutes = DryingTimeInMuntes - minutes?
             }
+            return TimeLeft;
         }
 
         // TODO: Implement this to report any errors with MessageBox.Show().

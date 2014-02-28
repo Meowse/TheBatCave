@@ -9,11 +9,14 @@ namespace WritingDesk
     public partial class Form1 : Form
     {
         private Pen _pen;
-        Timer _penTimer = new Timer();
+        private int _penDuration;
 
         public Form1()
         {
             InitializeComponent();
+            penTimer = new Timer();
+            penTimer.Tick += new EventHandler(penTimer_Tick);
+            penTimer.Interval = 1000;
         }
 
         private void getNewPageButton_Click(object sender, EventArgs e)
@@ -25,6 +28,12 @@ namespace WritingDesk
         {
             // Throws away your old pen and replaces it with a felt-tipped pen.
             _pen = new FeltTipPen();
+            _penDuration = _pen.TimeLeft;
+            _pen.Capped = true;
+            if (penTimer.Enabled)
+            {
+                penTimer.Stop();
+            }
             UpdateUi();
         }
 
@@ -32,6 +41,12 @@ namespace WritingDesk
         {
             // Throws away your old pen and replaces it with a $1 ball-point pen.
             _pen = new BallPointPen(1);
+            _penDuration = _pen.TimeLeft;
+            _pen.Capped = true;
+            if (penTimer.Enabled)
+            {
+                penTimer.Stop();
+            }
             UpdateUi();
         }
 
@@ -39,6 +54,12 @@ namespace WritingDesk
         {
             // Throws away your old pen and replaces it with a $20 ball-point pen.
             _pen = new BallPointPen(20);
+            _penDuration = _pen.TimeLeft;
+            _pen.Capped = true;
+            if (penTimer.Enabled)
+            {
+                penTimer.Stop();
+            }
             UpdateUi();
         }
 
@@ -75,8 +96,8 @@ namespace WritingDesk
                 MessageBox.Show("You need to uncap your pen");
                 return;
             }
+            penTimer.Stop();
             _pen.Capped = true;
-            _penTimer.Start();
         }
 
         private void uncapPenButton_Click(object sender, EventArgs e)
@@ -92,27 +113,36 @@ namespace WritingDesk
                 return;
             }
             _pen.Capped = false;
-            _penTimer.Start();
+            penTimer.Start();
         }
 
         private void waitFiveMinutesButton_Click(object sender, EventArgs e)
         {
             // TODO: Implement the MinutesPass method so that your pen
             // "ages" by 5 minutes.
-            _pen.MinutesPass(5);
+            if (_pen == null)
+            {
+                MessageBox.Show("You need a pen first");
+                return;
+            }
+            _penDuration = _pen.MinutesPass(5 * 60);
         }
 
         private void waitOneHourButton_Click(object sender, EventArgs e)
         {
             // TODO: Implement the MinutesPass method so that your pen
             // "ages" by an hour.
-            _pen.MinutesPass(60);
+            if (_pen == null)
+            {
+                MessageBox.Show("You need a pen first");
+                return;
+            }
+            _penDuration = _pen.MinutesPass(60 * 60);
         }
 
         private void throwAwayPenButton_Click(object sender, EventArgs e)
         {
             _pen = null;
-            StopPenTimer();
             UpdateUi();
         }
 
@@ -133,17 +163,21 @@ namespace WritingDesk
             }
             else
             {
-                currentPenLabel.Text = _pen.Description;
+                currentPenLabel.Text = _pen.Description + " " + _penDuration + " " + "seconds"; 
                 _pen.Capped = true;
-                _penTimer.Enabled = true;
-                _penTimer.Start();
             }
         }
 
-        private void StopPenTimer()
+        private void penTimer_Tick(object sender, EventArgs e)
         {
-            _penTimer.Enabled = false;
-            _penTimer.Stop();
+            _penDuration--;
+            currentPenLabel.Text = _pen.Description + " " + _penDuration + " " + "seconds";
+            if (_penDuration <= 0)
+            {
+                penTimer.Stop();
+                MessageBox.Show("Your pen is out of ink");
+                currentPenLabel.Text = "You do not own a pen.";
+            }
         }
     }
 }

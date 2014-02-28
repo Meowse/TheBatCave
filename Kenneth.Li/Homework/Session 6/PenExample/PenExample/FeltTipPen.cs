@@ -7,7 +7,8 @@
             // TODO: Figure out the right way to get rid of the comment
             // on the next line.
             DryingTimeInMinutes = 60*5;
-            Description = "You bought a felt tip pen, it will last for 5 minutes.";
+            TimeLeft = DryingTimeInMinutes;
+            Description = "You bought a felt tip pen, it will last for";
         }
     }
 }
