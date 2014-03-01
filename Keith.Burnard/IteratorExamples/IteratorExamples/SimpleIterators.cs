@@ -130,6 +130,7 @@ namespace IteratorExamples
             int[] result = new int[length];
             for (int i = 0; i < length; i++)
             {
+                // or result[i] = countFrom -(countBy * i)
                 result[i] = countValue;
                 countValue -= countBy;
             }
