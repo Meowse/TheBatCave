@@ -88,15 +88,18 @@ namespace IteratorExamples
         {
             int length = (max/increment) + 1;
             int [] result = new int[length];
-            for (int i=0; i<length; i++ )
+            for (int i=0; i<length; i++)
             {
-                result[i] = (max - increment);
-                max = (max - increment);
+                result[i] = max - (increment * i);
+//                result[i] = max;
+//                max = (max - increment);
                 
                 // dunno
                 //and here's where I'm stuck: I don't know how to 
                 //return the result of the decremented 'max'. Obviously
-                //I need to decrease max by 7 each time, but can't get it to work.
+                //I need to decrease max by increment each time, but can't get it to work.
+                //would like to step through debugger to see where it goes wrong, but 
+                //don't know how.
             }
             return result;
         }
