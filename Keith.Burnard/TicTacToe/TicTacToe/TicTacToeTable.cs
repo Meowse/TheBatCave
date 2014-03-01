@@ -40,12 +40,21 @@ namespace TicTacToe
         {
             CheckForHorizontalWinner();
             CheckForVerticalWinner();
-            //CheckForDiagonalWinner();
+            CheckForDiagonalWinner();
         }
 
         private void CheckForDiagonalWinner()
         {
-            throw new NotImplementedException();
+            if ((_ticTacToeTable[0, 0] == Player1 && _ticTacToeTable[1, 1] == Player1 && _ticTacToeTable[2, 2] == Player1) ||
+            (_ticTacToeTable[0, 2] == Player1 && _ticTacToeTable[1, 1] == Player1 && _ticTacToeTable[2, 0] == Player1))
+            {
+                PlayerOneWins = true;
+            }
+            if ((_ticTacToeTable[0, 0] == Player2 && _ticTacToeTable[1, 1] == Player2 && _ticTacToeTable[2, 2] == Player2) ||
+            (_ticTacToeTable[0, 2] == Player2 && _ticTacToeTable[1, 1] == Player2 && _ticTacToeTable[2, 0] == Player2))
+            {
+                PlayerTwoWins = true;
+            }
         }
 
         private void CheckForVerticalWinner()

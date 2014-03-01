@@ -22,5 +22,14 @@ namespace TicTacToe
             Assert.That(_TicTacToeTable.MakeAMove(1, 0, 1), Is.EqualTo(0));
             Assert.That(_TicTacToeTable.MakeAMove(2, 0, 1), Is.EqualTo(1));
         }
+
+        [Test]
+        public void TestDiagonalWin()
+        {
+            _TicTacToeTable.NewGame();
+            Assert.That(_TicTacToeTable.MakeAMove(0, 0, 1), Is.EqualTo(0));
+            Assert.That(_TicTacToeTable.MakeAMove(1, 1, 1), Is.EqualTo(0));
+            Assert.That(_TicTacToeTable.MakeAMove(2, 2, 1), Is.EqualTo(1));
+        }
     }
 }
