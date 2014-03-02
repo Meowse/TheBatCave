@@ -5,6 +5,12 @@
         public BallPointPen(int priceInDollars)
         {
             DryingTimeInMinutes = priceInDollars*24*60;
+            Capped = true;
+            if (priceInDollars <= 1)
+            {Description = "Cheap Ballpoint pen";}
+            else Description = "Expensive Ballpoint pen";
+
+                
         }
     }
 }
