@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace FizzBuzz
 {
@@ -32,6 +33,20 @@ namespace FizzBuzz
                 }
             }
             return result;
+        }
+
+        static string ConvertStringArrayToString(string[] array)
+        {
+            //
+            // Concatenate all the elements into a StringBuilder.
+            //
+            StringBuilder builder = new StringBuilder();
+            foreach (string value in array)
+            {
+                builder.Append(value);
+                builder.Append('.');
+            }
+            return builder.ToString();
         }
 
     }
