@@ -78,6 +78,13 @@ namespace IteratorExamplesTests
         }
 
         [Test]
+        public void CanCountFromToByWithWhileLoopDiana()
+        {
+            int[] expected = {3, 5, 7, 9};
+            Assert.That(SimpleIterators.CountFromToByWithWhileLoop(3, 10, 2), Is.EqualTo(expected));
+        }
+
+        [Test]
         public void CanCountFromToWithForLoop()
         {
             int[] expected = { 3, 4, 5, 6, 7 };
