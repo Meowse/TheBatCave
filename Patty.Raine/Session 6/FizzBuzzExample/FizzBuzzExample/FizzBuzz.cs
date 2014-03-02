@@ -4,13 +4,12 @@ using System.Diagnostics;
 using System.Runtime.Serialization;
 
 
-namespace FizzBuzzNS
+namespace FizzBuzzNs
 {
-    public class FizzBuzzPC
+    public class FizzBuzzPc
     {
         public string[] ReturnFizzBuzz(string[] input, int max)
         {
-            max == 100;
             int arraySize = max;
             List<string> result = new List<string>();
             for (int i = 1; i <= max; i++)
