@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Runtime.Serialization;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
-
-namespace FizzBuzzNs
+namespace FizzBuzz
 {
     public class FizzBuzzPc
     {
