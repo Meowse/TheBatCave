@@ -134,5 +134,6 @@ namespace WritingDesk
             else
                 currentPenLabel.Text = _pen.Description;
         }
+
     }
 }

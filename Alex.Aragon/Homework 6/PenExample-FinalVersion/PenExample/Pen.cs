@@ -41,18 +41,20 @@ namespace PenExample
             }
             else
             {
-                if (this.DryingTimeInMinutes < 0)
+                if (DryingTimeInMinutes < 0)
                 {
                     MessageBox.Show("Your pen is out of ink");
                     return null;
                 }
-                else
+                if (string.IsNullOrEmpty(something))
                 {
-                    this.MinutesPass(1);
-                    return something;
+                    MessageBox.Show("Enter text in text field");
+                    return null;
                 }
+                MinutesPass(1);
+                return something;
             }
+        }
             // TODO: Optionally age your pen here based on time and ink consumption.
         }
     }
-}
