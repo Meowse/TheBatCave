@@ -1,24 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace FizzBuzz
+﻿namespace FizzBuzz
 {
     public class FizzBuzz
     {
-        public string[] fizzBuzzCount(int max)
+        public string[] FizzBuzzCount(int max)
         {
             string[] result = new string[max];
+            string fizzBuzz;
 
-            for (int i = 0; i < max; i++)
+            for (int i = 1; i <= max; i++)
             {
-                string fizzBuzz = string.Empty;
+                fizzBuzz = string.Empty;
 
                 if ((i%3 != 0) && (i%5 != 0))
                 {
-                    result[i] = i.ToString();
-
+                    result[i-1] = i.ToString();
                 }
                 else
                 {
@@ -30,7 +25,7 @@ namespace FizzBuzz
                     {
                         fizzBuzz += "Buzz";
                     }
-                    result[i] = fizzBuzz;
+                    result[i-1] = fizzBuzz;
                 }
             }
             return result;
