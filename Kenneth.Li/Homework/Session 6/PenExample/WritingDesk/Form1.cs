@@ -15,7 +15,7 @@ namespace WritingDesk
         {
             InitializeComponent();
             penTimer = new Timer();
-            penTimer.Tick += new EventHandler(penTimer_Tick);
+            penTimer.Tick += penTimer_Tick;
             penTimer.Interval = 1000;
         }
 
@@ -172,12 +172,11 @@ namespace WritingDesk
         {
             _penDuration--;
             currentPenLabel.Text = _pen.Description + " " + _penDuration + " " + "seconds";
-            if (_penDuration <= 0)
-            {
-                penTimer.Stop();
-                MessageBox.Show("Your pen is out of ink");
-                currentPenLabel.Text = "You do not own a pen.";
-            }
+            if (_penDuration > 0) return;
+            currentPenLabel.Text = _pen.Description + " 0 seconds";
+            penTimer.Stop();
+            MessageBox.Show("Your pen is out of ink");
+            currentPenLabel.Text = "You do not own a pen.";
         }
     }
 }
