@@ -77,14 +77,18 @@ namespace IteratorExamples
 
         public int[] BackFromBy(int min, int max)
         {
-            int length = (min / max) + 1;
-            int[] result = new int[length];
-            for (int i = length; i > length; i--)
+            //int length = (min / max) + 1;
+           // int[] result = new int[15];
+            //for (int i = 0; i < 15; i++)
+            var result = new List<int>();
+            for (int i = 100; i >= 0; i = min -=7)
             {
-                result[i] = (min - max) + max;
+                //result[i] = (min -= 7) + 7;
+               result.Add(i);
 
             }
-            return result;
+            //return result;
+            return result.ToArray();
         }
     }
 }
