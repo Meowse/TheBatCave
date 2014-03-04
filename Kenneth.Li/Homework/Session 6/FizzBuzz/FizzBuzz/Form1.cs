@@ -7,6 +7,7 @@ namespace FizzBuzz
     {
         private readonly FizzBuzz _fizzbuzz = new FizzBuzz();
         private int _maxValue;
+        private string result;
 
         public Form1()
         {
@@ -34,10 +35,10 @@ namespace FizzBuzz
                 displayNumberTextbox.Text = "Maximum value has to be greater then 1";
             }
 
-            string[] numbers = _fizzbuzz.Count(_maxValue);
+            string numbers = _fizzbuzz.Count(_maxValue);
             for (int i = 1; i < _fizzbuzz.Count(_maxValue).Length; i++)
             {
-                displayNumberTextbox.Text += numbers[i] + Environment.NewLine;
+                displayNumberTextbox.Text += numbers[i];
             }
         }
         private void Form1_Load(object sender, EventArgs e)

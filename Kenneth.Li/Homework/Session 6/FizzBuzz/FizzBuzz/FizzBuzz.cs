@@ -5,10 +5,9 @@ namespace FizzBuzz
 {
     class FizzBuzz
     {
-        public string[] Count(int max)
+        public string Count(int max)
         {
-            int min = 1;
-            int length = (max / min) + 1;
+            int length = (max) + 1;
 
             string[] result = new string[length];
             for (int i = 0; i < length; i++)
@@ -32,7 +31,7 @@ namespace FizzBuzz
                     result[i] = "0";
                 }
             }
-            return result;
+            return ConvertStringArrayToString(result);
         }
 
         static string ConvertStringArrayToString(string[] array)
@@ -43,8 +42,7 @@ namespace FizzBuzz
             StringBuilder builder = new StringBuilder();
             foreach (string value in array)
             {
-                builder.Append(value);
-                builder.Append('.');
+                builder.AppendLine(value);
             }
             return builder.ToString();
         }

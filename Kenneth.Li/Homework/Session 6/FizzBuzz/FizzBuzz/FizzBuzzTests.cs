@@ -12,11 +12,8 @@ namespace FizzBuzz
         [Test]
         public void CountTo15()
         {
-            string[] expected =
-            {
-                "0","1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13",
-                "14", "FizzBuzz"
-            };
+            string expected =
+                "0\r\n1\r\n2\r\nFizz\r\n4\r\nBuzz\r\nFizz\r\n7\r\n8\r\nFizz\r\nBuzz\r\n11\r\nFizz\r\n13\r\n14\r\nFizzBuzz\r\n";
             Assert.That(FizzBuzz.Count(15), Is.EqualTo(expected));
         }
     }
