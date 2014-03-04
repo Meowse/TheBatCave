@@ -61,13 +61,25 @@ namespace IteratorExamples
 
         public int[] CountFromToWithForLoop(int min, int max)
         {
-            return new[] { 3, 4, 5, 6, 7 };
+            var result = new List<int>();
+            for (int i = min; i <= max; i++)
+            {
+                result.Add(i);
+            }
+            return result.ToArray();
         }
 
-        public int[] CountFromToByWithForLoop(int p0, int p1, int p2)
-        {
-            throw new NotImplementedException();
-        }
+     //   public int[] CountFromToByWithForLoop(int startingnumber, int endingnumber, int increment)
+     //   {
+     //       var result = new List<int>();
+     //       for (int i = startingnumber; i <= endingnumber; i = i + increment)
+     //       {
+     //           result.Add(i);
+     //       }
+     //       return result.ToArray();
+     //   }
+
+    }
 
         public int[] CountFromToByWithWhileLoop(int p0, int p1, int p2)
         {
