@@ -9,7 +9,6 @@ namespace FizzBuzz
         {
             int min = 1;
             int length = (max / min) + 1;
-
             string[] result = new string[length];
             for (int i = 0; i < length; i++)
             {
@@ -34,20 +33,5 @@ namespace FizzBuzz
             }
             return result;
         }
-
-        static string ConvertStringArrayToString(string[] array)
-        {
-            //
-            // Concatenate all the elements into a StringBuilder.
-            //
-            StringBuilder builder = new StringBuilder();
-            foreach (string value in array)
-            {
-                builder.Append(value);
-                builder.Append('.');
-            }
-            return builder.ToString();
-        }
-
     }
 }

@@ -7,6 +7,7 @@ namespace FizzBuzz
     {
         private readonly FizzBuzz _fizzbuzz = new FizzBuzz();
         private int _maxValue;
+        private string result;
 
         public Form1()
         {

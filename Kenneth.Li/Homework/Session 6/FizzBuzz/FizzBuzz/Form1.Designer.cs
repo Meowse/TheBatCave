@@ -36,7 +36,7 @@
             // 
             // maxValueTextbox
             // 
-            this.maxValueTextbox.Location = new System.Drawing.Point(103, 384);
+            this.maxValueTextbox.Location = new System.Drawing.Point(101, 384);
             this.maxValueTextbox.Name = "maxValueTextbox";
             this.maxValueTextbox.Size = new System.Drawing.Size(44, 20);
             this.maxValueTextbox.TabIndex = 11;
