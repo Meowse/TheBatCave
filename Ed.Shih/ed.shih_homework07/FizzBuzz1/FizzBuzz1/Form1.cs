@@ -23,6 +23,7 @@ namespace FizzBuzz1
         private void FizzButton1_Click(object sender, EventArgs e)
         {
             input1 = Convert.ToInt32(Input1.Text);
+            // need to look up how to get return to go into result box as string
 
             for (int i = 0; i <= input1; i++)
             {
@@ -32,11 +33,10 @@ namespace FizzBuzz1
                     return "FIZZ\n";
                 if (i%5 == 0)
                     return "BUZZ\n";
-                else
-                {
-                    return i.ToString(\n);
-                }
             }
+            // not sure how this is unreachable
+            return i.ToString(\n);
+
         }
 
         private void Input1_TextChanged(object sender, EventArgs e)
