@@ -5,10 +5,10 @@ namespace FizzBuzz
 {
     class FizzBuzz
     {
-        public string Count(int max)
+        public string[] Count(int max)
         {
-            int length = (max) + 1;
-
+            int min = 1;
+            int length = (max / min) + 1;
             string[] result = new string[length];
             for (int i = 0; i < length; i++)
             {
@@ -31,21 +31,7 @@ namespace FizzBuzz
                     result[i] = "0";
                 }
             }
-            return ConvertStringArrayToString(result);
+            return result;
         }
-
-        static string ConvertStringArrayToString(string[] array)
-        {
-            //
-            // Concatenate all the elements into a StringBuilder.
-            //
-            StringBuilder builder = new StringBuilder();
-            foreach (string value in array)
-            {
-                builder.AppendLine(value);
-            }
-            return builder.ToString();
-        }
-
     }
 }
