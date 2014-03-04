@@ -6,27 +6,27 @@ using System.Threading.Tasks;
 
 namespace FizzBuzz
 {
-    class Program
+    public class FizzBuzzApp
     {
-        private static void Main(string[] args)
+        public static void Main(string[] args)
         {
 
-            string fizz = "fizz";
-            string buzz = "buzz";
+            const string fizz = "fizz";
+            const string buzz = "buzz";
 
             for (int i = 100; i > 0; i--)
             {
-                if (i%3 == 0)
+                if ((i%3 == 0) && (i%5 == 0))
                 {
-                    Console.WriteLine(fizz);
+                    Console.WriteLine(fizz+buzz);
                 }
                 else if (i%5 == 0)
                 {
                     Console.WriteLine(buzz);
                 }
-                else if ((i%3 == 0) && (i%5 == 0))
+                else if (i%3 == 0)
                 {
-                    Console.WriteLine(fizz+buzz);
+                    Console.WriteLine(fizz);
                 }
                 else
                 {

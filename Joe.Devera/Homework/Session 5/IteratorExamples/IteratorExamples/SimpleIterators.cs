@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Runtime.Serialization;
 
 namespace IteratorExamples
@@ -74,13 +75,14 @@ namespace IteratorExamples
             throw new NotImplementedException();
         }
 
-        public int[] BackFromBy(int num, int i1)
+        public int[] BackFromBy(int min, int max)
         {
-            int length = (i1 / num) + 1; 
+            int length = (min / max) + 1;
             int[] result = new int[length];
-            for (int i = 100; i <= length; i--)
+            for (int i = length; i > length; i--)
             {
-                result[i] = (i1 -7);
+                result[i] = (min - max) + max;
+
             }
             return result;
         }
