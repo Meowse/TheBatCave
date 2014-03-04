@@ -81,12 +81,12 @@ namespace IteratorExamples
            int [] result = new int [length];
             int start =i;
            int by = i1;
-            for(int i = 0; i <length; i++)
+            for(index i = 0; i <length; i++)
             {
                 result[i] = start;
                 start = start - by;
             }
-        return result
+            return result;
         }
 
     }
