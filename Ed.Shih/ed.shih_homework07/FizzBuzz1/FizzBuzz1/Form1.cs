@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,41 +18,30 @@ namespace FizzBuzz1
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        float input1;
+
+        private void FizzButton1_Click(object sender, EventArgs e)
         {
+            input1 = Convert.ToInt32(Input1.Text);
 
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            public string FizzBuzz(int from, int to)
+            for (int i = 0; i <= input1; i++)
+            {
+                if (i%3 == 0 && i%5 == 0)
+                    return "FIZZBUZZ\n";
+                if (i%3 == 0)
+                    return "FIZZ\n";
+                if (i%5 == 0)
+                    return "BUZZ\n";
+                else
                 {
-                    int @from;
-                    int @to;
-                    for (int i = from; i <= to; i++)
-                    {
-                        if (i%3 == 0 && i%5 == 0)
-                            return "FIZZBUZZ\n";
-                        if (i%3 == 0)
-                            return "FIZZ\n";
-                        if (i%5 == 0)
-                           return "BUZZ\n";
-                        else
-                           return i.toString();
-                    }
-                    return null;
+                    return i.ToString(\n);
                 }
-
+            }
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void Input1_TextChanged(object sender, EventArgs e)
         {
-
+        
         }
     }
 }

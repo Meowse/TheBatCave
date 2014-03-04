@@ -28,61 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.InputExplain = new System.Windows.Forms.Label();
+            this.FizzBuzzOutput = new System.Windows.Forms.Label();
+            this.Input1 = new System.Windows.Forms.TextBox();
+            this.FizzButton1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // InputExplain
             // 
-            this.button1.Location = new System.Drawing.Point(102, 94);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "FizzBuzz!";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.InputExplain.AutoSize = true;
+            this.InputExplain.Location = new System.Drawing.Point(12, 44);
+            this.InputExplain.Name = "InputExplain";
+            this.InputExplain.Size = new System.Drawing.Size(262, 17);
+            this.InputExplain.TabIndex = 0;
+            this.InputExplain.Text = "What Number Should FizzBuzz Run To?";
             // 
-            // label1
+            // FizzBuzzOutput
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Input number to count to";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.FizzBuzzOutput.AutoSize = true;
+            this.FizzBuzzOutput.Location = new System.Drawing.Point(114, 161);
+            this.FizzBuzzOutput.Name = "FizzBuzzOutput";
+            this.FizzBuzzOutput.Size = new System.Drawing.Size(0, 17);
+            this.FizzBuzzOutput.TabIndex = 1;
             // 
-            // textBox1
+            // Input1
             // 
-            this.textBox1.Location = new System.Drawing.Point(209, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(39, 22);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.Input1.Location = new System.Drawing.Point(98, 80);
+            this.Input1.Name = "Input1";
+            this.Input1.Size = new System.Drawing.Size(100, 22);
+            this.Input1.TabIndex = 2;
+            this.Input1.TextChanged += new System.EventHandler(this.Input1_TextChanged);
             // 
-            // label2
+            // FizzButton1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(99, 159);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 17);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Result";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.FizzButton1.Location = new System.Drawing.Point(70, 108);
+            this.FizzButton1.Name = "FizzButton1";
+            this.FizzButton1.Size = new System.Drawing.Size(152, 23);
+            this.FizzButton1.TabIndex = 3;
+            this.FizzButton1.Text = "Calculate FizzBuzz";
+            this.FizzButton1.UseVisualStyleBackColor = true;
+            this.FizzButton1.Click += new System.EventHandler(this.FizzButton1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(282, 253);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.FizzButton1);
+            this.Controls.Add(this.Input1);
+            this.Controls.Add(this.FizzBuzzOutput);
+            this.Controls.Add(this.InputExplain);
             this.Name = "Form1";
-            this.Text = "FizzBuzz Generator";
+            this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -90,10 +87,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label InputExplain;
+        private System.Windows.Forms.Label FizzBuzzOutput;
+        private System.Windows.Forms.TextBox Input1;
+        private System.Windows.Forms.Button FizzButton1;
     }
 }
 
