@@ -1,4 +1,6 @@
-﻿namespace PenExample
+﻿using System.Windows.Forms;
+
+namespace PenExample
 {
     // TODO: Throughout this class, report errors (such as trying to 
     // cap an already capped pen) with MessageBox.Show().  
@@ -11,25 +13,70 @@
     // TODO: Consider how much harder it makes to test the code.  :-)
     public class Pen
     {
-        protected int DryingTimeInMinutes { get; set; }
+        private int _dryingTimeInMinutes;
 
-        public bool Capped { get; set; }
+        public int DryingTimeInMinutes
+        {
+            get
+            {
+                return _dryingTimeInMinutes;
+            }
+            set
+            {
+                _dryingTimeInMinutes = value;
+            }
+        }
 
-        public int TimeLeft { get; set; }
+        private bool _isCapped = true;
+
+        public bool IsCapped
+        {
+            get { return _isCapped; }
+            set
+            {
+                if (_isCapped && value)
+                {
+                    MessageBox.Show("Pen is already capped.");
+                    return;
+                }
+                if (!_isCapped && !value)
+                {
+                    MessageBox.Show("Pen is already uncapped");
+                    return;
+                }
+                _isCapped = value;
+            }
+        }
 
         // TODO: Implement the description so that the different kinds of
         // pens describe themselves accurately.
-        public string Description { get; protected set; }
+        private string _description;
+
+        public string Description
+        {
+            get
+            {
+                if (IsCapped)
+                {
+                    return _description + "capped";
+                }
+                else
+                {
+                    return _description + "uncapped";
+                }
+            }
+            protected set { _description = value; }
+        }
 
         // TODO: Remember that pens only dry out while uncapped.
         public int MinutesPass(int minutes)
         {
             // TODO: Age your pen here.
-            if (!Capped)
+            if (!IsCapped)
             {
-                TimeLeft = TimeLeft - minutes;   //DryingTimeInMinutes = DryingTimeInMuntes - minutes?
+                _dryingTimeInMinutes = _dryingTimeInMinutes - minutes;   //DryingTimeInMinutes = DryingTimeInMuntes - minutes?
             }
-            return TimeLeft;
+            return _dryingTimeInMinutes;
         }
 
         // TODO: Implement this to report any errors with MessageBox.Show().

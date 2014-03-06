@@ -8,8 +8,10 @@ namespace WritingDesk
     // yet have a pen.
     public partial class Form1 : Form
     {
+        private const string DoNotOwnAPen = "You do not own a pen.";
         private Pen _pen;
         private int _penDuration;
+        private string _updatePenLabel;
 
         public Form1()
         {
@@ -28,8 +30,7 @@ namespace WritingDesk
         {
             // Throws away your old pen and replaces it with a felt-tipped pen.
             _pen = new FeltTipPen();
-            _penDuration = _pen.TimeLeft;
-            _pen.Capped = true;
+            _penDuration = _pen.DryingTimeInMinutes;
             if (penTimer.Enabled)
             {
                 penTimer.Stop();
@@ -41,8 +42,7 @@ namespace WritingDesk
         {
             // Throws away your old pen and replaces it with a $1 ball-point pen.
             _pen = new BallPointPen(1);
-            _penDuration = _pen.TimeLeft;
-            _pen.Capped = true;
+            _penDuration = _pen.DryingTimeInMinutes;
             if (penTimer.Enabled)
             {
                 penTimer.Stop();
@@ -54,8 +54,7 @@ namespace WritingDesk
         {
             // Throws away your old pen and replaces it with a $20 ball-point pen.
             _pen = new BallPointPen(20);
-            _penDuration = _pen.TimeLeft;
-            _pen.Capped = true;
+            _penDuration = _pen.DryingTimeInMinutes;
             if (penTimer.Enabled)
             {
                 penTimer.Stop();
@@ -73,7 +72,7 @@ namespace WritingDesk
                 MessageBox.Show("You need a pen to write with");
                 return;
             }
-            if (_pen.Capped)
+            if (_pen.IsCapped)
             {
                 MessageBox.Show("You need to uncap the pen to  write something!");
                 return;
@@ -91,13 +90,15 @@ namespace WritingDesk
                 MessageBox.Show("You need a pen first");
                 return;
             }
-            if (_pen.Capped)
-            {
-                MessageBox.Show("You need to uncap your pen");
-                return;
-            }
+//            if (_pen.Capped)
+//            {
+//                MessageBox.Show("You need to uncap your pen");
+//                return;
+//            }
             penTimer.Stop();
-            _pen.Capped = true;
+//            _pen.Capped = true;
+            _pen.IsCapped = true;
+            UpdateUi();
         }
 
         private void uncapPenButton_Click(object sender, EventArgs e)
@@ -107,13 +108,15 @@ namespace WritingDesk
                 MessageBox.Show("You need a pen first");
                 return;
             }
-            if (_pen.Capped == false)
-            {
-                MessageBox.Show("You need to cap your pen");
-                return;
-            }
-            _pen.Capped = false;
+//            if (_pen.Capped == false)
+//            {
+//                MessageBox.Show("You need to cap your pen");
+//                return;
+//            }
+//            _pen.Capped = false;
             penTimer.Start();
+            _pen.IsCapped = false;
+            UpdateUi();
         }
 
         private void waitFiveMinutesButton_Click(object sender, EventArgs e)
@@ -159,24 +162,31 @@ namespace WritingDesk
 
             if (_pen == null)
             {
-                currentPenLabel.Text = "You do not own a pen.";
+                currentPenLabel.Text = DoNotOwnAPen;
             }
             else
             {
-                currentPenLabel.Text = _pen.Description + " " + _penDuration + " " + "seconds"; 
-                _pen.Capped = true;
+                UpdateCurrentTextLabel();
             }
+        }
+
+        private void UpdateCurrentTextLabel()
+        {
+            _updatePenLabel = string.Format("{0} and will last {1} seconds ", _pen.Description, _penDuration);
+            currentPenLabel.Text = _updatePenLabel;
         }
 
         private void penTimer_Tick(object sender, EventArgs e)
         {
             _penDuration--;
-            currentPenLabel.Text = _pen.Description + " " + _penDuration + " " + "seconds";
+            UpdateCurrentTextLabel();
             if (_penDuration > 0) return;
             currentPenLabel.Text = _pen.Description + " 0 seconds";
             penTimer.Stop();
             MessageBox.Show("Your pen is out of ink");
-            currentPenLabel.Text = "You do not own a pen.";
+            currentPenLabel.Text = DoNotOwnAPen;
         }
+
+
     }
 }
