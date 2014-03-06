@@ -6,6 +6,7 @@ namespace IteratorExamples
 {
     public class SimpleIterators
     {
+
         public int[] CountToTen()
         {
             return new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
@@ -120,19 +121,15 @@ namespace IteratorExamples
             return result;
         }
 
-        public int[] BackFromBy(int p, int p1)
+        public int [] BackFromBy()
+    {
+        var result = new List<int>();
+        for (int i = 100; i >= 0; i -= 7)
         {
-            int countValue = p;
-
-            int length = (p / p1) + 1;
-
-            int[] result = new int[length];
-            for (int i = 0; i < length; i++)
-            {
-                result[i] = countValue;
-                countValue -= p1;
-            }
-            return result;
+            result.Add(i);
         }
+
+        return result.ToArray();
+    }
     }
 }
