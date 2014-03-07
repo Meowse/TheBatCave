@@ -19,16 +19,7 @@ namespace FizzBuzz
 
         private void fizzBuzzIt_Click(object sender, EventArgs e)
         {
-            int maxValue;
-
-            try
-            {
-                maxValue = Convert.ToInt32(maxValueField.Text);
-            }
-            catch (FormatException)
-            {
-                maxValue = 0;
-            }
+            var maxValue = GetMaxValue();
 
             if (maxValue < 1)
             {
@@ -41,6 +32,21 @@ namespace FizzBuzz
             {
                 outputLabel.Text = outputLabel.Text + Environment.NewLine + i;
             }
+        }
+
+        private int GetMaxValue()
+        {
+            int maxValue;
+
+            try
+            {
+                maxValue = Convert.ToInt32(maxValueField.Text);
+            }
+            catch (FormatException)
+            {
+                maxValue = 0;
+            }
+            return maxValue;
         }
     }
 }
