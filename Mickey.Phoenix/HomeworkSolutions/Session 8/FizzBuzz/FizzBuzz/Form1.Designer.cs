@@ -31,18 +31,21 @@
             this.maxValueField = new System.Windows.Forms.TextBox();
             this.fizzBuzzIt = new System.Windows.Forms.Button();
             this.outputLabel = new System.Windows.Forms.Label();
+            this.fizzDivisorField = new System.Windows.Forms.TextBox();
+            this.buzzDivisorField = new System.Windows.Forms.TextBox();
+            this.newFizzBuzzerButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // maxValueField
             // 
-            this.maxValueField.Location = new System.Drawing.Point(13, 13);
+            this.maxValueField.Location = new System.Drawing.Point(12, 37);
             this.maxValueField.Name = "maxValueField";
             this.maxValueField.Size = new System.Drawing.Size(100, 20);
             this.maxValueField.TabIndex = 0;
             // 
             // fizzBuzzIt
             // 
-            this.fizzBuzzIt.Location = new System.Drawing.Point(119, 11);
+            this.fizzBuzzIt.Location = new System.Drawing.Point(118, 35);
             this.fizzBuzzIt.Name = "fizzBuzzIt";
             this.fizzBuzzIt.Size = new System.Drawing.Size(75, 23);
             this.fizzBuzzIt.TabIndex = 1;
@@ -53,17 +56,44 @@
             // outputLabel
             // 
             this.outputLabel.AutoSize = true;
-            this.outputLabel.Location = new System.Drawing.Point(13, 40);
+            this.outputLabel.Location = new System.Drawing.Point(12, 60);
             this.outputLabel.Name = "outputLabel";
             this.outputLabel.Size = new System.Drawing.Size(13, 104);
             this.outputLabel.TabIndex = 2;
             this.outputLabel.Text = "  \r\n  \r\n  \r\n  \r\n  \r\n  \r\n  \r\n\r\n";
             // 
+            // fizzDivisorField
+            // 
+            this.fizzDivisorField.Location = new System.Drawing.Point(12, 11);
+            this.fizzDivisorField.Name = "fizzDivisorField";
+            this.fizzDivisorField.Size = new System.Drawing.Size(100, 20);
+            this.fizzDivisorField.TabIndex = 3;
+            // 
+            // buzzDivisorField
+            // 
+            this.buzzDivisorField.Location = new System.Drawing.Point(118, 11);
+            this.buzzDivisorField.Name = "buzzDivisorField";
+            this.buzzDivisorField.Size = new System.Drawing.Size(100, 20);
+            this.buzzDivisorField.TabIndex = 4;
+            // 
+            // newFizzBuzzerButton
+            // 
+            this.newFizzBuzzerButton.Location = new System.Drawing.Point(224, 9);
+            this.newFizzBuzzerButton.Name = "newFizzBuzzerButton";
+            this.newFizzBuzzerButton.Size = new System.Drawing.Size(116, 23);
+            this.newFizzBuzzerButton.TabIndex = 5;
+            this.newFizzBuzzerButton.Text = "New FizzBuzzer!";
+            this.newFizzBuzzerButton.UseVisualStyleBackColor = true;
+            this.newFizzBuzzerButton.Click += new System.EventHandler(this.newFizzBuzzerButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(409, 495);
+            this.Controls.Add(this.newFizzBuzzerButton);
+            this.Controls.Add(this.buzzDivisorField);
+            this.Controls.Add(this.fizzDivisorField);
             this.Controls.Add(this.outputLabel);
             this.Controls.Add(this.fizzBuzzIt);
             this.Controls.Add(this.maxValueField);
@@ -79,6 +109,9 @@
         private System.Windows.Forms.TextBox maxValueField;
         private System.Windows.Forms.Button fizzBuzzIt;
         private System.Windows.Forms.Label outputLabel;
+        private System.Windows.Forms.TextBox fizzDivisorField;
+        private System.Windows.Forms.TextBox buzzDivisorField;
+        private System.Windows.Forms.Button newFizzBuzzerButton;
     }
 }
 

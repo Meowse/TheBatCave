@@ -1,11 +1,9 @@
-﻿using System.Windows.Forms.VisualStyles;
-
-namespace FizzBuzz
+﻿namespace FizzBuzz
 {
     public class FizzBuzzCalculator
     {
-        private int _fizzDivisor;
-        private int _buzzDivisor;
+        private readonly int _fizzDivisor;
+        private readonly int _buzzDivisor;
 
         public FizzBuzzCalculator() : this(3, 5)
         {
