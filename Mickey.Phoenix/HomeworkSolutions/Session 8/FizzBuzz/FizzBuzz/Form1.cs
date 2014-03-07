@@ -36,17 +36,14 @@ namespace FizzBuzz
 
         private int GetMaxValue()
         {
-            int maxValue;
-
             try
             {
-                maxValue = Convert.ToInt32(maxValueField.Text);
+                return Convert.ToInt32(maxValueField.Text);
             }
             catch (FormatException)
             {
-                maxValue = 0;
+                return 0;
             }
-            return maxValue;
         }
     }
 }
