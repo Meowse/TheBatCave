@@ -4,17 +4,30 @@ namespace FizzBuzz
 {
     public class FizzBuzzCalculator
     {
+        private int _fizzDivisor;
+        private int _buzzDivisor;
+
+        public FizzBuzzCalculator() : this(3, 5)
+        {
+        }
+
+        public FizzBuzzCalculator(int fizzDivisor, int buzzDivisor)
+        {
+            _fizzDivisor = fizzDivisor;
+            _buzzDivisor = buzzDivisor;
+        }
+
         public string Calculate(int i)
         {
-            if (i % 3 == 0 && i % 5 == 0)
+            if (i % _fizzDivisor == 0 && i % _buzzDivisor == 0)
             {
                 return "FizzBuzz";
             }
-            if (i % 3 == 0)
+            if (i % _fizzDivisor == 0)
             {
                 return "Fizz";
             }
-            if (i % 5 == 0)
+            if (i % _buzzDivisor == 0)
             {
                 return "Buzz";
             }

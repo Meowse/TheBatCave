@@ -5,7 +5,7 @@ namespace FizzBuzz
 {
     public partial class Form1 : Form
     {
-        private readonly FizzBuzzCalculator _fizzBuzzCalculator = new FizzBuzzCalculator();
+        private readonly FizzBuzzCalculator _fizzBuzzCalculator = new FizzBuzzCalculator(2, 7);
 
         public Form1()
         {
