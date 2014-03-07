@@ -25,7 +25,7 @@ namespace FizzBuzz
             outputLabel.Text = @"Calculating FizzBuzz from 1 to " + maxValue;
             for (int i = 1; i <= maxValue; i++)
             {
-                outputLabel.Text = outputLabel.Text + Environment.NewLine + _fizzBuzzCalculator.Calculate(i);
+                outputLabel.Text += Environment.NewLine + _fizzBuzzCalculator.Calculate(i);
             }
         }
 
