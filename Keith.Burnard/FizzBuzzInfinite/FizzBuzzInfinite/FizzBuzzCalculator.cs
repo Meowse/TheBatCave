@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace FizzBuzzInfinite
 {
@@ -65,10 +62,18 @@ namespace FizzBuzzInfinite
                 bool foundModalEqualToZero = false;
                 for (int j = 0; j < fizzBuzzObjects.Count; j++)
                 {
-                    if (i % fizzBuzzObjects[j].Denominator == 0)
+                    if (i == 0)
                     {
-                        returnString += fizzBuzzObjects[j].Message;
+                        returnString += "";
                         foundModalEqualToZero = true;
+                    }
+                    else
+                    {
+                        if (i % fizzBuzzObjects[j].Denominator == 0)
+                        {
+                            returnString += fizzBuzzObjects[j].Message;
+                            foundModalEqualToZero = true;
+                        }
                     }
                 }
                 if (!foundModalEqualToZero)

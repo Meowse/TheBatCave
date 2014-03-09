@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
 
 namespace FizzBuzzInfinite
@@ -13,7 +8,7 @@ namespace FizzBuzzInfinite
     public partial class Form1 : Form
     {
         List<FizzBuzzObject> _listOfFizzBuzzObjects = new List<FizzBuzzObject>();
-        FizzBuzzCalculator _fizzBuzzCalculator = new FizzBuzzCalculator();
+        readonly FizzBuzzCalculator _fizzBuzzCalculator = new FizzBuzzCalculator();
 
         public Form1()
         {
@@ -22,36 +17,41 @@ namespace FizzBuzzInfinite
 
         private void btnAddToList_Click(object sender, EventArgs e)
         {
-            FizzBuzzObject fizzBuzzObjectToAdd = new FizzBuzzObject();
+            var fizzBuzzObjectToAdd = new FizzBuzzObject();
+            SetFizzBuzzValues(fizzBuzzObjectToAdd);
+            ResetForm();
+        }
 
+        private void SetFizzBuzzValues(FizzBuzzObject fizzBuzzObjectToAdd)
+        {
             int result;
             if (int.TryParse(tbDevisor.Text, out result))
             {
-                if (int.Parse(tbDevisor.Text)>0)
+                if (int.Parse(tbDevisor.Text) > 0)
                 {
                     fizzBuzzObjectToAdd.Denominator = int.Parse(tbDevisor.Text);
+                    fizzBuzzObjectToAdd.Message = tbMessage.Text;
+                    _listOfFizzBuzzObjects.Add(fizzBuzzObjectToAdd);
                 }
                 else
                 {
                     MessageBox.Show(@"The Denominator needs to be a positive whole number");
                 }
-                
             }
             else
             {
                 MessageBox.Show(@"The Denominator needs to be a positive whole number");
             }
-
-            fizzBuzzObjectToAdd.Message = tbMessage.Text;
-            _listOfFizzBuzzObjects.Add(fizzBuzzObjectToAdd);
-            tbDevisor.Text = "";
-            tbMessage.Text = "";
-            tbDevisor.Focus();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
             _listOfFizzBuzzObjects = new List<FizzBuzzObject>();
+            ResetForm();
+        }
+
+        private void ResetForm()
+        {
             tbDevisor.Text = "";
             tbMessage.Text = "";
             tbDevisor.Focus();
