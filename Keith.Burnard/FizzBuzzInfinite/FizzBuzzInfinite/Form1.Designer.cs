@@ -40,6 +40,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblCountTo = new System.Windows.Forms.Label();
+            this.btnShowList = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -88,7 +89,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(204, 406);
+            this.btnClear.Location = new System.Drawing.Point(125, 406);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 32);
             this.btnClear.TabIndex = 5;
@@ -125,6 +126,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnShowList);
             this.groupBox1.Controls.Add(this.btnAddToList);
             this.groupBox1.Controls.Add(this.tbDevisor);
             this.groupBox1.Controls.Add(this.lblDevisor);
@@ -132,22 +134,22 @@
             this.groupBox1.Controls.Add(this.lblMessage);
             this.groupBox1.Location = new System.Drawing.Point(52, 38);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 216);
+            this.groupBox1.Size = new System.Drawing.Size(200, 305);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Create the list";
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.lblCountTo);
             this.groupBox2.Controls.Add(this.tbCountTo);
             this.groupBox2.Controls.Add(this.btnFizzBuzz);
-            this.groupBox2.Location = new System.Drawing.Point(374, 38);
+            this.groupBox2.Location = new System.Drawing.Point(305, 38);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(200, 216);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.groupBox2.Text = "Do the thing!";
             // 
             // lblCountTo
             // 
@@ -158,11 +160,21 @@
             this.lblCountTo.TabIndex = 9;
             this.lblCountTo.Text = "Count To";
             // 
+            // btnShowList
+            // 
+            this.btnShowList.Location = new System.Drawing.Point(48, 236);
+            this.btnShowList.Name = "btnShowList";
+            this.btnShowList.Size = new System.Drawing.Size(107, 31);
+            this.btnShowList.TabIndex = 5;
+            this.btnShowList.Text = "Show List";
+            this.btnShowList.UseVisualStyleBackColor = true;
+            this.btnShowList.Click += new System.EventHandler(this.btnShowList_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(665, 529);
+            this.ClientSize = new System.Drawing.Size(577, 529);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnExit);
@@ -191,6 +203,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lblCountTo;
+        private System.Windows.Forms.Button btnShowList;
     }
 }
 

@@ -18,24 +18,24 @@ namespace FizzBuzzInfinite
 
             for (int i = 0; i <= countTo; i++)
             {
-                bool foundModalEqualToZero = false;
+                bool numberIsEvenlyDivisibleByDenominator = false;
                 for (int j = 0; j < fizzBuzzObjects.Count; j++)
                 {
                     if (i == 0)
                     {
                         returnString += "";
-                        foundModalEqualToZero = true;
+                        numberIsEvenlyDivisibleByDenominator = true;
                     }
                     else
                     {
                         if (i % fizzBuzzObjects[j].Denominator == 0)
                         {
                             returnString += fizzBuzzObjects[j].Message;
-                            foundModalEqualToZero = true;
+                            numberIsEvenlyDivisibleByDenominator = true;
                         }
                     }
                 }
-                if (!foundModalEqualToZero)
+                if (!numberIsEvenlyDivisibleByDenominator)
                 {
                     returnString += i;
                 }

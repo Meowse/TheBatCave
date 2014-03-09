@@ -19,7 +19,6 @@ namespace FizzBuzzInfinite
         {
             var fizzBuzzObjectToAdd = new FizzBuzzObject();
             SetFizzBuzzValues(fizzBuzzObjectToAdd);
-            ResetForm();
         }
 
         private void SetFizzBuzzValues(FizzBuzzObject fizzBuzzObjectToAdd)
@@ -32,15 +31,20 @@ namespace FizzBuzzInfinite
                     fizzBuzzObjectToAdd.Denominator = int.Parse(tbDevisor.Text);
                     fizzBuzzObjectToAdd.Message = tbMessage.Text;
                     _listOfFizzBuzzObjects.Add(fizzBuzzObjectToAdd);
+                    ResetForm();
                 }
                 else
                 {
                     MessageBox.Show(@"The Denominator needs to be a positive whole number");
+                    tbDevisor.SelectAll(); 
+                    tbDevisor.Focus();
                 }
             }
             else
             {
                 MessageBox.Show(@"The Denominator needs to be a positive whole number");
+                tbDevisor.SelectAll(); 
+                tbDevisor.Focus();
             }
         }
 
@@ -65,6 +69,12 @@ namespace FizzBuzzInfinite
         private void btnFizzBuzz_Click(object sender, EventArgs e)
         {
             MessageBox.Show(_fizzBuzzCalculator.Calculate(_listOfFizzBuzzObjects, 15));
+        }
+
+        private void btnShowList_Click(object sender, EventArgs e)
+        {
+            string displayList = "";
+            
         }
     }
 }
