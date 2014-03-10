@@ -71,19 +71,19 @@ namespace CheckForDuplicates
         // Example: given { 1, 1, 2, 2, 2, 3, 4, 5 }, return 2, since there
         // are two values of which there are duplicates
 
-        public int ReturnDistinctCountOfDuplicates(List<int> SetOfNumbers)
+        public int ReturnDistinctCountOfDuplicates(List<int> values)
         {
-            int duplicate;
-            int result = 0;
-            foreach (int value in SetOfNumbers)
+            ISet<int> uniqueValues = new HashSet<int>();
+            ISet<int> duplicates = new HashSet<int>();
+            foreach (int value in values)
             {
-                duplicate = value;
-                if (SetOfNumbers.Contains(duplicate))
+                if (uniqueValues.Contains(value) && !duplicates.Contains(value))
                 {
-                    result += 1;
+                    duplicates.Add(value);
                 }
+                uniqueValues.Add(value);
             }
-            return result;
+            return duplicates.Count;
         }
 
     // TODO: Write "GetDuplicateCounts" which returns a Map<int, int>() 

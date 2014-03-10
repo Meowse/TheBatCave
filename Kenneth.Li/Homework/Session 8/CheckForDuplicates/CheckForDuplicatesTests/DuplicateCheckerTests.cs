@@ -39,8 +39,54 @@ namespace CheckForDuplicatesTests
         [Test]
         public void ReturnDistinctCountOfDuplicatesTests()
         {
-            var distinctDuplicates = new List<int> {1, 1, 2, 2, 2, 3, 4, 5};
-            Assert.That(_duplicateChecker.ReturnDistinctCountOfDuplicates(distinctDuplicates), Is.EqualTo("1, 2"));
+            var input = new List<int> {1, 1, 2, 2, 2, 3, 4, 5};
+            Assert.That(_duplicateChecker.ReturnDistinctCountOfDuplicates(input), Is.EqualTo(2));
         }
+
+        [Test]
+        public void ReturnDistinctCountOfDuplicatesForEmptyList()
+        {
+            var input = new List<int>();
+            Assert.That(_duplicateChecker.ReturnDistinctCountOfDuplicates(input), Is.EqualTo(0));
+        }
+
+        [Test]
+        public void ReturnDistinctCountOfDuplicatesForNoDuplicates()
+        {
+            var input = new List<int> { 1, 2, 3, 4, 5 };
+            Assert.That(_duplicateChecker.ReturnDistinctCountOfDuplicates(input), Is.EqualTo(0));
+        }
+
+        [Test]
+        public void ReturnDistinctCountOfDuplicatesForAllDuplicates()
+        {
+            var input = new List<int> { 1, 1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5 };
+            Assert.That(_duplicateChecker.ReturnDistinctCountOfDuplicates(input), Is.EqualTo(5));
+        }
+
+        [Test]
+        public void ReturnDistinctCountOfDuplicatesForOutOfOrderDuplicates()
+        {
+            var input = new List<int> { 1, 2, 3, 2, 2, 2, 3, 3, 4, 5, 4 };
+            Assert.That(_duplicateChecker.ReturnDistinctCountOfDuplicates(input), Is.EqualTo(3));
+        }
+
+
+
+
+        [Test]
+        public void GetDuplicateCountsTest()
+        {
+            var input = new List<int> { 1, 1, 2, 2, 2, 3, 4, 5 };
+
+            // Resharper will turn this into the dictionary initializer format below.
+            //            var expectedResult = new Dictionary<int, int>();
+            //            expectedResult.Add(1, 2); // 1 occurs 2 times
+            //            expectedResult.Add(2, 3); // 2 occurs 3 times
+
+            var expectedResult = new Dictionary<int, int> { { 1, 2 }, { 2, 3 } };
+            Assert.That(_duplicateChecker.ReturnDistinctCountOfDuplicates(input), Is.EqualTo(expectedResult));
+        }
+
     }
 }

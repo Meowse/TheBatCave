@@ -56,7 +56,7 @@ namespace CheckForDuplicates
         // Example: given { 1, 1, 2, 2, 2, 3, 4, 5 }, return 2, since there
         // are two values of which there are duplicates
 
-        // TODO: Write "GetDuplicateCounts" which returns a Map<int, int>() 
+        // TODO: Write "GetDuplicateCounts" which returns a Dictionary<int, int>() 
         // containing the number of duplications of each value that is duplicated.
         // Example: given { 1, 1, 2, 2, 2, 2, 3, 4, 5, 5 }, it would return 
         // a map with keys 1, 2, and 5, and corresponding values 2, 4, and 2,
