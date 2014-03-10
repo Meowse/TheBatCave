@@ -51,10 +51,36 @@ namespace CheckForDuplicates
         // TODO: Write "CountDuplicates"
         // Example: given { 1, 1, 2, 2, 2, 3, 4, 5 }, return 5, since 5 of
         // the values are "duplicates"
+        public int CountDuplicates(ISet<int> set)
+        {
+            int numOfDupes=0;
+            foreach (int val in set)
+            {
+                if (set.Contains(val))
+                {
+                    numOfDupes += 1;
+                }
+            }
+            return numOfDupes;
+        }
+
 
         // TODO: Write "ReturnDistinctCountOfDuplicates"
         // Example: given { 1, 1, 2, 2, 2, 3, 4, 5 }, return 2, since there
         // are two values of which there are duplicates
+        public int ReturnDistinctCountOfDuplicates(ISet<int> set)
+        {
+            int numDupes = 0;
+            var distinctNums = new List<int> {};
+
+            foreach (int val in set)
+            {
+
+            }
+            return numDupes;
+        }
+
+
 
         // TODO: Write "GetDuplicateCounts" which returns a Map<int, int>() 
         // containing the number of duplications of each value that is duplicated.
