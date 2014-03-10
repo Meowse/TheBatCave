@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Remoting.Metadata;
 using System.Text;
 using System.Threading.Tasks;
+using NUnit.Framework;
 
 namespace CheckForDuplicates
 {
@@ -53,18 +54,17 @@ namespace CheckForDuplicates
         // Example: given { 1, 1, 2, 2, 2, 3, 4, 5 }, return 5, since 5 of
         // the values are "duplicates"
 
-        public int CountDuplicates(ISet<int> SetOfNumbers)
+        public int CountDuplicates(List<int> values)
         {
-            SetOfNumbers.Distinct().ToList();
-            int result = 0;
-            foreach (int value in SetOfNumbers)
+            ISet<int> uniqueValues = new HashSet<int>();
+            foreach (int value in values)
             {
-                if (SetOfNumbers.Contains(value))
+                if (values.Contains(value))
                 {
-                    result += 1;
+                    uniqueValues.Add(value);
                 }
             }
-            return result;
+            return uniqueValues.Count;
         }
 
         // TODO: Write "ReturnDistinctCountOfDuplicates"

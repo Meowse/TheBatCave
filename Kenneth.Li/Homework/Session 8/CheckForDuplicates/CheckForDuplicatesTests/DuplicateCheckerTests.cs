@@ -32,7 +32,7 @@ namespace CheckForDuplicatesTests
         [Test]
         public void CountForDuplicatesTest()
         {
-            var countDuplicates = new HashSet<int>{1, 1, 2, 2, 2, 3, 4, 5};
+            var countDuplicates = new List<int>{1, 1, 2, 2, 2, 3, 4, 5};
             Assert.That(_duplicateChecker.CountDuplicates(countDuplicates), Is.EqualTo(5));
         }
 
