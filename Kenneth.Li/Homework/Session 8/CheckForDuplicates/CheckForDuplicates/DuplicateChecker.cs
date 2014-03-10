@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Remoting.Metadata;
@@ -86,29 +87,28 @@ namespace CheckForDuplicates
             return duplicates.Count;
         }
 
-    // TODO: Write "GetDuplicateCounts" which returns a Map<int, int>() 
+    // TODO: Write "GetDuplicateCounts" which returns a Dictionary<int, int>() 
         // containing the number of duplications of each value that is duplicated.
         // Example: given { 1, 1, 2, 2, 2, 2, 3, 4, 5, 5 }, it would return 
         // a map with keys 1, 2, and 5, and corresponding values 2, 4, and 2,
         // i.e. a map with (key, value) pairs: (1, 2), (2, 4), (5, 2).
-        Dictionary<int, int> Map = new Dictionary<int, int>();
-        public string GetDuplicateCounts(ISet<int> SetOfNumbers)
-        { 
-            SetOfNumbers.Distinct();
-            string MapOfDictionary = null;
-
-            foreach (var value in SetOfNumbers)
+        public int GetDuplicateCounts(List<int> values)
+        {
+            ISet<int> numberThatIsDuplicated = new HashSet<int>();
+            ISet<int> amountOfTimesDuplicated = new HashSet<int>();
+            Dictionary<int, int> duplicateCounts = new Dictionary<int, int>();
+            foreach (var value in values)
             {
-                if (SetOfNumbers.Contains(value))
+                if (numberThatIsDuplicated.Contains(value) && !numberThatIsDuplicated.Contains(value))
                 {
-                    Map.Add(value, ReturnDistinctCountOfDuplicates(SetOfNumbers.ToList()));
+                    numberThatIsDuplicated.Add(value);
                 }
+                if (!amountOfTimesDuplicated.Contains(value))
+                {
+                    amountOfTimesDuplicated.Add(value);
+                }
+                duplicateCounts.Add(value, amountOfTimesDuplicated.Count);
             }
-            foreach (KeyValuePair<int, int> pair in Map)
-            {
-                MapOfDictionary = pair.ToString();
-            }
-            return MapOfDictionary;
         }
     }
 }
