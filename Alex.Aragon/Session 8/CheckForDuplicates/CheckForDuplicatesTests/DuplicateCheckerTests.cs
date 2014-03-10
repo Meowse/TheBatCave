@@ -28,5 +28,18 @@ namespace CheckForDuplicatesTests
             var noDuplicates = new List<int> { 1, 2, 3, 4, 5, 6 };
             Assert.That(_duplicateChecker.HasDuplicates(noDuplicates), Is.False);
         }
+
+        [Test]
+        public void FiveDuplicatesList()
+        {
+            var fiveDuplicates = new HashSet<int> { 1, 1, 2, 2, 2, 3, 4, 5 };
+            Assert.That(_duplicateChecker.CountDuplicates(fiveDuplicates), Is.EqualTo(5));
+        }
+        [Test]
+        public void DistinctDuplicatesList()
+        {
+            var twoDuplicates = new HashSet<int> { 1, 1, 2, 2, 2, 3, 4, 5 };
+            Assert.That(_duplicateChecker.ReturnDistinctCountOfDuplicates(twoDuplicates), Is.EqualTo(2));
+        }
     }
 }
