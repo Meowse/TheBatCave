@@ -94,9 +94,12 @@ namespace WritingDesk
             // user to enter text for the pen to "write", and use it here.
             string written = _pen.Write("This was written by the pen!");
 
-            // TODO: Fix the bug in this line of code.  Of course, you'll
-            // have to find it, first.  :-)
-            currentPage.Text += Environment.NewLine + written;
+            if (written != null)
+            {
+                // DONE: Fix the bug in this line of code.  Of course, you'll
+                // have to find it, first.  :-)
+                currentPage.Text += written + Environment.NewLine;
+            }
         }
 
         private void capPenButton_Click(object sender, EventArgs e)

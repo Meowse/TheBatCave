@@ -13,7 +13,7 @@ namespace PenExample
     // TODO: Consider how much harder it makes to test the code.  :-)
     public class Pen
     {
-        protected int DryingTimeInMinutes { get; set; }
+        protected int MinutesOfInkLeft { get; set; }
 
         private bool _isCapped = true;
 
@@ -56,11 +56,14 @@ namespace PenExample
             protected set { _description = value; }
         }
 
-        // TODO: Remember that pens only dry out while uncapped.
+        // DONE: Remember that pens only dry out while uncapped.
         public void MinutesPass(int minutes)
         {
-            // TODO: Age your pen here.
-            DryingTimeInMinutes = DryingTimeInMinutes - minutes;
+            if (!IsCapped)
+            {
+                // DONE: Age your pen here.
+                MinutesOfInkLeft = MinutesOfInkLeft - minutes;
+            }
         }
 
         // TODO: Implement this to report any errors with MessageBox.Show().
@@ -68,14 +71,15 @@ namespace PenExample
         // TODO: Optionally age your pen here based on time and ink consumption.
         public string Write(string textToWrite)
         {
-            if (DryingTimeInMinutes <= 0)
-            {
-                MessageBox.Show("Your pen has dried out.  Please buy a new pen!");
-                return null;
-            }
             if (IsCapped)
             {
                 MessageBox.Show("Your pen is capped.");
+                return null;
+            }
+            if (MinutesOfInkLeft <= 0)
+            {
+                MessageBox.Show("Your pen has dried out.  Please buy a new pen!");
+                return null;
             }
             return textToWrite;
         }
