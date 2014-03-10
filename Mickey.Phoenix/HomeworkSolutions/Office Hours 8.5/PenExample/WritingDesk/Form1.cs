@@ -4,7 +4,7 @@ using PenExample;
 
 namespace WritingDesk
 {
-    // TODO: Fix the bug that happens when you try to cap or uncap and don't
+    // DONE: Fix the bug that happens when you try to cap or uncap and don't
     // yet have a pen.
     public partial class Form1 : Form
     {
@@ -17,6 +17,7 @@ namespace WritingDesk
 
         private const string PenPurchasePrompt = "Please buy a pen.";
         private const string PenMissingMessage = "You do not have a pen.";
+        private const string BadDayMessage = "Some days are like that.  Better luck tomorrow!";
 
         // There is no class invariant that says we will always have
         // a value in _pen, so all of our logic in our class needs to 
@@ -153,6 +154,15 @@ namespace WritingDesk
             _pen.MinutesPass(60);
         }
 
+        private void giveUpForTheDayButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(BadDayMessage);
+            if (_pen != null)
+            {
+                _pen.MinutesPass(60 * 12);
+            }
+        }
+
         private void throwAwayPenButton_Click(object sender, EventArgs e)
         {
             if (_pen == null)
@@ -164,10 +174,10 @@ namespace WritingDesk
             UpdateUi();
         }
 
-        // TODO: Implement everything needed to make the UI properly
+        // DONE: Implement everything needed to make the UI properly
         // consistent with the state of the pen.
         //
-        // TODO: Add calls to UpdateUi() wherever you feel they are needed.
+        // DONE: Add calls to UpdateUi() wherever you feel they are needed.
         // NOTE: This may depend on which parts of the UI are updated in
         // UpdateUi(), since you only want to call UpdateUi() after changes
         // that will show up in the UI.

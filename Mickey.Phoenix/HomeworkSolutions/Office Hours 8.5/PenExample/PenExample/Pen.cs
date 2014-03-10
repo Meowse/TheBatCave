@@ -2,7 +2,7 @@
 
 namespace PenExample
 {
-    // TODO: Throughout this class, report errors (such as trying to 
+    // DONE: Throughout this class, report errors (such as trying to 
     // cap an already capped pen) with MessageBox.Show().  
     //
     // WARNING: This is bad programming style, since the pen 
@@ -36,7 +36,7 @@ namespace PenExample
             }
         }
 
-        // TODO: Implement the description so that the different kinds of
+        // DONE: Implement the description so that the different kinds of
         // pens describe themselves accurately.
         private string _description;
 
@@ -66,8 +66,8 @@ namespace PenExample
             }
         }
 
-        // TODO: Implement this to report any errors with MessageBox.Show().
-        // TODO: This method is expected to return the text that is actually "written".
+        // DONE: Implement this to report any errors with MessageBox.Show().
+        // DONE: This method is expected to return the text that is actually "written".
         // TODO: Optionally age your pen here based on time and ink consumption.
         public string Write(string textToWrite)
         {
