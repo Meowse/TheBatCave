@@ -60,16 +60,24 @@ namespace PenExample
         public void MinutesPass(int minutes)
         {
             // TODO: Age your pen here.
-            throw new System.NotImplementedException();
+            DryingTimeInMinutes = DryingTimeInMinutes - minutes;
         }
 
         // TODO: Implement this to report any errors with MessageBox.Show().
-        // TODO: This method is expected to return the text that is actually
-        // "written".
-        public string Write(string something)
+        // TODO: This method is expected to return the text that is actually "written".
+        // TODO: Optionally age your pen here based on time and ink consumption.
+        public string Write(string textToWrite)
         {
-            // TODO: Optionally age your pen here based on time and ink consumption.
-            return null;
+            if (DryingTimeInMinutes <= 0)
+            {
+                MessageBox.Show("Your pen has dried out.  Please buy a new pen!");
+                return null;
+            }
+            if (IsCapped)
+            {
+                MessageBox.Show("Your pen is capped.");
+            }
+            return textToWrite;
         }
     }
 }

@@ -8,7 +8,15 @@ namespace WritingDesk
     // yet have a pen.
     public partial class Form1 : Form
     {
-        private const string PenMissingMessage = "Please buy a pen.";
+        // Can be references (gotten or set) anywhere in my program by using the 
+        // name "WritingDesk.Form1.VisibleEverywhereInMyProgram".
+        // This is a bad thing to do, because it means that in order to analyze the
+        // behavior of the program, you have to analyze the *entire* program and look
+        // at *everywhere* this variable is accessed or set.
+        public static String VisibleEverywhereInMyProgram = "Effectively global";
+
+        private const string PenPurchasePrompt = "Please buy a pen.";
+        private const string PenMissingMessage = "You do not have a pen.";
 
         // There is no class invariant that says we will always have
         // a value in _pen, so all of our logic in our class needs to 
@@ -30,10 +38,30 @@ namespace WritingDesk
             currentPage.Text = "";
         }
 
+        // Throws away your old pen and replaces it with a felt-tipped pen.
         private void buyFeltTipPenButton_Click(object sender, EventArgs e)
         {
-            // Throws away your old pen and replaces it with a felt-tipped pen.
-            _pen = new FeltTipPen();
+            // 1) Declares a local variable named "pen" that holds references to
+            // Pen objects.
+            // 2) Creates a new FeltTipPen instance (object) using the "new" keyword
+            // and the FeltTipPen constructor method.
+            // 3) Puts a reference to the new FeltTipPen instance/object into the
+            // local variable "pen"
+            Pen pen = new FeltTipPen();
+
+            // 1) Asks the local variable "pen" for the value of its "Description" 
+            // property.
+            // 2) Writes out that value to the console.
+            Console.WriteLine(pen.Description);
+
+            // Copies the reference (to the new FeltTipPen instance) from the 
+            // local variable "pen" to the instance variable "_pen".
+            // This has two effects:
+            // 1) The value will be available after this method is done executing,
+            // because instance variables live as long as the instance lives, and
+            // 2) It will be visible in other methods, like "UpdateUi()", because
+            // instance variables are visible to all methods of the class.
+            _pen = pen;
             UpdateUi();
         }
 
@@ -58,7 +86,7 @@ namespace WritingDesk
             // and/or complicated, and the guard condition is simple.
             if (_pen == null)
             {
-                MessageBox.Show(PenMissingMessage);
+                MessageBox.Show(PenPurchasePrompt);
                 return;
             }
 
@@ -82,7 +110,7 @@ namespace WritingDesk
             }
             else
             {
-                MessageBox.Show(PenMissingMessage);
+                MessageBox.Show(PenPurchasePrompt);
             }
             UpdateUi();
         }
@@ -91,7 +119,7 @@ namespace WritingDesk
         {
             if (_pen == null)
             {
-                MessageBox.Show(PenMissingMessage);
+                MessageBox.Show(PenPurchasePrompt);
                 return;
             }
             _pen.IsCapped = false;
@@ -102,7 +130,7 @@ namespace WritingDesk
         {
             if (_pen == null)
             {
-                MessageBox.Show(PenMissingMessage);
+                MessageBox.Show(PenPurchasePrompt);
                 return;
             }
             // TODO: Implement the MinutesPass method so that your pen
@@ -114,7 +142,7 @@ namespace WritingDesk
         {
             if (_pen == null)
             {
-                MessageBox.Show(PenMissingMessage);
+                MessageBox.Show(PenPurchasePrompt);
                 return;
             }
             // TODO: Implement the MinutesPass method so that your pen
@@ -124,6 +152,11 @@ namespace WritingDesk
 
         private void throwAwayPenButton_Click(object sender, EventArgs e)
         {
+            if (_pen == null)
+            {
+                MessageBox.Show(PenMissingMessage);
+                return;
+            }
             _pen = null;
             UpdateUi();
         }
