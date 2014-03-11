@@ -1,4 +1,6 @@
-﻿namespace PenExample
+﻿using System.Runtime.Serialization.Formatters;
+
+namespace PenExample
 {
     // TODO: Throughout this class, report errors (such as trying to 
     // cap an already capped pen) with MessageBox.Show().  
@@ -19,10 +21,17 @@
         // pens describe themselves accurately.
         public string Description { get; protected set; }
 
+        // check pen type and Capped status then return them
+
         // TODO: Remember that pens only dry out while uncapped.
         public void MinutesPass(int minutes)
         {
             // TODO: Age your pen here.
+
+            // check if capped or not
+            // if capped, return not aged
+            // if uncapped, return dryingTime minus minutes passed
+
             throw new System.NotImplementedException();
         }
 

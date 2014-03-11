@@ -10,7 +10,6 @@ namespace FizzBuzzExample
     {
         public int[] WriteFizzBuzzByWithForLoop(int max)
         {
-            throw new ();
 
             //If /3, then "Fizz", if /5 then "Buzz", if /3 & /5, then "FizzBuzz"
         }

@@ -1,4 +1,6 @@
-﻿namespace PenExample
+﻿using System.Windows.Forms;
+
+namespace PenExample
 {
     // TODO: Throughout this class, report errors (such as trying to 
     // cap an already capped pen) with MessageBox.Show().  
@@ -13,7 +15,28 @@
     {
         protected int DryingTimeInMinutes { get; set; }
 
-        public bool Capped { get; set; }
+        private bool _isCapped = true;
+
+        public bool IsCapped
+        {
+            get { return _isCapped; }
+            set
+            {
+                if (_isCapped && value)
+                {
+                    MessageBox.Show("Pen is already capped.");
+                    return;
+                }
+                if (!_isCapped && !value)
+                {
+                    MessageBox.Show("Pen is already uncapped.");
+                    return;
+                }
+                _isCapped = value;
+            }
+        }
+
+        public object MessageBox { get; set; }
 
         // TODO: Implement the description so that the different kinds of
         // pens describe themselves accurately.

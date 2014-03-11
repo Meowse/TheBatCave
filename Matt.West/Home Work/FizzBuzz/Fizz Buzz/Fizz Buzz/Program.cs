@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Fizz_Buzz
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
 //i. FizzBuzz: print out the numbers from 1 to N, one per line. BUT:
 //ii. If a number is divisible by 3, print out “Fizz” instead of the number. AND:
@@ -18,9 +18,34 @@ namespace Fizz_Buzz
 //
 //v. And -- create a brand new Visual Studio solution, including a separate project to hold your tests.
 
+            FizzBuzzCalc fizzBuzzCalc = new FizzBuzzCalc();
+
+
+            Console.WriteLine("Enter an integer:");
+            int myNumber = Convert.ToInt16(Console.ReadLine());
+
+            for (int i = 1; i <= myNumber; i++)
+            {
+                Console.WriteLine(fizzBuzzCalc.Calc(i));
+            }
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey(true);
 
 
 
         }
+
+
+        
+
+
+
+
+
+
     }
 }
+
+
+   
+

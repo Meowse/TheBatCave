@@ -11,7 +11,7 @@ namespace FizzBuzzExampleTests
     [TestFixture]
     public class FizzBuzzTests
     {
-        private static readonly FizzBuzz FizzBuzz = new FizzBuzz();
+        private readonly FizzBuzz FizzBuzz = new FizzBuzz();
 
         [Test]
         public void WriteFizzBuzzByWithForLoop;

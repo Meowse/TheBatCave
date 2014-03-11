@@ -2,8 +2,9 @@
 
 namespace Project1
 {
-    public class FizzBuzz
+    class FizzBuzz
     {
+
         //print out numners from 1 to N, one per line. BUT:
         // if a number is divisible by 3, print "Fizz" instead of a number. AND:
         // if a number is divisible by 5, print "Buzz" instead of a number.
@@ -11,8 +12,9 @@ namespace Project1
         // If a number is divisible by both 3 and 5, print out ""FizzBuzz" instead of the number.
         //And create a brand new Visual Studio solution , including a separate 
         // project to hold your tests
+        static void Main(string[]args)
 
-        static public string FizzyBuzzy(int number)
+        public string FizzyBuzzy(int number)
         {
             string returnString = string.Empty;
 

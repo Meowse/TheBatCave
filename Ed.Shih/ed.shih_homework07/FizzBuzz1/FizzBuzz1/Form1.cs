@@ -28,14 +28,14 @@ namespace FizzBuzz1
             for (int i = 0; i <= input1; i++)
             {
                 if (i%3 == 0 && i%5 == 0)
-                    return "FIZZBUZZ\n";
+                    Console.WriteLine("FIZZBUZZ");
                 if (i%3 == 0)
-                    return "FIZZ\n";
+                    Console.WriteLine("FIZZ");
                 if (i%5 == 0)
-                    return "BUZZ\n";
+                    Console.WriteLine("BUZZ");
             }
             // not sure how this is unreachable
-            return i.ToString(\n);
+            return Console.WriteLine(i.ToString);
 
         }
 
