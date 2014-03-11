@@ -51,15 +51,69 @@ namespace CheckForDuplicates
         // TODO: Write "CountDuplicates"
         // Example: given { 1, 1, 2, 2, 2, 3, 4, 5 }, return 5, since 5 of
         // the values are "duplicates"
+        public int CountDuplicates(ISet<int> SetOfNumbers)
+        {
+            SetOfNumbers.Distinct().ToList();
+            int result = 0;
+            foreach (int value in SetOfNumbers)
+            {
+                if (SetOfNumbers.Contains(value))
+                {
+                    result += 1;
+                }
+            }
+            return result;
+        }
+
 
         // TODO: Write "ReturnDistinctCountOfDuplicates"
         // Example: given { 1, 1, 2, 2, 2, 3, 4, 5 }, return 2, since there
         // are two values of which there are duplicates
+
+        public int ReturnDistinctCountOfDuplicates(List<int> SetOfNumbers)
+        {
+            int duplicate;
+            int result = 0;
+            foreach (int value in SetOfNumbers)
+            {
+                duplicate = value;
+                if (SetOfNumbers.Contains(duplicate))
+                {
+                    result += 1;
+                }
+            }
+            return result;
+        }
+
 
         // TODO: Write "GetDuplicateCounts" which returns a Map<int, int>() 
         // containing the number of duplications of each value that is duplicated.
         // Example: given { 1, 1, 2, 2, 2, 2, 3, 4, 5, 5 }, it would return 
         // a map with keys 1, 2, and 5, and corresponding values 2, 4, and 2,
         // i.e. a map with (key, value) pairs: (1, 2), (2, 4), (5, 2).
+
+        Dictionary<int, int> Map = new Dictionary<int, int>();
+        public string GetDuplicateCounts(ISet<int> SetOfNumbers)
+        {
+            SetOfNumbers.Distinct();
+            string MapOfDictionary = null;
+
+            foreach (var value in SetOfNumbers)
+            {
+                if (SetOfNumbers.Contains(value))
+                {
+                    Map.Add(value, ReturnDistinctCountOfDuplicates(SetOfNumbers.ToList()));
+                }
+            }
+            foreach (KeyValuePair<int, int> pair in Map)
+            {
+                MapOfDictionary = pair.ToString();
+            }
+            return MapOfDictionary;
+        }
+
+
+
+
     }
 }
