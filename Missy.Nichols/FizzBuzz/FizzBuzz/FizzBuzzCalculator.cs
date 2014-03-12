@@ -1,4 +1,6 @@
-﻿namespace FizzBuzz
+﻿using System.Globalization;
+
+namespace FizzBuzz
 {
     public class FizzBuzzCalculator
     {
@@ -17,19 +19,11 @@
 
         public string Calculate(int i)
         {
-            if (i % _fizzDivisor == 0 && i % _buzzDivisor == 0)
-            {
-                return "FizzBuzz";
-            }
-            if (i % _fizzDivisor == 0)
-            {
-                return "Fizz";
-            }
-            if (i % _buzzDivisor == 0)
-            {
-                return "Buzz";
-            }
-            return i.ToString();
+            return i%_fizzDivisor == 0 && i%_buzzDivisor == 0
+                ? "FizzBuzz"
+                : (i%_fizzDivisor == 0
+                    ? "Fizz"
+                    : (i%_buzzDivisor == 0 ? "Buzz" : i.ToString(CultureInfo.InvariantCulture)));
         }
     }
 }
