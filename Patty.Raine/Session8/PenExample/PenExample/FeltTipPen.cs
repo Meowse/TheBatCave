@@ -8,7 +8,7 @@
 
             // TODO: Figure out the right way to get rid of the comment
             // on the next line.
-            DryingTimeInMinutes = 60*5; // 5 hours
+            MinutesOfInkLeft = 60*5; // 5 hours
         }
     }
 }

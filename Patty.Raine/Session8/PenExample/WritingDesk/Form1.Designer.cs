@@ -42,6 +42,7 @@
             this.capPenButton = new System.Windows.Forms.Button();
             this.uncapPenButton = new System.Windows.Forms.Button();
             this.throwAwayPenButton = new System.Windows.Forms.Button();
+            this.giveUpForTheDayButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -58,13 +59,12 @@
             this.currentPage.Location = new System.Drawing.Point(12, 135);
             this.currentPage.Multiline = true;
             this.currentPage.Name = "currentPage";
-            this.currentPage.Size = new System.Drawing.Size(314, 171);
+            this.currentPage.Size = new System.Drawing.Size(314, 236);
             this.currentPage.TabIndex = 1;
-            this.currentPage.Text = "        \r\n                ";
             // 
             // getNewPageButton
             // 
-            this.getNewPageButton.Location = new System.Drawing.Point(332, 283);
+            this.getNewPageButton.Location = new System.Drawing.Point(332, 348);
             this.getNewPageButton.Name = "getNewPageButton";
             this.getNewPageButton.Size = new System.Drawing.Size(75, 23);
             this.getNewPageButton.TabIndex = 2;
@@ -180,11 +180,22 @@
             this.throwAwayPenButton.UseVisualStyleBackColor = true;
             this.throwAwayPenButton.Click += new System.EventHandler(this.throwAwayPenButton_Click);
             // 
+            // giveUpForTheDayButton
+            // 
+            this.giveUpForTheDayButton.Location = new System.Drawing.Point(371, 260);
+            this.giveUpForTheDayButton.Name = "giveUpForTheDayButton";
+            this.giveUpForTheDayButton.Size = new System.Drawing.Size(181, 23);
+            this.giveUpForTheDayButton.TabIndex = 14;
+            this.giveUpForTheDayButton.Text = "Give Up For The Day.  :-(";
+            this.giveUpForTheDayButton.UseVisualStyleBackColor = true;
+            this.giveUpForTheDayButton.Click += new System.EventHandler(this.giveUpForTheDayButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(575, 318);
+            this.ClientSize = new System.Drawing.Size(575, 383);
+            this.Controls.Add(this.giveUpForTheDayButton);
             this.Controls.Add(this.throwAwayPenButton);
             this.Controls.Add(this.uncapPenButton);
             this.Controls.Add(this.capPenButton);
@@ -222,6 +233,7 @@
         private System.Windows.Forms.Button capPenButton;
         private System.Windows.Forms.Button uncapPenButton;
         private System.Windows.Forms.Button throwAwayPenButton;
+        private System.Windows.Forms.Button giveUpForTheDayButton;
     }
 }
 
