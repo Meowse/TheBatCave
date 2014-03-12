@@ -78,14 +78,14 @@ namespace FizzBuzzInfinite
                 }
                 else
                 {
-                    MessageBox.Show(@"The Denominator needs to be a positive whole number");
+                    MessageBox.Show(@"The Count To number needs to be a positive whole number");
                     tbCountTo.SelectAll();
                     tbCountTo.Focus();
                 }
             }
             else
             {
-                MessageBox.Show(@"The Denominator needs to be a positive whole number");
+                MessageBox.Show(@"The Count To number needs to be a positive whole number");
                 tbCountTo.SelectAll();
                 tbCountTo.Focus();
             }
