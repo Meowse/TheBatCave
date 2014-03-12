@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.Remoting.Metadata;
 using System.Text;
@@ -92,23 +93,22 @@ namespace CheckForDuplicates
         // Example: given { 1, 1, 2, 2, 2, 2, 3, 4, 5, 5 }, it would return 
         // a map with keys 1, 2, and 5, and corresponding values 2, 4, and 2,
         // i.e. a map with (key, value) pairs: (1, 2), (2, 4), (5, 2).
-        public int GetDuplicateCounts(List<int> values)
+        public Dictionary<int, int> GetDuplicateCounts(List<int> values)
         {
-            ISet<int> numberThatIsDuplicated = new HashSet<int>();
-            ISet<int> amountOfTimesDuplicated = new HashSet<int>();
-            Dictionary<int, int> duplicateCounts = new Dictionary<int, int>();
+            var duplicateCounts = new Dictionary<int, int>();
             foreach (var value in values)
             {
-                if (numberThatIsDuplicated.Contains(value) && !numberThatIsDuplicated.Contains(value))
+                if (duplicateCounts.ContainsKey(value))
                 {
-                    numberThatIsDuplicated.Add(value);
+                    duplicateCounts[value]++;
                 }
-                if (!amountOfTimesDuplicated.Contains(value))
+                else
                 {
-                    amountOfTimesDuplicated.Add(value);
+                    duplicateCounts[value] = 1;
+                    //duplicateCounts.Add(value, 1); also works
                 }
-                duplicateCounts.Add(value, amountOfTimesDuplicated.Count);
             }
+            return duplicateCounts;
         }
     }
 }

@@ -84,7 +84,7 @@ namespace CheckForDuplicatesTests
             //            expectedResult.Add(1, 2); // 1 occurs 2 times
             //            expectedResult.Add(2, 3); // 2 occurs 3 times
 
-            var expectedResult = new Dictionary<int, int> { { 1, 2 }, { 2, 3 } };
+            var expectedResult = new Dictionary<int, int> { { 1, 2 }, { 2, 3 }, {3, 1}, {4, 1}, {5, 1} };
             Assert.That(_duplicateChecker.GetDuplicateCounts(input), Is.EqualTo(expectedResult));
         }
 
