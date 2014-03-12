@@ -14,7 +14,7 @@
 //            }
 //            Description = "$" + priceInDollars + " Ballpoint Pen";
             Description = string.Format("${0} Ballpoint Pen", priceInDollars);
-            DryingTimeInMinutes = priceInDollars * 24 * 60;
+            MinutesOfInkLeft = priceInDollars * 24 * 60;
         }
     }
 }
