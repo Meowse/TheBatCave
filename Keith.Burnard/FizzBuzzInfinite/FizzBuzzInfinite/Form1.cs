@@ -67,8 +67,28 @@ namespace FizzBuzzInfinite
         }
 
         private void btnFizzBuzz_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(_fizzBuzzCalculator.Calculate(_listOfFizzBuzzObjects, 15));
+        { 
+            int result;
+            if (int.TryParse(tbCountTo.Text, out result))
+            {
+                if (int.Parse(tbCountTo.Text) > 0)
+                {
+                    MessageBox.Show(_fizzBuzzCalculator.Calculate(_listOfFizzBuzzObjects, 15));
+                    ResetForm();
+                }
+                else
+                {
+                    MessageBox.Show(@"The Denominator needs to be a positive whole number");
+                    tbCountTo.SelectAll();
+                    tbCountTo.Focus();
+                }
+            }
+            else
+            {
+                MessageBox.Show(@"The Denominator needs to be a positive whole number");
+                tbCountTo.SelectAll();
+                tbCountTo.Focus();
+            }
         }
 
         private void btnShowList_Click(object sender, EventArgs e)
