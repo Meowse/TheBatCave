@@ -2,7 +2,7 @@
 
 namespace PenExample
 {
-    // TODO: Throughout this class, report errors (such as trying to 
+    // DONE: Throughout this class, report errors (such as trying to 
     // cap an already capped pen) with MessageBox.Show().  
     //
     // WARNING: This is bad programming style, since the pen 
@@ -13,7 +13,7 @@ namespace PenExample
     // TODO: Consider how much harder it makes to test the code.  :-)
     public class Pen
     {
-        protected int DryingTimeInMinutes { get; set; }
+        protected int MinutesOfInkLeft { get; set; }
 
         private bool _isCapped = true;
 
@@ -36,7 +36,7 @@ namespace PenExample
             }
         }
 
-        // TODO: Implement the description so that the different kinds of
+        // DONE: Implement the description so that the different kinds of
         // pens describe themselves accurately.
         private string _description;
 
@@ -56,20 +56,32 @@ namespace PenExample
             protected set { _description = value; }
         }
 
-        // TODO: Remember that pens only dry out while uncapped.
+        // DONE: Remember that pens only dry out while uncapped.
         public void MinutesPass(int minutes)
         {
-            // TODO: Age your pen here.
-            throw new System.NotImplementedException();
+            if (!IsCapped)
+            {
+                // DONE: Age your pen here.
+                MinutesOfInkLeft = MinutesOfInkLeft - minutes;
+            }
         }
 
-        // TODO: Implement this to report any errors with MessageBox.Show().
-        // TODO: This method is expected to return the text that is actually
-        // "written".
-        public string Write(string something)
+        // DONE: Implement this to report any errors with MessageBox.Show().
+        // DONE: This method is expected to return the text that is actually "written".
+        // TODO: Optionally age your pen here based on time and ink consumption.
+        public string Write(string textToWrite)
         {
-            // TODO: Optionally age your pen here based on time and ink consumption.
-            return null;
+            if (IsCapped)
+            {
+                MessageBox.Show("Your pen is capped.");
+                return null;
+            }
+            if (MinutesOfInkLeft <= 0)
+            {
+                MessageBox.Show("Your pen has dried out.  Please buy a new pen!");
+                return null;
+            }
+            return textToWrite;
         }
     }
 }
