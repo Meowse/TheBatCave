@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuadraticEfficiency", "QuadraticEfficiency\QuadraticEfficiency.csproj", "{81370DA3-92AF-4B57-A6C1-685469945C97}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81370DA3-92AF-4B57-A6C1-685469945C97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81370DA3-92AF-4B57-A6C1-685469945C97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81370DA3-92AF-4B57-A6C1-685469945C97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81370DA3-92AF-4B57-A6C1-685469945C97}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
