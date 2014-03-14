@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace FizzBuzz
+namespace FizzBuzzBim
 {
     public partial class Form1 : Form
     {

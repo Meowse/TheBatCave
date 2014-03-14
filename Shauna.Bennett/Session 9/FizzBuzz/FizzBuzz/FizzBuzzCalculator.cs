@@ -1,11 +1,12 @@
-﻿namespace FizzBuzz
+﻿namespace FizzBuzzBim
 {
     public class FizzBuzzCalculator
     {
         private readonly int _fizzDivisor;
         private readonly int _buzzDivisor;
+        private int _bimDivisor;
 
-        public FizzBuzzCalculator() : this(3, 5)
+        public FizzBuzzCalculator() : this(2, 3, 5)
         {
         }
 
@@ -13,11 +14,12 @@
         {
             _fizzDivisor = fizzDivisor;
             _buzzDivisor = buzzDivisor;
+            _bimDivisor = _bimDivisor;
         }
 
-        public string Calculate(int i)
+        public void Calculate(int i)
         {
-            if (i % _fizzDivisor == 0 && i % _buzzDivisor == 0)
+            if (i % _fizzDivisor == 0 && i % _buzzDivisor == 0 && i % _bimDivisor == 0)
             {
                 return "FizzBuzz";
             }
@@ -29,7 +31,12 @@
             {
                 return "Buzz";
             }
-            return i.ToString();
+            if (i % _bimDivisor == 0)
+            {
+                return "Bim";
+
+                return i.ToString();
+            }
         }
     }
 }

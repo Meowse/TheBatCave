@@ -1,11 +1,11 @@
 ﻿using NUnit.Framework;
 
-namespace FizzBuzz
+namespace FizzBuzzBim
 {
     [TestFixture]
-    class FizzBuzzCalculatorTests
+    class FizzBuzzBimCalculatorTests
     {
-        private readonly FizzBuzzCalculator _calculator = new FizzBuzzCalculator();
+        private readonly FizzBuzzBimCalculator _calculator = new FizzBuzzCalculator();
 
         [Test]
         public void ReturnsFizzForMultiplesOf3ThatAreNotMultiplesOf5()
