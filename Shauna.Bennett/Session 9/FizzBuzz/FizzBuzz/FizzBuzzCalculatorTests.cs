@@ -5,7 +5,7 @@ namespace FizzBuzzBim
     [TestFixture]
     class FizzBuzzBimCalculatorTests
     {
-        private readonly FizzBuzzBimCalculator _calculator = new FizzBuzzCalculator();
+        private readonly FizzBuzzBimCalculator _calculator = new FizzBuzzBimCalculator();
 
         [Test]
         public void ReturnsFizzForMultiplesOf3ThatAreNotMultiplesOf5()
@@ -70,6 +70,14 @@ namespace FizzBuzzBim
             Assert.That(fizzBuzz57.Calculate(2 * 5 * 7), Is.EqualTo("FizzBuzz"));
             Assert.That(fizzBuzz57.Calculate(3 * 5 * 7), Is.EqualTo("FizzBuzz"));
             Assert.That(fizzBuzz57.Calculate(4 * 5 * 7), Is.EqualTo("FizzBuzz"));
+        }
+    }
+
+    internal class FizzBuzzBimCalculator
+    {
+        public object Calculate(int p0)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

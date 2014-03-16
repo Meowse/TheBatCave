@@ -4,17 +4,22 @@
     {
         private readonly int _fizzDivisor;
         private readonly int _buzzDivisor;
-        private int _bimDivisor;
+        private readonly int _bimDivisor;
 
         public FizzBuzzCalculator() : this(2, 3, 5)
         {
         }
 
-        public FizzBuzzCalculator(int fizzDivisor, int buzzDivisor)
+        public FizzBuzzCalculator(int divisor, int fizzDivisor, int buzzDivisor)
         {
             _fizzDivisor = fizzDivisor;
             _buzzDivisor = buzzDivisor;
             _bimDivisor = _bimDivisor;
+        }
+
+        public FizzBuzzCalculator(int divisor, int fizzDivisor)
+        {
+            throw new System.NotImplementedException();
         }
 
         public void Calculate(int i)

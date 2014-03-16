@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.maxValueField = new System.Windows.Forms.TextBox();
-            this.fizzBuzzIt = new System.Windows.Forms.Button();
+            this.fizzBuzzBimIt = new System.Windows.Forms.Button();
             this.outputLabel = new System.Windows.Forms.Label();
             this.fizzDivisorField = new System.Windows.Forms.TextBox();
             this.buzzDivisorField = new System.Windows.Forms.TextBox();
-            this.newFizzBuzzerButton = new System.Windows.Forms.Button();
+            this.newFizzBuzzBimmerButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // maxValueField
@@ -43,15 +43,15 @@
             this.maxValueField.Size = new System.Drawing.Size(100, 20);
             this.maxValueField.TabIndex = 0;
             // 
-            // fizzBuzzIt
+            // fizzBuzzBimIt
             // 
-            this.fizzBuzzIt.Location = new System.Drawing.Point(118, 35);
-            this.fizzBuzzIt.Name = "fizzBuzzIt";
-            this.fizzBuzzIt.Size = new System.Drawing.Size(75, 23);
-            this.fizzBuzzIt.TabIndex = 1;
-            this.fizzBuzzIt.Text = "FizzBuzz It!";
-            this.fizzBuzzIt.UseVisualStyleBackColor = true;
-            this.fizzBuzzIt.Click += new System.EventHandler(this.fizzBuzzIt_Click);
+            this.fizzBuzzBimIt.Location = new System.Drawing.Point(118, 35);
+            this.fizzBuzzBimIt.Name = "fizzBuzzBimIt";
+            this.fizzBuzzBimIt.Size = new System.Drawing.Size(90, 22);
+            this.fizzBuzzBimIt.TabIndex = 1;
+            this.fizzBuzzBimIt.Text = "FizzBuzzBim It!";
+            this.fizzBuzzBimIt.UseVisualStyleBackColor = true;
+            this.fizzBuzzBimIt.Click += new System.EventHandler(this.fizzBuzzIt_Click);
             // 
             // outputLabel
             // 
@@ -76,26 +76,26 @@
             this.buzzDivisorField.Size = new System.Drawing.Size(100, 20);
             this.buzzDivisorField.TabIndex = 4;
             // 
-            // newFizzBuzzerButton
+            // newFizzBuzzBimmerButton
             // 
-            this.newFizzBuzzerButton.Location = new System.Drawing.Point(224, 9);
-            this.newFizzBuzzerButton.Name = "newFizzBuzzerButton";
-            this.newFizzBuzzerButton.Size = new System.Drawing.Size(116, 23);
-            this.newFizzBuzzerButton.TabIndex = 5;
-            this.newFizzBuzzerButton.Text = "New FizzBuzzer!";
-            this.newFizzBuzzerButton.UseVisualStyleBackColor = true;
-            this.newFizzBuzzerButton.Click += new System.EventHandler(this.newFizzBuzzerButton_Click);
+            this.newFizzBuzzBimmerButton.Location = new System.Drawing.Point(224, 9);
+            this.newFizzBuzzBimmerButton.Name = "newFizzBuzzBimmerButton";
+            this.newFizzBuzzBimmerButton.Size = new System.Drawing.Size(143, 22);
+            this.newFizzBuzzBimmerButton.TabIndex = 5;
+            this.newFizzBuzzBimmerButton.Text = "New FizzBuzzBimmer!";
+            this.newFizzBuzzBimmerButton.UseVisualStyleBackColor = true;
+            this.newFizzBuzzBimmerButton.Click += new System.EventHandler(this.newFizzBuzzerButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(409, 495);
-            this.Controls.Add(this.newFizzBuzzerButton);
+            this.Controls.Add(this.newFizzBuzzBimmerButton);
             this.Controls.Add(this.buzzDivisorField);
             this.Controls.Add(this.fizzDivisorField);
             this.Controls.Add(this.outputLabel);
-            this.Controls.Add(this.fizzBuzzIt);
+            this.Controls.Add(this.fizzBuzzBimIt);
             this.Controls.Add(this.maxValueField);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -107,11 +107,11 @@
         #endregion
 
         private System.Windows.Forms.TextBox maxValueField;
-        private System.Windows.Forms.Button fizzBuzzIt;
+        private System.Windows.Forms.Button fizzBuzzBimIt;
         private System.Windows.Forms.Label outputLabel;
         private System.Windows.Forms.TextBox fizzDivisorField;
         private System.Windows.Forms.TextBox buzzDivisorField;
-        private System.Windows.Forms.Button newFizzBuzzerButton;
+        private System.Windows.Forms.Button newFizzBuzzBimmerButton;
     }
 }
 
