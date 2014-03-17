@@ -51,6 +51,15 @@ namespace CheckForDuplicates
         // TODO: Write "CountDuplicates"
         // Example: given { 1, 1, 2, 2, 2, 3, 4, 5 }, return 5, since 5 of
         // the values are "duplicates"
+        public int CountDuplicates(List<int> someList)
+        {
+            ISet<int> set = new HashSet<int>(someList);
+            foreach (int n in someList)
+            {
+                set.Add(n);
+            }
+            return set.Count;
+        }
 
         // TODO: Write "ReturnDistinctCountOfDuplicates"
         // Example: given { 1, 1, 2, 2, 2, 3, 4, 5 }, return 2, since there
