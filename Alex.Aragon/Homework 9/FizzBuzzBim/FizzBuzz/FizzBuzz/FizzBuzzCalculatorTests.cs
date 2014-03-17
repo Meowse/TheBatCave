@@ -71,5 +71,18 @@ namespace FizzBuzz
             Assert.That(fizzBuzz57.Calculate(3 * 5 * 7), Is.EqualTo("FizzBuzz"));
             Assert.That(fizzBuzz57.Calculate(4 * 5 * 7), Is.EqualTo("FizzBuzz"));
         }
+
+        [Test]
+        public void FizzBuzzBim30()
+        {
+            var fizzBuzzBim30 = new FizzBuzzBimCalculator(2, 3, 5);
+            Assert.That(fizzBuzzBim30.Calculate(2*3*5), Is.EqualTo("FizzBuzzBim"));
+        }
+        [Test]
+        public void FizzBuzzBim60()
+        {
+            var fizzBuzzBim60 = new FizzBuzzBimCalculator(2, 3, 5);
+            Assert.That(fizzBuzzBim60.Calculate(60), Is.EqualTo("FizzBuzzBim"));
+        }
     }
 }

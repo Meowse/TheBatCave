@@ -99,9 +99,28 @@ namespace CountWords
         // For the same input, this would return
         // ([the, happy, fox, slept], [2, 1, 2, 1])
         // where the (list, list) pair is a WordCountRecord
-        public WordCountRecord GetResultsAsWordCountRecord()
+        public WordCountRecord GetResultsAsWordCountRecord(List<WordCount> list, string word)
         {
-            return null;
+            var result = new WordCountRecord();
+            result.Words = word;
+            result.Counts = list;
+
+            return result;
+            //return null;
+           /* var counts = new Dictionary<string, int>();
+            foreach (string word in _words)
+            {
+                if (counts.ContainsKey(word))
+                {
+                    counts[word]++;
+                }
+                else
+                {
+                    // counts[word] = 1;
+                    counts.Add(word, 1);
+                }
+            }
+            return counts;*/
         }
 
 
