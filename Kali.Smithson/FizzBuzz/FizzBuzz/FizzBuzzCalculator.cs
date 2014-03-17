@@ -5,7 +5,7 @@
         private readonly int _fizzDivisor;
         private readonly int _buzzDivisor;
 
-        public FizzBuzzCalculator() : this(3, 5)
+        public FizzBuzzCalculator() : this(2, 3, 5)
         {
         }
 
@@ -28,6 +28,10 @@
             if (i % _buzzDivisor == 0)
             {
                 return "Buzz";
+            }
+            if (i % _buzzDivisor == 0)
+            {
+                return "Bim";
             }
             return i.ToString();
         }
