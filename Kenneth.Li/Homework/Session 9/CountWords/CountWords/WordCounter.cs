@@ -101,7 +101,18 @@ namespace CountWords
         // where the (list, list) pair is a WordCountRecord
         public WordCountRecord GetResultsAsWordCountRecord()
         {
-            return null;
+            List<WordCount> wordCounts = new List<WordCount>();
+            List<WordCount> numberOfWordsInWordCounts = new List<WordCount>();
+            foreach (string word in _words)
+            {
+                WordCount wordCounter = GetWordCountForWord(wordCounts, word);
+                if (wordCounter != null)
+                {
+                    wordCounter.Count++;
+                    numberOfWordsInWordCounts.Add(new WordCount(wordCounter.Count.ToString()));
+                }
+            }
+            return GetResultsAsWordCountRecord();
         }
 
 
