@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -64,11 +65,26 @@ namespace CheckForDuplicates
         // TODO: Write "ReturnDistinctCountOfDuplicates"
         // Example: given { 1, 1, 2, 2, 2, 3, 4, 5 }, return 2, since there
         // are two values of which there are duplicates
+        public int DistinctCount(List<int> someList)
+        {
+            ISet<int> set = new HashSet<int>();
+            ISet<int> duplicates = new HashSet<int>();
+            foreach (int n in someList)
+            {
+                if (set.Contains(n) && !duplicates.Contains(n))
+                {
+                    duplicates.Add(n);
+                }
+                set.Add(n);
+            }
+            return duplicates.Count;
+        }
 
         // TODO: Write "GetDuplicateCounts" which returns a Map<int, int>() 
         // containing the number of duplications of each value that is duplicated.
         // Example: given { 1, 1, 2, 2, 2, 2, 3, 4, 5, 5 }, it would return 
         // a map with keys 1, 2, and 5, and corresponding values 2, 4, and 2,
         // i.e. a map with (key, value) pairs: (1, 2), (2, 4), (5, 2).
+
     }
 }

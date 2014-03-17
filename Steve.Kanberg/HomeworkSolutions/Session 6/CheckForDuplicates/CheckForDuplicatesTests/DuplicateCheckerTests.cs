@@ -35,5 +35,12 @@ namespace CheckForDuplicatesTests
             var nbrOfDuplicates = new List<int> {1, 1, 2, 2, 2, 3, 4, 5};
             Assert.That(_duplicateChecker.CountDuplicates(nbrOfDuplicates), Is.EqualTo(5));
         }
+
+        [Test]
+        public void DistinctCountofDuplicatesTest()
+        {
+            var nbrofDistDups = new List<int> {1, 1, 2, 2, 2, 3, 4, 5};
+            Assert.That(_duplicateChecker.DistinctCount(nbrofDistDups), Is.EqualTo(2));
+        }
     }
 }
