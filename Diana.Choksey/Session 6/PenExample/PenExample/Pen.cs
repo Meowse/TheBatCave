@@ -11,9 +11,16 @@
     // TODO: Consider how much harder it makes to test the code.  :-)
     public class Pen
     {
+        private int _age;
+
+        public Pen()
+        {
+            IsCapped = true;
+        }
+
         protected int DryingTimeInMinutes { get; set; }
 
-        public bool Capped { get; set; }
+        public bool IsCapped { get; set; }
 
         // TODO: Implement the description so that the different kinds of
         // pens describe themselves accurately.
@@ -22,9 +29,13 @@
         // TODO: Remember that pens only dry out while uncapped.
         public void MinutesPass(int minutes)
         {
-            // TODO: Age your pen here.
-            throw new System.NotImplementedException();
+            
+            if (IsCapped == false)
+            {
+                _age = _age + minutes;                    
+            }
         }
+
 
         // TODO: Implement this to report any errors with MessageBox.Show().
         // TODO: This method is expected to return the text that is actually

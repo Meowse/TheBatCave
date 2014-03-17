@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics.Eventing.Reader;
+using System.Runtime.Serialization.Formatters;
 using System.Windows.Forms;
 using PenExample;
 
@@ -8,6 +10,7 @@ namespace WritingDesk
     // yet have a pen.
     public partial class Form1 : Form
     {
+        private const string PenMissingMessage = "Please buy a pen";
         private Pen _pen;
 
         public Form1()
@@ -54,12 +57,33 @@ namespace WritingDesk
 
         private void capPenButton_Click(object sender, EventArgs e)
         {
-            _pen.Capped = true;
+
+            if (_pen != null)
+            {
+                _pen.IsCapped = true;
+
+            }
+
+            else
+            {
+                MessageBox.Show(PenMissingMessage);
+            }
+
+            UpdateUi();
         }
+
+
 
         private void uncapPenButton_Click(object sender, EventArgs e)
         {
-            _pen.Capped = false;
+            if (_pen == null)
+            {
+                MessageBox.Show(PenMissingMessage);
+                return;
+            }
+
+            _pen.IsCapped = false;
+            UpdateUi();
         }
 
         private void waitFiveMinutesButton_Click(object sender, EventArgs e)
@@ -67,6 +91,7 @@ namespace WritingDesk
             // TODO: Implement the MinutesPass method so that your pen
             // "ages" by 5 minutes.
             _pen.MinutesPass(5);
+          
         }
 
         private void waitOneHourButton_Click(object sender, EventArgs e)
@@ -91,8 +116,26 @@ namespace WritingDesk
         // that will show up in the UI.
         private void UpdateUi()
         {
-            // TODO: Fix the bug on this line.
-            currentPenLabel.Text = _pen.Description;
+            currentPenLabel.Text = (_pen == null)
+                ? "You do not own a pen."
+                : string.Format("You own {0}.", _pen.Description);
+
+            if (_pen != null)
+            {
+                capPenButton.Enabled = !_pen.IsCapped;
+                uncapPenButton.Enabled = _pen.IsCapped;
+            }
+            else
+            {
+                capPenButton.Enabled = true;
+                uncapPenButton.Enabled = true;
+            }
+
+        }
+
+        private void currentPage_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

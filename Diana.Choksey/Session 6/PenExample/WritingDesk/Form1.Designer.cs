@@ -61,6 +61,7 @@
             this.currentPage.Size = new System.Drawing.Size(314, 171);
             this.currentPage.TabIndex = 1;
             this.currentPage.Text = "        \r\n                ";
+            this.currentPage.TextChanged += new System.EventHandler(this.currentPage_TextChanged);
             // 
             // getNewPageButton
             // 
