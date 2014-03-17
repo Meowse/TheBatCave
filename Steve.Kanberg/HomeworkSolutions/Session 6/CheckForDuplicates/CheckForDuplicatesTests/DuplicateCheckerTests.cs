@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using CheckForDuplicates;
@@ -41,6 +42,22 @@ namespace CheckForDuplicatesTests
         {
             var nbrofDistDups = new List<int> {1, 1, 2, 2, 2, 3, 4, 5};
             Assert.That(_duplicateChecker.DistinctCount(nbrofDistDups), Is.EqualTo(2));
+        }
+
+        [Test]
+        public void GetDuplicatesCountTest()
+        {
+            var dupsToCount = new List<int> {1, 1, 2, 2, 2, 2, 3, 4, 5, 5};
+            Dictionary<int, int> Dups1 = new Dictionary<int, int>();
+            Dups1.Add(1, 2);
+            Assert.That(_duplicateChecker.GetDuplicatesCount(dupsToCount), Is.EqualTo(Dups1));
+            Dictionary<int, int> Dups2 = new Dictionary<int, int>();
+            Dups1.Add(2, 4);
+            Assert.That(_duplicateChecker.GetDuplicatesCount(dupsToCount), Is.EqualTo(Dups2));
+            Dictionary<int, int> Dups3 = new Dictionary<int, int>();
+            Dups1.Add(5, 2);
+            Assert.That(_duplicateChecker.GetDuplicatesCount(dupsToCount), Is.EqualTo(Dups3));
+
         }
     }
 }

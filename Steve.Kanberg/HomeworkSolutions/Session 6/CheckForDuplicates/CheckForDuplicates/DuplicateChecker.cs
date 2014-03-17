@@ -85,6 +85,27 @@ namespace CheckForDuplicates
         // Example: given { 1, 1, 2, 2, 2, 2, 3, 4, 5, 5 }, it would return 
         // a map with keys 1, 2, and 5, and corresponding values 2, 4, and 2,
         // i.e. a map with (key, value) pairs: (1, 2), (2, 4), (5, 2).
+        public Dictionary<int, int> GetDuplicatesCount(List<int> someList)
+        {
+            Dictionary<int, int> Pairs = new Dictionary<int, int>();
+            ISet<int> set = new HashSet<int>();
+            int duplicates = 0;
+            foreach (int n in someList)
+            {
+                if (!set.Contains(n))
+                {
+                    set.Add(n);
+                    duplicates = 0;
+                    duplicates++;
+                }
+                else if (set.Contains(n))
+                {
+                    duplicates++;
+                    Pairs[n] = duplicates;
+                }
+            }
+            return Pairs.Keys(duplicates);
+        }
 
     }
 }
