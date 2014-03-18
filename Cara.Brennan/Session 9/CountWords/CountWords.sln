@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountWords", "CountWords\CountWords.csproj", "{F8277B81-115C-4BDE-BDD8-CBF9E01B2E8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountWordsTests", "CountWordsTests\CountWordsTests.csproj", "{4CF7017D-ACBF-41AE-8EFE-87BECCB28ECA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F8277B81-115C-4BDE-BDD8-CBF9E01B2E8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8277B81-115C-4BDE-BDD8-CBF9E01B2E8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8277B81-115C-4BDE-BDD8-CBF9E01B2E8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8277B81-115C-4BDE-BDD8-CBF9E01B2E8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CF7017D-ACBF-41AE-8EFE-87BECCB28ECA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CF7017D-ACBF-41AE-8EFE-87BECCB28ECA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CF7017D-ACBF-41AE-8EFE-87BECCB28ECA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CF7017D-ACBF-41AE-8EFE-87BECCB28ECA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
