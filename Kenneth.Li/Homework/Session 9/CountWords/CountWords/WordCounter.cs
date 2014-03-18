@@ -101,18 +101,31 @@ namespace CountWords
         // where the (list, list) pair is a WordCountRecord
         public WordCountRecord GetResultsAsWordCountRecord()
         {
-            List<WordCount> wordCounts = new List<WordCount>();
-            List<WordCount> numberOfWordsInWordCounts = new List<WordCount>();
-            foreach (string word in _words)
+            WordCountRecord wordCounter = new WordCountRecord {Words = new List<string>(), Counts = new List<int>()};
+            const int count = 0;
+            foreach (var word in _words)
             {
-                WordCount wordCounter = GetWordCountForWord(wordCounts, word);
-                if (wordCounter != null)
+                if (!wordCounter.Words.Contains(word))
                 {
-                    wordCounter.Count++;
-                    numberOfWordsInWordCounts.Add(new WordCount(wordCounter.Count.ToString()));
+                    wordCounter.Words.Add(word);
+                    wordCounter.Counts.Add(CountNumberOfSimiliarWords(word, count));
                 }
             }
-            return GetResultsAsWordCountRecord();
+            return wordCounter;
+        }
+
+        private int CountNumberOfSimiliarWords(string checkWord, int numberOfWords)
+        {
+//            prior to converting to LINQ.
+//            foreach (var word in _words)
+//            {
+//                if (checkWord == word)
+//                {
+//                    numberOfWords++;
+//                }
+//            }
+            numberOfWords += _words.Count(word => checkWord == word);
+            return numberOfWords;
         }
 
 
