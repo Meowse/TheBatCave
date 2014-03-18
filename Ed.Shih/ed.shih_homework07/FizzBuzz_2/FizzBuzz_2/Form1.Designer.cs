@@ -31,11 +31,19 @@
             this.MaxValue = new System.Windows.Forms.TextBox();
             this.FizzBuzz = new System.Windows.Forms.Button();
             this.output = new System.Windows.Forms.Label();
+            this.NewCalc = new System.Windows.Forms.Button();
+            this.fizzDivField = new System.Windows.Forms.TextBox();
+            this.buzzDivField = new System.Windows.Forms.TextBox();
+            this.bimDivField = new System.Windows.Forms.TextBox();
+            this.EnterMaxVal = new System.Windows.Forms.Label();
+            this.FizzVal = new System.Windows.Forms.Label();
+            this.BuzzVal = new System.Windows.Forms.Label();
+            this.BimVal = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // MaxValue
             // 
-            this.MaxValue.Location = new System.Drawing.Point(31, 27);
+            this.MaxValue.Location = new System.Drawing.Point(12, 92);
             this.MaxValue.Name = "MaxValue";
             this.MaxValue.Size = new System.Drawing.Size(100, 22);
             this.MaxValue.TabIndex = 0;
@@ -43,33 +51,109 @@
             // 
             // FizzBuzz
             // 
-            this.FizzBuzz.Location = new System.Drawing.Point(159, 26);
+            this.FizzBuzz.Location = new System.Drawing.Point(134, 91);
             this.FizzBuzz.Name = "FizzBuzz";
-            this.FizzBuzz.Size = new System.Drawing.Size(75, 23);
+            this.FizzBuzz.Size = new System.Drawing.Size(110, 23);
             this.FizzBuzz.TabIndex = 1;
-            this.FizzBuzz.Text = "FizzBuzz Me!";
+            this.FizzBuzz.Text = "FizzBuzzBim!";
             this.FizzBuzz.UseVisualStyleBackColor = true;
             this.FizzBuzz.Click += new System.EventHandler(this.FizzButton1Click);
             // 
             // output
             // 
             this.output.AutoSize = true;
-            this.output.Location = new System.Drawing.Point(31, 68);
+            this.output.Location = new System.Drawing.Point(24, 131);
             this.output.Name = "output";
             this.output.Size = new System.Drawing.Size(8, 493);
             this.output.TabIndex = 2;
             this.output.Text = "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n";
             // 
+            // NewCalc
+            // 
+            this.NewCalc.Location = new System.Drawing.Point(330, 37);
+            this.NewCalc.Name = "NewCalc";
+            this.NewCalc.Size = new System.Drawing.Size(110, 23);
+            this.NewCalc.TabIndex = 3;
+            this.NewCalc.Text = "New Calculator";
+            this.NewCalc.UseVisualStyleBackColor = true;
+            this.NewCalc.Click += new System.EventHandler(this.NewCalc_Click);
+            // 
+            // fizzDivField
+            // 
+            this.fizzDivField.Location = new System.Drawing.Point(12, 38);
+            this.fizzDivField.Name = "fizzDivField";
+            this.fizzDivField.Size = new System.Drawing.Size(100, 22);
+            this.fizzDivField.TabIndex = 2;
+            // 
+            // buzzDivField
+            // 
+            this.buzzDivField.Location = new System.Drawing.Point(118, 38);
+            this.buzzDivField.Name = "buzzDivField";
+            this.buzzDivField.Size = new System.Drawing.Size(100, 22);
+            this.buzzDivField.TabIndex = 3;
+            // 
+            // bimDivField
+            // 
+            this.bimDivField.Location = new System.Drawing.Point(224, 38);
+            this.bimDivField.Name = "bimDivField";
+            this.bimDivField.Size = new System.Drawing.Size(100, 22);
+            this.bimDivField.TabIndex = 5;
+            // 
+            // EnterMaxVal
+            // 
+            this.EnterMaxVal.AutoSize = true;
+            this.EnterMaxVal.Location = new System.Drawing.Point(12, 72);
+            this.EnterMaxVal.Name = "EnterMaxVal";
+            this.EnterMaxVal.Size = new System.Drawing.Size(111, 17);
+            this.EnterMaxVal.TabIndex = 7;
+            this.EnterMaxVal.Text = "Enter Max Value";
+            // 
+            // FizzVal
+            // 
+            this.FizzVal.AutoSize = true;
+            this.FizzVal.Location = new System.Drawing.Point(12, 9);
+            this.FizzVal.Name = "FizzVal";
+            this.FizzVal.Size = new System.Drawing.Size(73, 17);
+            this.FizzVal.TabIndex = 8;
+            this.FizzVal.Text = "Fizz Value";
+            // 
+            // BuzzVal
+            // 
+            this.BuzzVal.AutoSize = true;
+            this.BuzzVal.Location = new System.Drawing.Point(115, 9);
+            this.BuzzVal.Name = "BuzzVal";
+            this.BuzzVal.Size = new System.Drawing.Size(79, 17);
+            this.BuzzVal.TabIndex = 9;
+            this.BuzzVal.Text = "Buzz Value";
+            // 
+            // BimVal
+            // 
+            this.BimVal.AutoSize = true;
+            this.BimVal.Location = new System.Drawing.Point(221, 9);
+            this.BimVal.Name = "BimVal";
+            this.BimVal.Size = new System.Drawing.Size(71, 17);
+            this.BimVal.TabIndex = 10;
+            this.BimVal.Text = "Bim Value";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(458, 406);
+            this.ClientSize = new System.Drawing.Size(500, 846);
+            this.Controls.Add(this.BimVal);
+            this.Controls.Add(this.BuzzVal);
+            this.Controls.Add(this.FizzVal);
+            this.Controls.Add(this.EnterMaxVal);
+            this.Controls.Add(this.bimDivField);
+            this.Controls.Add(this.buzzDivField);
+            this.Controls.Add(this.fizzDivField);
+            this.Controls.Add(this.NewCalc);
             this.Controls.Add(this.output);
             this.Controls.Add(this.FizzBuzz);
             this.Controls.Add(this.MaxValue);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "FizzBuzzBim Calculator";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -80,6 +164,14 @@
         private System.Windows.Forms.TextBox MaxValue;
         private System.Windows.Forms.Button FizzBuzz;
         private System.Windows.Forms.Label output;
+        private System.Windows.Forms.Button NewCalc;
+        private System.Windows.Forms.TextBox fizzDivField;
+        private System.Windows.Forms.TextBox buzzDivField;
+        private System.Windows.Forms.TextBox bimDivField;
+        private System.Windows.Forms.Label EnterMaxVal;
+        private System.Windows.Forms.Label FizzVal;
+        private System.Windows.Forms.Label BuzzVal;
+        private System.Windows.Forms.Label BimVal;
     }
 }
 

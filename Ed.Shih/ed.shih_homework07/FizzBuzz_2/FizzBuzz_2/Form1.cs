@@ -43,15 +43,42 @@ namespace FizzBuzz_2
 
         private int GetMaxValue()
         {
-           
             try
             {
                 return Convert.ToInt32(MaxValue.Text);
             }
             catch (FormatException)
             {
+                
                 return 0;
             }
+        }
+
+        private int GetIntValue(string value)
+        {
+           
+            try
+            {
+                return Convert.ToInt32(value);
+            }
+            catch (FormatException)
+            {
+                return 0;
+            }
+        }
+
+        private void NewCalc_Click(object sender, EventArgs e)
+        {
+            // Make new FizzBuzzBim
+            int fizzDiv = GetIntValue(fizzDivField.Text);
+            int buzzDiv = GetIntValue(buzzDivField.Text);
+            int bimDiv = GetIntValue(bimDivField.Text);
+            new FizzBuzzCalculator(fizzDiv, buzzDiv, bimDiv);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
