@@ -3,6 +3,7 @@
     public class FizzBuzzCalculator
     {
         private readonly int _fizzDivisor;
+        private readonly int _fizzdivisor;
         private readonly int _buzzDivisor;
         private readonly int _bimDivisor;
 
@@ -10,11 +11,11 @@
         {
         }
 
-        public FizzBuzzCalculator(int divisor, int fizzDivisor, int buzzDivisor)
+        public FizzBuzzCalculator(int fizzdivisor, int buzzDivisor, int bimDivisor)
         {
-            _fizzDivisor = fizzDivisor;
+            _fizzdivisor = fizzdivisor;
             _buzzDivisor = buzzDivisor;
-            _bimDivisor = _bimDivisor;
+            _bimDivisor = bimDivisor;
         }
 
         public FizzBuzzCalculator(int divisor, int fizzDivisor)
@@ -22,7 +23,7 @@
             throw new System.NotImplementedException();
         }
 
-        public void Calculate(int i)
+        public string Calculate(int i)
         {
             if (i % _fizzDivisor == 0 && i % _buzzDivisor == 0 && i % _bimDivisor == 0)
             {
@@ -36,12 +37,11 @@
             {
                 return "Buzz";
             }
-            if (i % _bimDivisor == 0)
+            if (i%_bimDivisor == 0)
             {
                 return "Bim";
-
-                return i.ToString();
+            }
+            return i.ToString();
             }
         }
     }
-}
