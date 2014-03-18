@@ -75,5 +75,14 @@ namespace FizzBuzz_2
             Assert.That(fizzBuzz235.Calculate(7 * 5), Is.EqualTo("Bim"));
             Assert.That(fizzBuzz235.Calculate(11 * 5), Is.EqualTo("Bim"));
         }
+        [Test]
+        public void FizzBuzz235ReturnsNumForNoMultiples()
+        {
+            var fizzBuzz235 = new FizzBuzzCalculator(2, 3, 5);
+            Assert.That(fizzBuzz235.Calculate(1), Is.EqualTo("1"));
+            Assert.That(fizzBuzz235.Calculate(7), Is.EqualTo("7"));
+            Assert.That(fizzBuzz235.Calculate(11), Is.EqualTo("11"));
+            Assert.That(fizzBuzz235.Calculate(13), Is.EqualTo("13"));
+        }
     }
 }
