@@ -39,6 +39,7 @@
             this.FizzVal = new System.Windows.Forms.Label();
             this.BuzzVal = new System.Windows.Forms.Label();
             this.BimVal = new System.Windows.Forms.Label();
+            this.CalcReminder = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // MaxValue
@@ -70,7 +71,7 @@
             // 
             // NewCalc
             // 
-            this.NewCalc.Location = new System.Drawing.Point(330, 37);
+            this.NewCalc.Location = new System.Drawing.Point(351, 37);
             this.NewCalc.Name = "NewCalc";
             this.NewCalc.Size = new System.Drawing.Size(110, 23);
             this.NewCalc.TabIndex = 3;
@@ -104,9 +105,9 @@
             this.EnterMaxVal.AutoSize = true;
             this.EnterMaxVal.Location = new System.Drawing.Point(12, 72);
             this.EnterMaxVal.Name = "EnterMaxVal";
-            this.EnterMaxVal.Size = new System.Drawing.Size(111, 17);
+            this.EnterMaxVal.Size = new System.Drawing.Size(73, 17);
             this.EnterMaxVal.TabIndex = 7;
-            this.EnterMaxVal.Text = "Enter Max Value";
+            this.EnterMaxVal.Text = "Max Value";
             // 
             // FizzVal
             // 
@@ -135,11 +136,24 @@
             this.BimVal.TabIndex = 10;
             this.BimVal.Text = "Bim Value";
             // 
+            // CalcReminder
+            // 
+            this.CalcReminder.AutoSize = true;
+            this.CalcReminder.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CalcReminder.Location = new System.Drawing.Point(327, 63);
+            this.CalcReminder.Name = "CalcReminder";
+            this.CalcReminder.Size = new System.Drawing.Size(169, 51);
+            this.CalcReminder.TabIndex = 11;
+            this.CalcReminder.Text = "Remember To Press This\r\nAfter New FizzBuzzBim\r\nValues Are Entered";
+            this.CalcReminder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(500, 846);
+            this.Controls.Add(this.CalcReminder);
             this.Controls.Add(this.BimVal);
             this.Controls.Add(this.BuzzVal);
             this.Controls.Add(this.FizzVal);
@@ -172,6 +186,7 @@
         private System.Windows.Forms.Label FizzVal;
         private System.Windows.Forms.Label BuzzVal;
         private System.Windows.Forms.Label BimVal;
+        private System.Windows.Forms.Label CalcReminder;
     }
 }
 

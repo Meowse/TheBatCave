@@ -17,6 +17,10 @@ namespace FizzBuzz_2
         public Form1()
         {
             InitializeComponent();
+            _fizzBuzzCalculator = new FizzBuzzCalculator(2,3,5);
+            fizzDivField.Text = "2";
+            buzzDivField.Text = "3";
+            bimDivField.Text = "5";
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -29,11 +33,11 @@ namespace FizzBuzz_2
             int maxValue = GetMaxValue();
             if (maxValue < 1)
             {
-                output.Text = @"Please enter an integer.";
+                output.Text = @"Please enter an integer for Max Value.";
                 return;
             }
 
-            output.Text = @"Calculating FizzBuzz from 1 to " + MaxValue.Text;
+            output.Text = @"Calculating FizzBuzzBim from 1 to " + MaxValue.Text;
 
             for (int i = 1; i <= maxValue; i++)
             {
@@ -73,7 +77,16 @@ namespace FizzBuzz_2
             int fizzDiv = GetIntValue(fizzDivField.Text);
             int buzzDiv = GetIntValue(buzzDivField.Text);
             int bimDiv = GetIntValue(bimDivField.Text);
-            _fizzBuzzCalculator = new FizzBuzzCalculator(fizzDiv, buzzDiv, bimDiv);
+            if (fizzDiv <= 0 || buzzDiv <= 0 || bimDiv <= 0)
+            {
+                output.Text = @"Fizz, Buzz, and Bim must all be an integers";
+            }
+            else
+            {
+                output.Text = @"Ready to calculate new FizzBuzzBim.";
+                _fizzBuzzCalculator = new FizzBuzzCalculator(fizzDiv, buzzDiv, bimDiv);
+            }
+       
         }
 
         private void Form1_Load(object sender, EventArgs e)
