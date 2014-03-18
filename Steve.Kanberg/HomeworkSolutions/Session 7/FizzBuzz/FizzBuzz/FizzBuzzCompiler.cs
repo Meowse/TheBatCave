@@ -7,36 +7,41 @@ namespace FizzBuzz
 {
     public class FizzBuzzCompiler
     {
-        public static string FizzBuzzed(string answer)
+        public static string[] FizzBuzzed(int CountUp)
         {
-            string ans1 = "Fizz";
-            string ans2 = "Buzz";
-            string ans3 = "FizzBuzz";
-            int num1 = 0;
+            int incrementor = 0;
+            var length = CountUp;
+            string[] result = new string[length];
+            int num1 = 1;
 
             while (num1 <= 15)
             {
-                string result = null;
-                num1 = num1 + 1;
-
                 if (num1 % 5 == 0 && num1 % 3 == 0)
                 {
-                    result = ans3;
-                    return result;
+                    result[incrementor] = "FizzBuzz";
+                    num1++;
+                    incrementor++;
                 }
                 if (num1 % 3 == 0)
                 {
-                    result = ans1;
-                    return result;
+                    result[incrementor] = "Fizz";
+                    num1++;
+                    incrementor++;
                 }
-                if (num1 % 5 == 0)
+                if (num1 %5 == 0)
                 {
-                    result = ans2;
-                    return result;
+                    result[incrementor] = "Buzz";
+                    num1++;
+                    incrementor++;
+                }
+                else
+                {
+                    result[incrementor] = num1.ToString();
+                    incrementor++;
+                    num1++;
                 }
             }
-            answer = "Done";
-            return answer;
+            return result;
         }
     }
 }

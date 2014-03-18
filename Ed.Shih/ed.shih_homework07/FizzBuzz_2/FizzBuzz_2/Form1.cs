@@ -12,7 +12,7 @@ namespace FizzBuzz_2
 {
     public partial class Form1 : Form
     {
-        private readonly FizzBuzzCalculator _fizzBuzzCalculator = new FizzBuzzCalculator();
+        private FizzBuzzCalculator _fizzBuzzCalculator = new FizzBuzzCalculator();
         
         public Form1()
         {
@@ -73,7 +73,7 @@ namespace FizzBuzz_2
             int fizzDiv = GetIntValue(fizzDivField.Text);
             int buzzDiv = GetIntValue(buzzDivField.Text);
             int bimDiv = GetIntValue(bimDivField.Text);
-            new FizzBuzzCalculator(fizzDiv, buzzDiv, bimDiv);
+            _fizzBuzzCalculator = new FizzBuzzCalculator(fizzDiv, buzzDiv, bimDiv);
         }
 
         private void Form1_Load(object sender, EventArgs e)
