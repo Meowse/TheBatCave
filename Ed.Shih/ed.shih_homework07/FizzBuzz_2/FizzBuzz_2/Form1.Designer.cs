@@ -47,7 +47,7 @@
             this.MaxValue.Location = new System.Drawing.Point(12, 92);
             this.MaxValue.Name = "MaxValue";
             this.MaxValue.Size = new System.Drawing.Size(100, 22);
-            this.MaxValue.TabIndex = 0;
+            this.MaxValue.TabIndex = 5;
             this.MaxValue.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // FizzBuzz
@@ -55,7 +55,7 @@
             this.FizzBuzz.Location = new System.Drawing.Point(134, 91);
             this.FizzBuzz.Name = "FizzBuzz";
             this.FizzBuzz.Size = new System.Drawing.Size(110, 23);
-            this.FizzBuzz.TabIndex = 1;
+            this.FizzBuzz.TabIndex = 6;
             this.FizzBuzz.Text = "FizzBuzzBim!";
             this.FizzBuzz.UseVisualStyleBackColor = true;
             this.FizzBuzz.Click += new System.EventHandler(this.FizzButton1Click);
@@ -66,7 +66,7 @@
             this.output.Location = new System.Drawing.Point(24, 131);
             this.output.Name = "output";
             this.output.Size = new System.Drawing.Size(8, 493);
-            this.output.TabIndex = 2;
+            this.output.TabIndex = 7;
             this.output.Text = "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n";
             // 
             // NewCalc
@@ -74,7 +74,7 @@
             this.NewCalc.Location = new System.Drawing.Point(351, 37);
             this.NewCalc.Name = "NewCalc";
             this.NewCalc.Size = new System.Drawing.Size(110, 23);
-            this.NewCalc.TabIndex = 3;
+            this.NewCalc.TabIndex = 4;
             this.NewCalc.Text = "New Calculator";
             this.NewCalc.UseVisualStyleBackColor = true;
             this.NewCalc.Click += new System.EventHandler(this.NewCalc_Click);
@@ -84,21 +84,21 @@
             this.fizzDivField.Location = new System.Drawing.Point(12, 38);
             this.fizzDivField.Name = "fizzDivField";
             this.fizzDivField.Size = new System.Drawing.Size(100, 22);
-            this.fizzDivField.TabIndex = 2;
+            this.fizzDivField.TabIndex = 1;
             // 
             // buzzDivField
             // 
             this.buzzDivField.Location = new System.Drawing.Point(118, 38);
             this.buzzDivField.Name = "buzzDivField";
             this.buzzDivField.Size = new System.Drawing.Size(100, 22);
-            this.buzzDivField.TabIndex = 3;
+            this.buzzDivField.TabIndex = 2;
             // 
             // bimDivField
             // 
             this.bimDivField.Location = new System.Drawing.Point(224, 38);
             this.bimDivField.Name = "bimDivField";
             this.bimDivField.Size = new System.Drawing.Size(100, 22);
-            this.bimDivField.TabIndex = 5;
+            this.bimDivField.TabIndex = 3;
             // 
             // EnterMaxVal
             // 
@@ -139,10 +139,10 @@
             // CalcReminder
             // 
             this.CalcReminder.AutoSize = true;
-            this.CalcReminder.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CalcReminder.Location = new System.Drawing.Point(327, 63);
+            this.CalcReminder.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CalcReminder.Location = new System.Drawing.Point(348, 72);
             this.CalcReminder.Name = "CalcReminder";
-            this.CalcReminder.Size = new System.Drawing.Size(169, 51);
+            this.CalcReminder.Size = new System.Drawing.Size(121, 39);
             this.CalcReminder.TabIndex = 11;
             this.CalcReminder.Text = "Remember To Press This\r\nAfter New FizzBuzzBim\r\nValues Are Entered";
             this.CalcReminder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

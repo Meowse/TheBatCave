@@ -80,11 +80,13 @@ namespace FizzBuzz_2
             if (fizzDiv <= 0 || buzzDiv <= 0 || bimDiv <= 0)
             {
                 output.Text = @"Fizz, Buzz, and Bim must all be an integers";
+                FizzBuzz.Enabled = false;
             }
             else
             {
                 output.Text = @"Ready to calculate new FizzBuzzBim.";
                 _fizzBuzzCalculator = new FizzBuzzCalculator(fizzDiv, buzzDiv, bimDiv);
+                FizzBuzz.Enabled = true;
             }
        
         }
