@@ -101,9 +101,7 @@ namespace CountWords
         // where the (list, list) pair is a WordCountRecord
         public WordCountRecord GetResultsAsWordCountRecord()
         {
-            WordCountRecord wordCounter = new WordCountRecord();
-            wordCounter.Words = new List<string>();
-            wordCounter.Counts = new List<int>();
+            WordCountRecord wordCounter = new WordCountRecord {Words = new List<string>(), Counts = new List<int>()};
             const int count = 0;
             foreach (var word in _words)
             {
