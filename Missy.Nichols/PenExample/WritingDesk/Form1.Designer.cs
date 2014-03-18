@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.currentPage = new System.Windows.Forms.TextBox();
             this.getNewPageButton = new System.Windows.Forms.Button();
@@ -42,6 +43,7 @@
             this.capPenButton = new System.Windows.Forms.Button();
             this.uncapPenButton = new System.Windows.Forms.Button();
             this.throwAwayPenButton = new System.Windows.Forms.Button();
+            this.penTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -180,6 +182,10 @@
             this.throwAwayPenButton.UseVisualStyleBackColor = true;
             this.throwAwayPenButton.Click += new System.EventHandler(this.throwAwayPenButton_Click);
             // 
+            // penTimer
+            // 
+            this.penTimer.Tick += new System.EventHandler(this.penTimer_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -222,6 +228,7 @@
         private System.Windows.Forms.Button capPenButton;
         private System.Windows.Forms.Button uncapPenButton;
         private System.Windows.Forms.Button throwAwayPenButton;
+        private System.Windows.Forms.Timer penTimer;
     }
 }
 
