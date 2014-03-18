@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C2DADE47-A477-4B25-935B-9C15A84EB3C7}</ProjectGuid>
+    <ProjectGuid>{4CF7017D-ACBF-41AE-8EFE-87BECCB28ECA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PenExample</RootNamespace>
-    <AssemblyName>PenExample</AssemblyName>
+    <RootNamespace>CountWordsTests</RootNamespace>
+    <AssemblyName>CountWordsTests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,6 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -39,10 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BallPointPen.cs" />
-    <Compile Include="FeltTipPen.cs" />
-    <Compile Include="Pen.cs" />
+    <Compile Include="WordCounterTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CountWords\CountWords.csproj">
+      <Project>{F8277B81-115C-4BDE-BDD8-CBF9E01B2E8F}</Project>
+      <Name>CountWords</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -59,5 +59,14 @@ namespace FizzBuzzBim.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2.
+        /// </summary>
+        internal static string Form1_Form1__2 {
+            get {
+                return ResourceManager.GetString("Form1_Form1__2", resourceCulture);
+            }
+        }
     }
 }
