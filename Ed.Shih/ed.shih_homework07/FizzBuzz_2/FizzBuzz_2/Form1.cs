@@ -87,7 +87,7 @@ namespace FizzBuzz_2
             int bimDiv = GetIntValue(bimDivField.Text);
             if (fizzDiv <= 0 || buzzDiv <= 0 || bimDiv <= 0)
             {
-                output.Text = @"Fizz, Buzz, and Bim must all be an integers with less than 6 digits.";
+                output.Text = @"Fizz, Buzz, and Bim must all be integers with less than 6 digits.";
                 FizzBuzz.Enabled = false;
             }
             else
