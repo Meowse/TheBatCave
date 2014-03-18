@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Odbc;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -101,7 +102,19 @@ namespace CountWords
         // where the (list, list) pair is a WordCountRecord
         public WordCountRecord GetResultsAsWordCountRecord()
         {
-            return null;
+            WordCountRecord wordCount = new WordCountRecord();
+
+            wordCount.Words = new List<string>();
+            wordCount.Counts = new List<int>();
+            int count = 0;
+            foreach (var word in _words)
+            {
+                if(!wordCount.Words.Contains(word))
+                {
+                    wordCount.Words.Add(word);
+                    wordCount.Counts.Add((word,count));
+                }                
+            }
         }
 
 
