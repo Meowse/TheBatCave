@@ -41,6 +41,7 @@
             this.waitOneHourButton = new System.Windows.Forms.Button();
             this.capPenButton = new System.Windows.Forms.Button();
             this.uncapPenButton = new System.Windows.Forms.Button();
+            this.throwAwayPenButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -131,21 +132,23 @@
             // 
             // waitFiveMinutesButton
             // 
-            this.waitFiveMinutesButton.Location = new System.Drawing.Point(371, 169);
+            this.waitFiveMinutesButton.Location = new System.Drawing.Point(371, 202);
             this.waitFiveMinutesButton.Name = "waitFiveMinutesButton";
             this.waitFiveMinutesButton.Size = new System.Drawing.Size(181, 23);
             this.waitFiveMinutesButton.TabIndex = 9;
             this.waitFiveMinutesButton.Text = "5 Minutes of Writer\'s Block";
             this.waitFiveMinutesButton.UseVisualStyleBackColor = true;
+            this.waitFiveMinutesButton.Click += new System.EventHandler(this.waitFiveMinutesButton_Click);
             // 
             // waitOneHourButton
             // 
-            this.waitOneHourButton.Location = new System.Drawing.Point(371, 198);
+            this.waitOneHourButton.Location = new System.Drawing.Point(371, 231);
             this.waitOneHourButton.Name = "waitOneHourButton";
             this.waitOneHourButton.Size = new System.Drawing.Size(181, 23);
             this.waitOneHourButton.TabIndex = 10;
             this.waitOneHourButton.Text = "1 Hour of Writer\'s Block";
             this.waitOneHourButton.UseVisualStyleBackColor = true;
+            this.waitOneHourButton.Click += new System.EventHandler(this.waitOneHourButton_Click);
             // 
             // capPenButton
             // 
@@ -155,6 +158,7 @@
             this.capPenButton.TabIndex = 11;
             this.capPenButton.Text = "Cap Your Pen";
             this.capPenButton.UseVisualStyleBackColor = true;
+            this.capPenButton.Click += new System.EventHandler(this.capPenButton_Click);
             // 
             // uncapPenButton
             // 
@@ -164,12 +168,24 @@
             this.uncapPenButton.TabIndex = 12;
             this.uncapPenButton.Text = "Un-Cap Your Pen";
             this.uncapPenButton.UseVisualStyleBackColor = true;
+            this.uncapPenButton.Click += new System.EventHandler(this.uncapPenButton_Click);
+            // 
+            // throwAwayPenButton
+            // 
+            this.throwAwayPenButton.Location = new System.Drawing.Point(371, 151);
+            this.throwAwayPenButton.Name = "throwAwayPenButton";
+            this.throwAwayPenButton.Size = new System.Drawing.Size(181, 23);
+            this.throwAwayPenButton.TabIndex = 13;
+            this.throwAwayPenButton.Text = "Throw Away Pen";
+            this.throwAwayPenButton.UseVisualStyleBackColor = true;
+            this.throwAwayPenButton.Click += new System.EventHandler(this.throwAwayPenButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(575, 318);
+            this.Controls.Add(this.throwAwayPenButton);
             this.Controls.Add(this.uncapPenButton);
             this.Controls.Add(this.capPenButton);
             this.Controls.Add(this.waitOneHourButton);
@@ -205,6 +221,7 @@
         private System.Windows.Forms.Button waitOneHourButton;
         private System.Windows.Forms.Button capPenButton;
         private System.Windows.Forms.Button uncapPenButton;
+        private System.Windows.Forms.Button throwAwayPenButton;
     }
 }
 

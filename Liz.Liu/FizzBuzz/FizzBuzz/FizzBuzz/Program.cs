@@ -6,17 +6,33 @@ using System.Windows.Forms;
 
 namespace FizzBuzz
 {
-    static class Program
+    internal class Program
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
-        [STAThread]
-        static void Main()
+        
+        static void Main(string[]args)
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            string fizz = "fizz";
+            string buzz = "buzz";
+            string fizzbuzz = "fizzbuzz";
+
+
+             for (int i = 1; i <= 100; i++)
+            {
+                if (i%3 == 0 && i%5 == 0)
+                    Console.WriteLine("FizzBuzz");
+            }
+            if (int % 3 ==0)
+            {
+                Console.WriteLine("Fizz");
+            }
+            else if (int % 5== 0)
+            {
+                Console.WriteLine("Buzz");
+            }
+        else
+            {
+                Console.WriteLine(int.tostring());
+            }
         }
     }
 }

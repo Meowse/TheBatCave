@@ -59,6 +59,7 @@ namespace IteratorExamples
             }
             return result;
         }
+        //int [] result = new int[10]
 
         public int[] CountFromToWithForLoop(int countFrom, int countTo)
         {
@@ -73,6 +74,9 @@ namespace IteratorExamples
         }
 
 
+        For(int i=0; i<=10)
+       //The variable you are incrementing and using for an indexEva-Lise Carlstrom 2: i is the iterator, teh count of what step we're at
+        //degenerate case for (;;) {}
         public int[] CountFromToByWithForLoop(int countFrom, int countTo, int countBy)
         {
             int countValue = countFrom;
@@ -125,7 +129,11 @@ namespace IteratorExamples
         }
 
         public int[] BackFromBy(int countFrom, int countBy)
-        {
+        { 
+            //check Ben's solution (max/increment) +1, modulo returns remainder of division, count value= max, multiple i by increment and sutract that from max
+            //at any point in my code i can describe what i am trying to do at that line and what infromation i have avalible at that line
+            //computatblity, can in be in theory figured out from the infrmation you have
+            //data dependance, data flow anaysis, determinatblity (practice this)
             int countValue = countFrom;
 
             int length = (countFrom/countBy) + 1;
@@ -133,8 +141,7 @@ namespace IteratorExamples
             int[] result = new int[length];
             for (int i = 0; i < length; ++i)
             {
-                result[i] = countValue;
-                countValue -= countBy;
+                result[i] = countFrom-(countBy*1);
             }
             return result;
         }
