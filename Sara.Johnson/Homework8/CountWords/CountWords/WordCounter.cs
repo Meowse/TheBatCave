@@ -101,7 +101,21 @@ namespace CountWords
         // where the (list, list) pair is a WordCountRecord
         public WordCountRecord GetResultsAsWordCountRecord()
         {
-            return null;
+                        WordCountRecord wordCounter = new WordCountRecord();
+            wordCounter.Words = new List<string>();
+            wordCounter.Counts = new List<int>();
+            const int count = 0;
+            foreach (var word in _words)
+            {
+                if (!wordCounter.Words.Contains(word))
+                {
+                    wordCounter.Words.Add(word);
+                    wordCounter.Counts.Add(CountNumberOfSimiliarWords(word, count));
+
+                }
+            }
+            return wordCounter;
+
         }
 
 
@@ -109,7 +123,20 @@ namespace CountWords
         //    check if it's in the dictionary (as a key)
         //    if it's in the dictionary, increment the count by 1
         //    else add it to the dictionary and initialize the count to 1
-            
+        private int CountNumberOfSimiliarWords(string checkWord, int numberOfWords)
+        {
+            //            prior to converting to LINQ.
+            //            foreach (var word in _words)
+            //            {
+            //                if (checkWord == word)
+            //                {
+            //                    numberOfWords++;
+            //                }
+            //            }
+            numberOfWords += _words.Count(word => checkWord == word);
+            return numberOfWords;
+        }
+
 
         // And for the same input, this would return
         // {{the, 2}, {happy, 1}, {fox, 2}, {slept, 1}}
