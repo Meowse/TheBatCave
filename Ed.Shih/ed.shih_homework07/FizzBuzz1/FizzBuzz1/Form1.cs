@@ -33,9 +33,11 @@ namespace FizzBuzz1
                     Console.WriteLine("FIZZ");
                 if (i%5 == 0)
                     Console.WriteLine("BUZZ");
+                else
+                {
+                    return Console.WriteLine(i.ToString);    
+                }
             }
-            // not sure how this is unreachable
-            return Console.WriteLine(i.ToString);
 
         }
 

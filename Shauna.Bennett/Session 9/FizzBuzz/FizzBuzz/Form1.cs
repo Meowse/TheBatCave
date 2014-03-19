@@ -5,14 +5,16 @@ namespace FizzBuzzBim
 {
     public partial class Form1 : Form
     {
-        private FizzBuzzCalculator _fizzBuzzCalculator;
+        private FizzBuzzCalculator _fizzBuzzBimCalculator;
 
         public Form1()
         {
+          //  _fizzBuzzBimCalculator = fizzBuzzBimCalculator;
             InitializeComponent();
-            _fizzBuzzCalculator = new FizzBuzzCalculator(3, 5);
-            fizzDivisorField.Text = "3";
-            buzzDivisorField.Text = "5";
+            _fizzBuzzBimCalculator = new FizzBuzzBimCalculator(2, 3, 5);
+            fizzDivisorField.Text = "2";
+            buzzDivisorField.Text = "3";
+            bimDivisorField.Text = "5";
         }
 
         private void fizzBuzzIt_Click(object sender, EventArgs e)
@@ -28,7 +30,7 @@ namespace FizzBuzzBim
             outputLabel.Text = @"Calculating FizzBuzz from 1 to " + maxValue;
             for (int i = 1; i <= maxValue; i++)
             {
-                outputLabel.Text += Environment.NewLine + _fizzBuzzCalculator.Calculate(i);
+                outputLabel.Text += Environment.NewLine + _fizzBuzzBimCalculator.Calculate(i);
             }
         }
 
@@ -60,7 +62,7 @@ namespace FizzBuzzBim
         {
             int fizzDivisor = GetIntValue(fizzDivisorField.Text);
             int buzzDivisor = GetIntValue(buzzDivisorField.Text);
-            _fizzBuzzCalculator = new FizzBuzzCalculator(fizzDivisor, buzzDivisor);
+            _fizzBuzzBimCalculator = new FizzBuzzCalculator(fizzDivisor, buzzDivisor);
         }
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
+using FizzBuzz;
 
 namespace FizzBuzz
 {
@@ -13,14 +14,8 @@ namespace FizzBuzz
         [Test]
         public void IsFizzBuzz()
         {
-            string expected = "Fizz";
-            Assert.That(FizzBuzzCompiler.FizzBuzzed("Fizz"), Is.EqualTo(expected));
-
-            string expected2 = "Buzz";
-            Assert.That(FizzBuzzCompiler.FizzBuzzed("Buzz"), Is.EqualTo(expected2));
-
-            string expected3 = "FizzBuzz";
-            Assert.That(FizzBuzzCompiler.FizzBuzzed("FizzBuzz"), Is.EqualTo(expected3));
+            string[] expected = {"1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz"};
+            Assert.That(FizzBuzzCompiler.FizzBuzzed(15), Is.EqualTo(expected));
         }
     }
 }

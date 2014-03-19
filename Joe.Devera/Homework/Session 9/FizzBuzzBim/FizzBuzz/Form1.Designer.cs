@@ -34,18 +34,19 @@
             this.fizzDivisorField = new System.Windows.Forms.TextBox();
             this.buzzDivisorField = new System.Windows.Forms.TextBox();
             this.newFizzBuzzerButton = new System.Windows.Forms.Button();
+            this.bimDivisorField = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // maxValueField
             // 
-            this.maxValueField.Location = new System.Drawing.Point(12, 37);
+            this.maxValueField.Location = new System.Drawing.Point(233, 66);
             this.maxValueField.Name = "maxValueField";
             this.maxValueField.Size = new System.Drawing.Size(100, 20);
             this.maxValueField.TabIndex = 0;
             // 
             // fizzBuzzIt
             // 
-            this.fizzBuzzIt.Location = new System.Drawing.Point(118, 35);
+            this.fizzBuzzIt.Location = new System.Drawing.Point(297, 92);
             this.fizzBuzzIt.Name = "fizzBuzzIt";
             this.fizzBuzzIt.Size = new System.Drawing.Size(75, 23);
             this.fizzBuzzIt.TabIndex = 1;
@@ -78,7 +79,7 @@
             // 
             // newFizzBuzzerButton
             // 
-            this.newFizzBuzzerButton.Location = new System.Drawing.Point(224, 9);
+            this.newFizzBuzzerButton.Location = new System.Drawing.Point(281, 37);
             this.newFizzBuzzerButton.Name = "newFizzBuzzerButton";
             this.newFizzBuzzerButton.Size = new System.Drawing.Size(116, 23);
             this.newFizzBuzzerButton.TabIndex = 5;
@@ -86,11 +87,19 @@
             this.newFizzBuzzerButton.UseVisualStyleBackColor = true;
             this.newFizzBuzzerButton.Click += new System.EventHandler(this.newFizzBuzzerButton_Click);
             // 
+            // bimDivisorField
+            // 
+            this.bimDivisorField.Location = new System.Drawing.Point(233, 11);
+            this.bimDivisorField.Name = "bimDivisorField";
+            this.bimDivisorField.Size = new System.Drawing.Size(100, 20);
+            this.bimDivisorField.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(409, 495);
+            this.Controls.Add(this.bimDivisorField);
             this.Controls.Add(this.newFizzBuzzerButton);
             this.Controls.Add(this.buzzDivisorField);
             this.Controls.Add(this.fizzDivisorField);
@@ -112,6 +121,7 @@
         private System.Windows.Forms.TextBox fizzDivisorField;
         private System.Windows.Forms.TextBox buzzDivisorField;
         private System.Windows.Forms.Button newFizzBuzzerButton;
+        private System.Windows.Forms.TextBox bimDivisorField;
     }
 }
 
