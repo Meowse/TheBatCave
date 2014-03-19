@@ -33,7 +33,7 @@ namespace FizzBuzz_2
             int maxValue = GetMaxValue();
             if (maxValue < 1)
             {
-                output.Text = @"Please enter an integer for Max Value.";
+                output.Text = @"Please enter an integer for Max Value with less than 6 digits.";
                 return;
             }
 
@@ -49,7 +49,11 @@ namespace FizzBuzz_2
         {
             try
             {
-                return Convert.ToInt32(MaxValue.Text);
+                if (MaxValue.TextLength < 6)
+                {
+                    return Convert.ToInt32(MaxValue.Text);
+                }
+                return 0;
             }
             catch (FormatException)
             {
@@ -63,7 +67,11 @@ namespace FizzBuzz_2
            
             try
             {
-                return Convert.ToInt32(value);
+                if (value.Length < 6)
+                {
+                    return Convert.ToInt32(value);
+                }
+                return 0;
             }
             catch (FormatException)
             {
@@ -79,7 +87,7 @@ namespace FizzBuzz_2
             int bimDiv = GetIntValue(bimDivField.Text);
             if (fizzDiv <= 0 || buzzDiv <= 0 || bimDiv <= 0)
             {
-                output.Text = @"Fizz, Buzz, and Bim must all be an integers";
+                output.Text = @"Fizz, Buzz, and Bim must all be integers with less than 6 digits.";
                 FizzBuzz.Enabled = false;
             }
             else

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace CountWords
@@ -102,6 +104,12 @@ namespace CountWords
         public WordCountRecord GetResultsAsWordCountRecord()
         {
             return null;
+            // return word list, how to get [the, happy, fox, slept]
+            // list would loop for each word in sentence, if word isn't in list, add it
+            // return # list [2,1,2,1]
+            // list would look at each word in first list, then check how often it appears in sentence
+            // 
+
         }
 
 
