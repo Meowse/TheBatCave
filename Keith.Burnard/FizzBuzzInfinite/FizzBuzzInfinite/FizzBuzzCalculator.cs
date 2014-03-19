@@ -15,24 +15,27 @@ namespace FizzBuzzInfinite
         public string Calculate(List<FizzBuzzObject> fizzBuzzObjects, int countTo)
         {
             string returnString = "";
-
             for (int i = 0; i <= countTo; i++)
             {
-                bool numberIsEvenlyDivisibleByDenominator = false;
-                foreach (FizzBuzzObject t in fizzBuzzObjects)
-                {
-                    if (i == 0)numberIsEvenlyDivisibleByDenominator = true;
-                    else
-                    {
-                        if (i%t.Denominator != 0) continue;
-                        returnString += t.Message;
-                        numberIsEvenlyDivisibleByDenominator = true;
-                    }
-                }
-
-                if (!numberIsEvenlyDivisibleByDenominator) returnString += i;
-                returnString += "\r\n";
+                returnString = CheckNumberDivisibility(fizzBuzzObjects, i, returnString) + "\r\n";
             }
+            return returnString;
+        }
+
+        private static string CheckNumberDivisibility(List<FizzBuzzObject> fizzBuzzObjects, int i, string returnString)
+        {
+            bool numberIsEvenlyDivisibleByDenominator = false;
+            foreach (FizzBuzzObject t in fizzBuzzObjects)
+            {
+                if (i == 0) numberIsEvenlyDivisibleByDenominator = true;
+                else
+                {
+                    if (i%t.Denominator != 0) continue;
+                    returnString += t.Message;
+                    numberIsEvenlyDivisibleByDenominator = true;
+                }
+            }
+            if (!numberIsEvenlyDivisibleByDenominator) returnString += i;
             return returnString;
         }
     }
