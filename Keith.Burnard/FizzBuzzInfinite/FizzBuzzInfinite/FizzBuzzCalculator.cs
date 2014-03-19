@@ -19,26 +19,18 @@ namespace FizzBuzzInfinite
             for (int i = 0; i <= countTo; i++)
             {
                 bool numberIsEvenlyDivisibleByDenominator = false;
-                for (int j = 0; j < fizzBuzzObjects.Count; j++)
+                foreach (FizzBuzzObject t in fizzBuzzObjects)
                 {
-                    if (i == 0)
-                    {
-                        returnString += "";
-                        numberIsEvenlyDivisibleByDenominator = true;
-                    }
+                    if (i == 0)numberIsEvenlyDivisibleByDenominator = true;
                     else
                     {
-                        if (i % fizzBuzzObjects[j].Denominator == 0)
-                        {
-                            returnString += fizzBuzzObjects[j].Message;
-                            numberIsEvenlyDivisibleByDenominator = true;
-                        }
+                        if (i%t.Denominator != 0) continue;
+                        returnString += t.Message;
+                        numberIsEvenlyDivisibleByDenominator = true;
                     }
                 }
-                if (!numberIsEvenlyDivisibleByDenominator)
-                {
-                    returnString += i;
-                }
+
+                if (!numberIsEvenlyDivisibleByDenominator) returnString += i;
                 returnString += "\r\n";
             }
             return returnString;
