@@ -17,6 +17,10 @@ namespace FizzBuzz_2
         public Form1()
         {
             InitializeComponent();
+            _fizzBuzzCalculator = new FizzBuzzCalculator(2,3,5);
+            fizzDivField.Text = "2";
+            buzzDivField.Text = "3";
+            bimDivField.Text = "5";
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -29,11 +33,11 @@ namespace FizzBuzz_2
             int maxValue = GetMaxValue();
             if (maxValue < 1)
             {
-                output.Text = @"Please enter an integer.";
+                output.Text = @"Please enter an integer for Max Value with less than 6 digits.";
                 return;
             }
 
-            output.Text = @"Calculating FizzBuzz from 1 to " + MaxValue.Text;
+            output.Text = @"Calculating FizzBuzzBim from 1 to " + MaxValue.Text;
 
             for (int i = 1; i <= maxValue; i++)
             {
@@ -45,7 +49,11 @@ namespace FizzBuzz_2
         {
             try
             {
-                return Convert.ToInt32(MaxValue.Text);
+                if (MaxValue.TextLength < 6)
+                {
+                    return Convert.ToInt32(MaxValue.Text);
+                }
+                return 0;
             }
             catch (FormatException)
             {
@@ -59,7 +67,11 @@ namespace FizzBuzz_2
            
             try
             {
-                return Convert.ToInt32(value);
+                if (value.Length < 6)
+                {
+                    return Convert.ToInt32(value);
+                }
+                return 0;
             }
             catch (FormatException)
             {
@@ -73,7 +85,18 @@ namespace FizzBuzz_2
             int fizzDiv = GetIntValue(fizzDivField.Text);
             int buzzDiv = GetIntValue(buzzDivField.Text);
             int bimDiv = GetIntValue(bimDivField.Text);
-            _fizzBuzzCalculator = new FizzBuzzCalculator(fizzDiv, buzzDiv, bimDiv);
+            if (fizzDiv <= 0 || buzzDiv <= 0 || bimDiv <= 0)
+            {
+                output.Text = @"Fizz, Buzz, and Bim must all be integers with less than 6 digits.";
+                FizzBuzz.Enabled = false;
+            }
+            else
+            {
+                output.Text = @"Ready to calculate new FizzBuzzBim.";
+                _fizzBuzzCalculator = new FizzBuzzCalculator(fizzDiv, buzzDiv, bimDiv);
+                FizzBuzz.Enabled = true;
+            }
+       
         }
 
         private void Form1_Load(object sender, EventArgs e)

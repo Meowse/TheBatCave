@@ -10,10 +10,9 @@ namespace FizzBuzz
         public Form1()
         {
             InitializeComponent();
-            _fizzBuzzCalculator = new FizzBuzzCalculator(2, 3, 5);
-            fizzDivisorField.Text = "2";
-            buzzDivisorField.Text = "3";
-            bimDivisorField.Text = "5";
+            _fizzBuzzCalculator = new FizzBuzzCalculator(3, 5);
+            fizzDivisorField.Text = "3";
+            buzzDivisorField.Text = "5";
         }
 
         private void fizzBuzzIt_Click(object sender, EventArgs e)
@@ -61,8 +60,7 @@ namespace FizzBuzz
         {
             int fizzDivisor = GetIntValue(fizzDivisorField.Text);
             int buzzDivisor = GetIntValue(buzzDivisorField.Text);
-            int bimDivisor = GetIntValue(bimDivisorField.Text);
-            _fizzBuzzCalculator = new FizzBuzzCalculator(fizzDivisor, buzzDivisor,bimDivisor);
+            _fizzBuzzCalculator = new FizzBuzzCalculator(fizzDivisor, buzzDivisor);
         }
     }
 }
