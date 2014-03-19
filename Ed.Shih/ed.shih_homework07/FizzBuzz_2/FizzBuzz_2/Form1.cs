@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -33,7 +34,7 @@ namespace FizzBuzz_2
             int maxValue = GetMaxValue();
             if (maxValue < 1)
             {
-                output.Text = @"Please enter an integer for Max Value with less than 6 digits.";
+                output.Text = string.Format("Please enter a positive integer ({0} or less) for Max Value.", int.MaxValue);
                 return;
             }
 
@@ -49,15 +50,10 @@ namespace FizzBuzz_2
         {
             try
             {
-                if (MaxValue.TextLength < 6)
-                {
-                    return Convert.ToInt32(MaxValue.Text);
-                }
-                return 0;
+                return Convert.ToInt32(MaxValue.Text);
             }
-            catch (FormatException)
+            catch
             {
-                
                 return 0;
             }
         }
