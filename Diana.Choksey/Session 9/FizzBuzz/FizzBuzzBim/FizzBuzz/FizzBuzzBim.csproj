@@ -7,8 +7,8 @@
     <ProjectGuid>{AAF0992D-D663-48DD-BF89-5183102C4A59}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FizzBuzz</RootNamespace>
-    <AssemblyName>FizzBuzz</AssemblyName>
+    <RootNamespace>FizzBuzzBim</RootNamespace>
+    <AssemblyName>FizzBuzzBim</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -44,7 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FizzBuzz.cs" />
+    <Compile Include="FizzBuzzBim.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

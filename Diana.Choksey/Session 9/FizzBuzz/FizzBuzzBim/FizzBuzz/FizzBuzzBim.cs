@@ -1,11 +1,11 @@
-﻿namespace FizzBuzz
+﻿namespace FizzBuzzBim
 {
-    public static class Fuzzy
+    public static class FizzBuzzBimCalculator
     {
 
-        public static string[] FizzBuzz(int max, int fizz, int buzz, int bim)
+        public static string[] FizzBuzzBim(int max, int fizz, int buzz, int bim)
         {
-            var length = max - 1 + 1;
+            var length = max;
             var result = new string[length];
             var i = 0;
 

@@ -6,8 +6,8 @@
     <ProjectGuid>{13459DBE-26C6-4689-86FF-565CA08E91FA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FizzBuzzTest</RootNamespace>
-    <AssemblyName>FizzBuzzTest</AssemblyName>
+    <RootNamespace>FizzBuzzBimTest</RootNamespace>
+    <AssemblyName>FizzBuzzBimTest</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -51,13 +51,13 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="FizzBuzzTests.cs" />
+    <Compile Include="FizzBuzzBimTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FizzBuzz\FizzBuzz.csproj">
+    <ProjectReference Include="..\FizzBuzz\FizzBuzzBim.csproj">
       <Project>{aaf0992d-d663-48dd-bf89-5183102c4a59}</Project>
-      <Name>FizzBuzz</Name>
+      <Name>FizzBuzzBim</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
