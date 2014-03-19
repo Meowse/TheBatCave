@@ -11,9 +11,10 @@ namespace FizzBuzzBim
         {
           //  _fizzBuzzBimCalculator = fizzBuzzBimCalculator;
             InitializeComponent();
-            _fizzBuzzBimCalculator = new FizzBuzzBimCalculator(2, 3, 5);
+            _fizzBuzzBimCalculator = new FizzBuzzBimCalculatorTests.FizzBuzzBimCalculator(2, 3, 5);
             fizzDivisorField.Text = "2";
             buzzDivisorField.Text = "3";
+            object bimDivisorField;
             bimDivisorField.Text = "5";
         }
 
