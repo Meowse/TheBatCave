@@ -10,29 +10,13 @@ namespace fizzbuzz2
     {
         private static void Main()
         {
-            Console.WriteLine("Enter input for bim:"); // Prompt
-            string line = Console.ReadLine(); // Get string from user
-
-            
-            int value;
-            int.TryParse(line, out value);
-
-         
-
             for (int i = 0; i < 100; i++)
             {
                 
-                if (((i % 3) == 0) && ((i % 5) == 0) && ((i % value) == 0))
-                {
-                    Console.WriteLine("fizzbuzzbim");
-                    
-
-                }
-
                 if (((i % 3) == 0) && ((i % 5) == 0))
                 {
                     Console.WriteLine("fizzbuzz");
-
+                    
 
                 }
                 
