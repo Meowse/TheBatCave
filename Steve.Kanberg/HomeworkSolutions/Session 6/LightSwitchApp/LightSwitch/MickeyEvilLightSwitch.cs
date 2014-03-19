@@ -45,6 +45,7 @@ namespace LightSwitch
                 }
                 return DimmerValue;
             }
+            set { throw new NotImplementedException(); }
         }
 
         public void ClickBigButton()
@@ -101,14 +102,29 @@ namespace LightSwitch
         {
             if (IsSwitchOn)
             {
+                DimmerValue = DimmestDimmerValue;
+                IsFullBright = false;
+            }
+            else
+            {
                 DimmerValue = BrightestDimmerValue;
                 IsFullBright = true;
             }
-            else
+        }
+
+        public void DoubleClickBigButtonForMaxDimmerValueFromLessThanMax()
+        {
+            if (IsSwitchOn && DimmerValue < 5)
             {
                 DimmerValue = DimmestDimmerValue;
                 IsFullBright = false;
             }
+            else
+            {
+                DimmerValue = 5;
+                IsFullBright = true;
+            }
         }
+
     }
 }

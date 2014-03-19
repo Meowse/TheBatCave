@@ -8,11 +8,17 @@ namespace WritingDesk
     // yet have a pen.
     public partial class Form1 : Form
     {
+        private const string DoNotOwnAPen = "You do not own a pen.";
         private Pen _pen;
+        private int _penDuration;
+        private string _updatePenLabel;
 
         public Form1()
         {
             InitializeComponent();
+            penTimer = new Timer();
+            penTimer.Tick += penTimer_Tick;
+            penTimer.Interval = 1000;
         }
 
         private void getNewPageButton_Click(object sender, EventArgs e)
@@ -24,6 +30,11 @@ namespace WritingDesk
         {
             // Throws away your old pen and replaces it with a felt-tipped pen.
             _pen = new FeltTipPen();
+            _penDuration = _pen.DryingTimeInMinutes;
+            if (penTimer.Enabled)
+            {
+                penTimer.Stop();
+            }
             UpdateUi();
         }
 
@@ -31,6 +42,11 @@ namespace WritingDesk
         {
             // Throws away your old pen and replaces it with a $1 ball-point pen.
             _pen = new BallPointPen(1);
+            _penDuration = _pen.DryingTimeInMinutes;
+            if (penTimer.Enabled)
+            {
+                penTimer.Stop();
+            }
             UpdateUi();
         }
 
@@ -38,6 +54,11 @@ namespace WritingDesk
         {
             // Throws away your old pen and replaces it with a $20 ball-point pen.
             _pen = new BallPointPen(20);
+            _penDuration = _pen.DryingTimeInMinutes;
+            if (penTimer.Enabled)
+            {
+                penTimer.Stop();
+            }
             UpdateUi();
         }
 
@@ -45,35 +66,81 @@ namespace WritingDesk
         {
             // Extra credit: add a text field to the form that allows the
             // user to enter text for the pen to "write", and use it here.
-            string written = _pen.Write("This was written by the pen!");
 
+            if (_pen == null)
+            {
+                MessageBox.Show("You need a pen to write with");
+                return;
+            }
+            if (_pen.IsCapped)
+            {
+                MessageBox.Show("You need to uncap the pen to  write something!");
+                return;
+            }
             // TODO: Fix the bug in this line of code.  Of course, you'll
             // have to find it, first.  :-)
+            string written = _pen.Write("This was written by the pen!");
             currentPage.Text += Environment.NewLine + written;
         }
 
         private void capPenButton_Click(object sender, EventArgs e)
         {
-            _pen.Capped = true;
+            if (_pen == null)
+            {
+                MessageBox.Show("You need a pen first");
+                return;
+            }
+//            if (_pen.Capped)
+//            {
+//                MessageBox.Show("You need to uncap your pen");
+//                return;
+//            }
+            penTimer.Stop();
+//            _pen.Capped = true;
+            _pen.IsCapped = true;
+            UpdateUi();
         }
 
         private void uncapPenButton_Click(object sender, EventArgs e)
         {
-            _pen.Capped = false;
+            if (_pen == null)
+            {
+                MessageBox.Show("You need a pen first");
+                return;
+            }
+//            if (_pen.Capped == false)
+//            {
+//                MessageBox.Show("You need to cap your pen");
+//                return;
+//            }
+//            _pen.Capped = false;
+            penTimer.Start();
+            _pen.IsCapped = false;
+            UpdateUi();
         }
 
         private void waitFiveMinutesButton_Click(object sender, EventArgs e)
         {
             // TODO: Implement the MinutesPass method so that your pen
             // "ages" by 5 minutes.
-            _pen.MinutesPass(5);
+            if (_pen == null)
+            {
+                MessageBox.Show("You need a pen first");
+                return;
+            }
+            _penDuration = _pen.MinutesPass(5 * 60);
         }
 
         private void waitOneHourButton_Click(object sender, EventArgs e)
         {
             // TODO: Implement the MinutesPass method so that your pen
             // "ages" by an hour.
-            _pen.MinutesPass(60);
+            if (_pen == null)
+            {
+                MessageBox.Show("You need a pen first");
+                return;
+            }
+            _penDuration = _pen.MinutesPass(60 * 60);
         }
 
         private void throwAwayPenButton_Click(object sender, EventArgs e)
@@ -92,7 +159,34 @@ namespace WritingDesk
         private void UpdateUi()
         {
             // TODO: Fix the bug on this line.
-            currentPenLabel.Text = _pen.Description;
+
+            if (_pen == null)
+            {
+                currentPenLabel.Text = DoNotOwnAPen;
+            }
+            else
+            {
+                UpdateCurrentTextLabel();
+            }
         }
+
+        private void UpdateCurrentTextLabel()
+        {
+            _updatePenLabel = string.Format("{0} and will last {1} seconds ", _pen.Description, _penDuration);
+            currentPenLabel.Text = _updatePenLabel;
+        }
+
+        private void penTimer_Tick(object sender, EventArgs e)
+        {
+            _penDuration--;
+            UpdateCurrentTextLabel();
+            if (_penDuration > 0) return;
+            currentPenLabel.Text = _pen.Description + " 0 seconds";
+            penTimer.Stop();
+            MessageBox.Show("Your pen is out of ink");
+            currentPenLabel.Text = DoNotOwnAPen;
+        }
+
+
     }
 }

@@ -68,17 +68,21 @@ namespace CheckForDuplicates
         // TODO: Write "ReturnDistinctCountOfDuplicates"
         // Example: given { 1, 1, 2, 2, 2, 3, 4, 5 }, return 2, since there
         // are two values of which there are duplicates
-        public int ReturnDistinctCountOfDuplicates(ISet<int> set)
+        public int ReturnDistinctCountOfDuplicates(List<int> values)
         {
-            int numDupes = 0;
-            var distinctNums = new List<int> {};
-
-            foreach (int val in set)
+            ISet<int> uniqueValues = new HashSet<int>();
+            ISet<int> duplicates = new HashSet<int>();
+            foreach (int value in values)
             {
-
+                if (uniqueValues.Contains(value) && !duplicates.Contains(value))
+                {
+                    duplicates.Add(value);
+                }
+                uniqueValues.Add(value);
             }
-            return numDupes;
+            return duplicates.Count;
         }
+
 
 
 
@@ -87,5 +91,21 @@ namespace CheckForDuplicates
         // Example: given { 1, 1, 2, 2, 2, 2, 3, 4, 5, 5 }, it would return 
         // a map with keys 1, 2, and 5, and corresponding values 2, 4, and 2,
         // i.e. a map with (key, value) pairs: (1, 2), (2, 4), (5, 2).
+        public Dictionary<int, int> GetDuplicateCounts(List<int> values)
+        {
+            var duplicateCounts = new Dictionary<int, int>();
+            foreach (var value in values)
+            {
+                if (duplicateCounts.ContainsKey(value))
+                {
+                    duplicateCounts[value]++;
+                }
+                else
+                {
+                    duplicateCounts[value] = 1;
+                }
+            }
+            return duplicateCounts;
+        }
     }
 }
