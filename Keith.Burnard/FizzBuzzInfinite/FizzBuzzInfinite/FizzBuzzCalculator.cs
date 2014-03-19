@@ -17,12 +17,12 @@ namespace FizzBuzzInfinite
             string returnString = "";
             for (int i = 0; i <= countTo; i++)
             {
-                returnString = CheckNumberDivisibility(fizzBuzzObjects, i, returnString) + "\r\n";
+                returnString = BuildTheReturnString(fizzBuzzObjects, i, returnString) + "\r\n";
             }
             return returnString;
         }
 
-        private static string CheckNumberDivisibility(List<FizzBuzzObject> fizzBuzzObjects, int i, string returnString)
+        private static string BuildTheReturnString(List<FizzBuzzObject> fizzBuzzObjects, int i, string returnString)
         {
             bool numberIsEvenlyDivisibleByDenominator = false;
             foreach (FizzBuzzObject t in fizzBuzzObjects)
