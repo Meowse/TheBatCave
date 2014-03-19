@@ -24,7 +24,7 @@ namespace GenericCollections
         }
 
         public int Count
-        { get { return this._count; } }
+        { get { return _count; } }
 
         // AddFirst, AddLast
         public void AddFirst(MyLinkedListNode<T> node)
