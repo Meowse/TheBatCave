@@ -1,48 +1,45 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace GenericCollections
 {
     public class MyLinkedList<T> where T : IComparable<T>
     {
-        MyLinkedListNode<T> first;
-        MyLinkedListNode<T> last;
-        int count;
+        MyLinkedListNode<T> _first;
+        MyLinkedListNode<T> _last;
+        int _count;
 
         public MyLinkedList(T data):this(new MyLinkedListNode<T>(data))
         {            
         }
         public MyLinkedList(MyLinkedListNode<T> node)
         {
-            first = last = node;
-            count = 1;
+            _first = _last = node;
+            _count = 1;
         }
         public MyLinkedList()
         {
-            first = last = null;
-            count = 0;
+            _first = _last = null;
+            _count = 0;
         }
 
         public int Count
-        { get { return this.count; } }
+        { get { return this._count; } }
 
         // AddFirst, AddLast
         public void AddFirst(MyLinkedListNode<T> node)
         {
-            if (count == 0)
+            if (_count == 0)
             {
-                first = last = node;
+                _first = _last = node;
             }
             else
             {
-                first.prev = node;
-                node.next = first;
-                first = node;
+                _first.prev = node;
+                node.next = _first;
+                _first = node;
             }
-            count++;
+            _count++;
         }
         public void AddFirst(T data)
         {
@@ -51,17 +48,17 @@ namespace GenericCollections
         }
         public void AddLast(MyLinkedListNode<T> node)
         {
-            if (count == 0)
+            if (_count == 0)
             {
-                first = last = node;
+                _first = _last = node;
             }
             else
             {
-                last.next = node;
-                node.prev = last;
-                last = node;
+                _last.next = node;
+                node.prev = _last;
+                _last = node;
             }
-            count++;
+            _count++;
         }
         public void AddLast(T data)
         {
@@ -81,7 +78,7 @@ namespace GenericCollections
                 afternode.next = node;
                 node.prev = afternode; 
                 node.next = afternode.next;
-                count++;
+                _count++;
             }            
         }
         public void AddBefore(MyLinkedListNode<T> beforenode, MyLinkedListNode<T> node)
@@ -96,7 +93,7 @@ namespace GenericCollections
                 node.prev = beforenode.prev;
                 node.next = beforenode;
                 beforenode.prev = node;
-                count++;
+                _count++;
             }  
         }
         // RemoveFirst, RemoveLast
@@ -108,14 +105,14 @@ namespace GenericCollections
             }
             if(Count == 1)
             {
-                first = last = null;
-                count = 0;
+                _first = _last = null;
+                _count = 0;
             }
             else
             {
-                first.next.prev = null;
-                first = first.next;
-                count--;
+                _first.next.prev = null;
+                _first = _first.next;
+                _count--;
             }            
         }
         public void RemoveLast()
@@ -126,29 +123,29 @@ namespace GenericCollections
             }
             if(Count == 1)
             {
-                first = last = null;
-                count = 0;
+                _first = _last = null;
+                _count = 0;
             }
             else
             {
                 //last.prev.next = null;
                 //last = last.prev;
                 // or
-                last = last.prev;
-                last.next = null;
-                count--;
+                _last = _last.prev;
+                _last.next = null;
+                _count--;
             }            
         }
         // copy linked list to an array
         public T[] ToArray()
         {
-            if (count == 0)
+            if (_count == 0)
             {
                 throw new Exception("List is empty");
             }
             T[] array = new T[Count];
             int index = 0;
-            MyLinkedListNode<T> tempNode = first;
+            MyLinkedListNode<T> tempNode = _first;
             while (tempNode != null)
             {
                 array[index] = tempNode.data;
@@ -164,7 +161,7 @@ namespace GenericCollections
         }
         public bool Contains(T data)
         {
-            MyLinkedListNode<T> tempNode = first;
+            MyLinkedListNode<T> tempNode = _first;
             while (tempNode != null)
             {                
                 if (tempNode.data.CompareTo(data) == 0)
@@ -177,7 +174,7 @@ namespace GenericCollections
         }
         public MyLinkedListNode<T> GetLinkedListNode(T data)
         {
-            MyLinkedListNode<T> tempNode = first;
+            MyLinkedListNode<T> tempNode = _first;
             while (tempNode != null)
             {
                 tempNode = tempNode.next;
