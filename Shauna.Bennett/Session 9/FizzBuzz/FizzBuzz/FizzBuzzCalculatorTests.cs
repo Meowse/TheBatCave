@@ -80,6 +80,11 @@ namespace FizzBuzzBim
 
     internal class FizzBuzzBimCalculator
     {
+        public FizzBuzzBimCalculator(int i, int i1, int i2)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public object Calculate(int p0)
         {
             throw new System.NotImplementedException();
